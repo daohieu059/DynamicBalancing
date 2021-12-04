@@ -1,0 +1,14 @@
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\bin\Debug\dynamic balancing machine.exe.config
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\bin\Debug\dynamic balancing machine.exe
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\bin\Debug\dynamic balancing machine.pdb
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.csprojAssemblyReference.cache
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.Form1.resources
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.Properties.Resources.resources
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.csproj.GenerateResource.cache
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.csproj.CoreCompileInputs.cache
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.exe
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.pdb
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.MachineControlForm.resources
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.csproj.CopyComplete
