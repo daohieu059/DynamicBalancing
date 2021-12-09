@@ -39,7 +39,7 @@ namespace Send_receiveData
         public Form1()
         {
             InitializeComponent();
-            string[] BaudRate = { "1200", "2400", "4800", "9600", "115200", "19200", "38400", "57600"};
+            string[] BaudRate = { "1200", "2400", "4800", "9600", "19200", "38400", "57600", "115200" };
             cBoxBaud.Items.AddRange(BaudRate);
             string[] DataBits = { "6", "7", "8" };
             cBoxDatabits.Items.AddRange(DataBits);
@@ -55,7 +55,7 @@ namespace Send_receiveData
             Control.CheckForIllegalCrossThreadCalls = false;
             cBoxCOM.DataSource = SerialPort.GetPortNames();
             cBoxCOM.SelectedIndex = 1;
-            cBoxBaud.SelectedIndex = 4;
+            cBoxBaud.SelectedIndex = 7;
             cBoxDatabits.SelectedIndex = 2;
             cBoxStopbits.SelectedIndex = 0;
             cBoxParitybits.SelectedIndex = 0;
