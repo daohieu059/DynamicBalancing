@@ -40,7 +40,7 @@ namespace dynamic_balancing_machine
         {
             SqlConnection con = new SqlConnection(@"Data Source=dynamicbalancmachine.database.windows.net;Initial Catalog=DBMk18;Persist Security Info=True;User ID=daotrunghieu059;Password=090220Hieu!");
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Table1 WHERE user_name = '" + tBoxUser.Text + "' AND pass = '" + tBoxPassword.Text + "'", con);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Table_user WHERE user_name = '" + tBoxUser.Text + "' AND pass = '" + tBoxPassword.Text + "'", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
