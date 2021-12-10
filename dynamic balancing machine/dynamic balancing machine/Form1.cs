@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace dynamic_balancing_machine
 {
@@ -36,12 +38,29 @@ namespace dynamic_balancing_machine
         }
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            
+            SqlConnection con = new SqlConnection(@"Data Source=dynamicbalancmachine.database.windows.net;Initial Catalog=DBMk18;Persist Security Info=True;User ID=daotrunghieu059;Password=090220Hieu!");
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Table1 WHERE user_name = '" + tBoxUser.Text + "' AND pass = '" + tBoxPassword.Text + "'", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.Close();
+            int i = 0;
+            if (dt != null)
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    i++;
+                }
+            }
+            //textBox1.Text = i.ToString();
+
             if (tBoxUser.Text != "Username")
             {
                 if (tBoxPassword.Text != "Password")
                 {
-                    if (tBoxUser.Text == "d" && tBoxPassword.Text == "f")
+                    //if (tBoxUser.Text == "d" && tBoxPassword.Text == "f")
+                    if (i == 1)   
                     {
                         MachineControlForm machineControlForm = new MachineControlForm();
                         machineControlForm.Show();

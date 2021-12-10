@@ -28,3 +28,28 @@ D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\obj\Debug
 D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.User_control.Step3.resources
 D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.User_control.Step4.resources
 D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.User_control.DataAcquisition2.resources
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\dynamic balancing machine.exe.config
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\dynamic balancing machine.exe
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\dynamic balancing machine.pdb
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForm.BunifuShadowPanel.xml
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.xml
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.xml
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu_UI_v1.5.3.xml
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.csprojAssemblyReference.cache
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.exe.config
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.Form1.resources
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.MachineControlForm.resources
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.Properties.Resources.resources
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.User_control.DataAcquisition2.resources
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.User_control.Step1.resources
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.User_control.Step2.resources
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.User_control.Step3.resources
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.User_control.Step4.resources
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.csproj.GenerateResource.cache
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.csproj.CoreCompileInputs.cache
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.csproj.CopyComplete
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.exe
+C:\Users\DAO TRUNG HIEU\OneDrive\Documents\GitHub\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.pdb
