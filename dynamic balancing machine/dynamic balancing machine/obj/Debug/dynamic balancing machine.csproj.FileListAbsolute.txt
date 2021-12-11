@@ -12,3 +12,21 @@ D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\obj\Debug
 D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.csproj.CopyComplete
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.dll
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.xml
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu_UI_v1.5.3.dll
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu_UI_v1.5.3.xml
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.exe.config
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.User_control.Step1.resources
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForm.BunifuShadowPanel.dll
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForm.BunifuShadowPanel.xml
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.xml
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.User_control.Step2.resources
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.User_control.Step3.resources
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.User_control.Step4.resources
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.User_control.DataAcquisition2.resources
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.dll
+D:\211\DCLV\CShape\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.xml
