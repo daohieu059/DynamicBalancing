@@ -70,7 +70,7 @@ namespace dynamic_balancing_machine.User_control
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(386, 175);
+            this.label1.Location = new System.Drawing.Point(397, 199);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 23);
             this.label1.TabIndex = 6;

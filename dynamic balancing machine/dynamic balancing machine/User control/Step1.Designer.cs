@@ -31,7 +31,7 @@ namespace dynamic_balancing_machine.User_control
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Step1));
             this.NextButton = new System.Windows.Forms.Button();
-            this.mode = new System.Windows.Forms.Label();
+            this.lblmode = new System.Windows.Forms.Label();
             this.panelMode1 = new System.Windows.Forms.Panel();
             this.btn1Plane = new System.Windows.Forms.Button();
             this.Mode02 = new System.Windows.Forms.PictureBox();
@@ -70,17 +70,17 @@ namespace dynamic_balancing_machine.User_control
             this.NextButton.UseVisualStyleBackColor = false;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
-            // mode
+            // lblmode
             // 
-            this.mode.AutoSize = true;
-            this.mode.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mode.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.mode.Location = new System.Drawing.Point(395, 15);
-            this.mode.Name = "mode";
-            this.mode.Size = new System.Drawing.Size(123, 33);
-            this.mode.TabIndex = 3;
-            this.mode.Text = "Plane Mode ";
-            this.mode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblmode.AutoSize = true;
+            this.lblmode.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmode.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblmode.Location = new System.Drawing.Point(399, 2);
+            this.lblmode.Name = "lblmode";
+            this.lblmode.Size = new System.Drawing.Size(115, 33);
+            this.lblmode.TabIndex = 3;
+            this.lblmode.Text = "Chọn Mode ";
+            this.lblmode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelMode1
             // 
@@ -210,7 +210,7 @@ namespace dynamic_balancing_machine.User_control
             this.txtMode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMode.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMode.ForeColor = System.Drawing.Color.White;
-            this.txtMode.Location = new System.Drawing.Point(26, 15);
+            this.txtMode.Location = new System.Drawing.Point(529, 0);
             this.txtMode.Name = "txtMode";
             this.txtMode.ReadOnly = true;
             this.txtMode.Size = new System.Drawing.Size(57, 40);
@@ -223,13 +223,13 @@ namespace dynamic_balancing_machine.User_control
             // 
             this.labelWarn.AutoSize = true;
             this.labelWarn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelWarn.Font = new System.Drawing.Font("MS Reference Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWarn.Font = new System.Drawing.Font("MS Reference Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWarn.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelWarn.Image = ((System.Drawing.Image)(resources.GetObject("labelWarn.Image")));
             this.labelWarn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelWarn.Location = new System.Drawing.Point(134, 369);
             this.labelWarn.Name = "labelWarn";
-            this.labelWarn.Size = new System.Drawing.Size(169, 34);
+            this.labelWarn.Size = new System.Drawing.Size(137, 28);
             this.labelWarn.TabIndex = 6;
             this.labelWarn.Text = "   Warning!";
             this.labelWarn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -243,7 +243,7 @@ namespace dynamic_balancing_machine.User_control
             this.Controls.Add(this.txtMode);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMode1);
-            this.Controls.Add(this.mode);
+            this.Controls.Add(this.lblmode);
             this.Controls.Add(this.NextButton);
             this.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -265,7 +265,7 @@ namespace dynamic_balancing_machine.User_control
         #endregion
 
         private System.Windows.Forms.Button NextButton;
-        private System.Windows.Forms.Label mode;
+        private System.Windows.Forms.Label lblmode;
         private System.Windows.Forms.Panel panelMode1;
         private System.Windows.Forms.PictureBox Mode02;
         private System.Windows.Forms.PictureBox Mode01;

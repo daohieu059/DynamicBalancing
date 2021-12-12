@@ -55,7 +55,7 @@ namespace dynamic_balancing_machine.Step
             ProgressBar progressbar1 = (ProgressBar)ParentForm.Controls.Find(progressbar, false)[0];
             progressbar1.Value = 100;
         }
-        public TextBox Transfer(Form ParentForm, string txtBox, string Pagename)
+        public TextBox TextBox(Form ParentForm, string txtBox, string Pagename)
         {
             TextBox textBox = (TextBox)ParentForm.Controls.Find("PanelProcess", false)[0].Controls.Find(Pagename, false)[0].Controls.Find(txtBox, false)[0];
             return textBox;

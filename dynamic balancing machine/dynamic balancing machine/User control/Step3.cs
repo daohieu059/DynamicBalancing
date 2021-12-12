@@ -40,7 +40,7 @@ namespace dynamic_balancing_machine.User_control
         {
             // transfer data Mode từ UserControl.Step1
             //TextBox textBox = (TextBox)ParentForm.Controls.Find("PanelProcess", false)[0].Controls.Find("Step1", false)[0].Controls.Find("txtMode", false)[0];
-            TextBox textBox = new Step_class().Transfer(ParentForm, "txtMode", "Step1");
+            TextBox textBox = new Step_class().TextBox(ParentForm, "txtMode", "Step1");
             Mode = int.Parse(textBox.Text);
             if (Mode ==1)            
             {

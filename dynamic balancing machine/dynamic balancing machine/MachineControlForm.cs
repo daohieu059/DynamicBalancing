@@ -9,17 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using dynamic_balancing_machine.User_control;
+using dynamic_balancing_machine.Step;
 
 
 namespace dynamic_balancing_machine
 {
+    
     public partial class MachineControlForm : Form
     {
-        
+        //int Mode;
+
         public MachineControlForm()
         {
             InitializeComponent();
-            
+
 
             PanelProcess.Controls.Add(new Step1());
             PanelProcess.Controls.Add(new Step2());
@@ -27,10 +30,15 @@ namespace dynamic_balancing_machine
             PanelProcess.Controls.Add(new Step4());
             PanelProcess.Controls.Add(new DataAcquisition2());
             //Form
-            
+
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            
 
-
+        }
+        private void MachineControlForm_Load(object sender, EventArgs e)
+        {
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 28, 28));
+            
         }
         //Radius form
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -56,47 +64,45 @@ namespace dynamic_balancing_machine
         }
         private void MachineControlForm_MouseDown(object sender, MouseEventArgs e)
         {
+            this.Opacity = 0.92;
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void MachineControlForm_Load(object sender, EventArgs e)
+            this.Opacity = 1;
+        }     
+                
+        private void MoveSidePanel(Control c)
         {
-            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 28, 28));
-            pnlNav.Height = btnExit.Height;
-            pnlNav.Top = btnExit.Top;
-            pnlNav.Left = btnExit.Left;
-            btnExit.BackColor = Color.FromArgb(35, 51, 69);          
+            pnlNav.Height = c.Height;
+            pnlNav.Top = c.Top;
+            pnlNav.Left = c.Left;
+            //c.BackColor = Color.FromArgb(35, 51, 69);
 
         }
+        private void button_leave(Control c)
+        {
+            c.BackColor = Color.FromArgb(37, 40, 53);
 
+        }
         private void btnHome_Click(object sender, EventArgs e)
         {
-            pnlNav.Height = btnHome.Height;
-            pnlNav.Top = btnHome.Top;
-            pnlNav.Left = btnHome.Left;
-            btnHome.BackColor = Color.FromArgb(35, 51, 69);
-        }
-                
-        private void btnHome_Leave(object sender, EventArgs e)
-        {
-            btnHome.BackColor = Color.FromArgb(24, 30, 54);
-        }
-
+            MoveSidePanel(btnHome);
+        }                
+        
         private void btnExit_Click(object sender, EventArgs e)
         {
-            pnlNav.Height = btnExit.Height;
-            pnlNav.Top = btnExit.Top;
-            pnlNav.Left = btnExit.Left;
-            btnExit.BackColor = Color.FromArgb(35, 51, 69);
+            MoveSidePanel(btnExit);
             Application.Exit();
         }
-
-        private void btnExit_Leave(object sender, EventArgs e)
+        
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-            btnExit.BackColor = Color.FromArgb(24, 30, 54);
+            MoveSidePanel(btnLogout);
+            this.Close();
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
         }
-
+       
         //Close, maximize, minimize
 
         private void ptBoxClose_Click(object sender, EventArgs e)
@@ -106,7 +112,7 @@ namespace dynamic_balancing_machine
         
         private void ptBoxMinimize_Click_1(object sender, EventArgs e)
         {
-            if (WindowState == FormWindowState.Normal)
+            if (WindowState != FormWindowState.Minimized)
             {
                 WindowState = FormWindowState.Minimized;
             }
@@ -131,5 +137,12 @@ namespace dynamic_balancing_machine
                 Invalidate();
             }
         }
+
+        private void pnlTitle_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);            
+        }
+        
     }
 }
