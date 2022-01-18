@@ -24,11 +24,15 @@ namespace dynamic_balancing_machine
             InitializeComponent();
 
 
-            PanelProcess.Controls.Add(new Step1());
-            PanelProcess.Controls.Add(new Step2());
-            PanelProcess.Controls.Add(new Step3());
-            PanelProcess.Controls.Add(new Step4());
-            PanelProcess.Controls.Add(new DataAcquisition2());
+            PanelProcess.Controls.Add(new Main());
+            PanelProcess.Controls.Add(new DataAcquisition());
+            PanelProcess.Controls.Add(new Calculator_1Plane());
+            PanelProcess.Controls.Add(new Result_1Plane());
+            PanelProcess.Controls.Add(new Calculator_2Plane());
+            PanelProcess.Controls.Add(new Result_2Plane());
+
+
+            PanelProcess.Controls.Add(new Calculator_2Plane());
             //Form
 
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;

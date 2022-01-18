@@ -13,21 +13,21 @@ using dynamic_balancing_machine.Step;
 
 namespace dynamic_balancing_machine.User_control
 {
-    public partial class DataAcquisition2 : UserControl
+    public partial class Calculator_2Plane : UserControl
     {
-        public DataAcquisition2()
+        public Calculator_2Plane()
         {
             InitializeComponent();
         }
 
         private void BackButton_Click_1(object sender, EventArgs e)
         {
-            new Step_class().Back(ParentForm, "step2", "step1", "Step1", "StepProcess");
+            new Step_class().Back(ParentForm, "step3", "step2", "DataAcquisition", "StepProcess");
         }
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            new Step_class().Forward(ParentForm, "step2", "step3", "Step3", "StepProcess");
+            new Step_class().Forward(ParentForm, "step3", "step4", "Result_2Plane", "StepProcess");
         }
     }
 }

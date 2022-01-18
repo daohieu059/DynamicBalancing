@@ -1,7 +1,7 @@
 ﻿
 namespace dynamic_balancing_machine.User_control
 {
-    partial class Step1
+    partial class Main
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace dynamic_balancing_machine.User_control
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Step1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.NextButton = new System.Windows.Forms.Button();
             this.lblmode = new System.Windows.Forms.Label();
             this.panelMode1 = new System.Windows.Forms.Panel();
@@ -62,7 +62,7 @@ namespace dynamic_balancing_machine.User_control
             this.NextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
             this.NextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NextButton.ForeColor = System.Drawing.Color.White;
-            this.NextButton.Location = new System.Drawing.Point(753, 369);
+            this.NextButton.Location = new System.Drawing.Point(821, 599);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(159, 51);
             this.NextButton.TabIndex = 0;
@@ -88,7 +88,7 @@ namespace dynamic_balancing_machine.User_control
             this.panelMode1.Controls.Add(this.btn1Plane);
             this.panelMode1.Controls.Add(this.Mode02);
             this.panelMode1.Controls.Add(this.Mode01);
-            this.panelMode1.Location = new System.Drawing.Point(140, 83);
+            this.panelMode1.Location = new System.Drawing.Point(143, 168);
             this.panelMode1.Name = "panelMode1";
             this.panelMode1.Size = new System.Drawing.Size(201, 254);
             this.panelMode1.TabIndex = 4;
@@ -139,7 +139,7 @@ namespace dynamic_balancing_machine.User_control
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Location = new System.Drawing.Point(375, 83);
+            this.panel1.Location = new System.Drawing.Point(439, 168);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(398, 254);
             this.panel1.TabIndex = 4;
@@ -227,7 +227,7 @@ namespace dynamic_balancing_machine.User_control
             this.labelWarn.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelWarn.Image = ((System.Drawing.Image)(resources.GetObject("labelWarn.Image")));
             this.labelWarn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelWarn.Location = new System.Drawing.Point(134, 369);
+            this.labelWarn.Location = new System.Drawing.Point(138, 454);
             this.labelWarn.Name = "labelWarn";
             this.labelWarn.Size = new System.Drawing.Size(137, 28);
             this.labelWarn.TabIndex = 6;
@@ -235,7 +235,7 @@ namespace dynamic_balancing_machine.User_control
             this.labelWarn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelWarn.Visible = false;
             // 
-            // Step1
+            // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
@@ -247,8 +247,8 @@ namespace dynamic_balancing_machine.User_control
             this.Controls.Add(this.NextButton);
             this.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.Name = "Step1";
-            this.Size = new System.Drawing.Size(912, 420);
+            this.Name = "Main";
+            this.Size = new System.Drawing.Size(980, 650);
             this.panelMode1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Mode02)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Mode01)).EndInit();

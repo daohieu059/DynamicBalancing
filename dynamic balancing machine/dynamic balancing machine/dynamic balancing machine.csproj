@@ -68,6 +68,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph">
+      <HintPath>..\..\..\..\..\Visual Studio\zedgraph_dll_v515\zedgraph_dll_v5.1.5\ZedGraph.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form1.cs">
@@ -90,35 +93,42 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Step\Step_class.cs" />
-    <Compile Include="User control\DataAcquisition2.cs">
+    <Compile Include="User control\DataAcquisition.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User control\DataAcquisition2.Designer.cs">
-      <DependentUpon>DataAcquisition2.cs</DependentUpon>
+    <Compile Include="User control\DataAcquisition.Designer.cs">
+      <DependentUpon>DataAcquisition.cs</DependentUpon>
     </Compile>
-    <Compile Include="User control\Step1.cs">
+    <Compile Include="User control\Calculator_2Plane.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User control\Step1.Designer.cs">
-      <DependentUpon>Step1.cs</DependentUpon>
+    <Compile Include="User control\Calculator_2Plane.Designer.cs">
+      <DependentUpon>Calculator_2Plane.cs</DependentUpon>
     </Compile>
-    <Compile Include="User control\Step2.cs">
+    <Compile Include="User control\Main.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User control\Step2.Designer.cs">
-      <DependentUpon>Step2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="User control\Step3.cs">
+    <Compile Include="User control\.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User control\Step3.Designer.cs">
-      <DependentUpon>Step3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="User control\Step4.cs">
+    <Compile Include="User control\Calculator_1Plane.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User control\Step4.Designer.cs">
-      <DependentUpon>Step4.cs</DependentUpon>
+    <Compile Include="User control\Calculator_1Plane.Designer.cs">
+      <DependentUpon>Calculator_1Plane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User control\Result_1Plane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User control\Result_1Plane.Designer.cs">
+      <DependentUpon>Result_1Plane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User control\Result_2Plane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User control\Result_2Plane.Designer.cs">
+      <DependentUpon>Result_2Plane.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -131,20 +141,23 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="User control\DataAcquisition2.resx">
-      <DependentUpon>DataAcquisition2.cs</DependentUpon>
+    <EmbeddedResource Include="User control\DataAcquisition.resx">
+      <DependentUpon>DataAcquisition.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User control\Step1.resx">
-      <DependentUpon>Step1.cs</DependentUpon>
+    <EmbeddedResource Include="User control\Calculator_2Plane.resx">
+      <DependentUpon>Calculator_2Plane.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User control\Step2.resx">
-      <DependentUpon>Step2.cs</DependentUpon>
+    <EmbeddedResource Include="User control\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User control\Step3.resx">
-      <DependentUpon>Step3.cs</DependentUpon>
+    <EmbeddedResource Include="User control\Calculator_1Plane.resx">
+      <DependentUpon>Calculator_1Plane.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User control\Step4.resx">
-      <DependentUpon>Step4.cs</DependentUpon>
+    <EmbeddedResource Include="User control\Result_1Plane.resx">
+      <DependentUpon>Result_1Plane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User control\Result_2Plane.resx">
+      <DependentUpon>Result_2Plane.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

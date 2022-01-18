@@ -62,3 +62,51 @@ D:\GitHub\dynamic balancing machine\dynamic balancing machine\dynamic balancing 
 D:\GitHub\dynamic balancing machine\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.csproj.CopyComplete
 D:\GitHub\dynamic balancing machine\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.exe
 D:\GitHub\dynamic balancing machine\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.pdb
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\dynamic balancing machine.exe.config
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\dynamic balancing machine.exe
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\dynamic balancing machine.pdb
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForm.BunifuShadowPanel.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu_UI_v1.5.3.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForm.BunifuShadowPanel.xml
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.xml
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.xml
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.xml
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu_UI_v1.5.3.xml
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.csprojAssemblyReference.cache
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.exe.config
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.Form1.resources
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.MachineControlForm.resources
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.Properties.Resources.resources
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.csproj.GenerateResource.cache
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.csproj.CoreCompileInputs.cache
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.csproj.CopyComplete
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.exe
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.pdb
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\ZedGraph.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\ZedGraph.xml
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\de\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\es\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\fr\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\hu\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\it\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\ja\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\pt\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\ru\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\sk\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\sv\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\tr\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\zh-cn\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\zh-tw\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.User_control.DataAcquisition.resources
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.User_control.Calculator_2Plane.resources
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.User_control.Calculator_1Plane.resources
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.User_control.Result_1Plane.resources
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.User_control.Main.resources
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.User_control.Result_2Plane.resources
