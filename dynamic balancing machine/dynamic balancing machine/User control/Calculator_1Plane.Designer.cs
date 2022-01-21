@@ -172,14 +172,13 @@ namespace dynamic_balancing_machine.User_control
             // 
             this.btn1Plane_Load.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btn1Plane_Load.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn1Plane_Load.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btn1Plane_Load.FlatAppearance.BorderSize = 0;
             this.btn1Plane_Load.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
-            this.btn1Plane_Load.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn1Plane_Load.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btn1Plane_Load.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn1Plane_Load.Location = new System.Drawing.Point(0, 224);
+            this.btn1Plane_Load.Location = new System.Drawing.Point(46, 221);
             this.btn1Plane_Load.Name = "btn1Plane_Load";
-            this.btn1Plane_Load.Size = new System.Drawing.Size(297, 37);
+            this.btn1Plane_Load.Size = new System.Drawing.Size(204, 37);
             this.btn1Plane_Load.TabIndex = 14;
             this.btn1Plane_Load.Text = "Load";
             this.btn1Plane_Load.UseVisualStyleBackColor = false;
@@ -491,14 +490,13 @@ namespace dynamic_balancing_machine.User_control
             // 
             this.btnCalculator.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnCalculator.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCalculator.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnCalculator.FlatAppearance.BorderSize = 0;
             this.btnCalculator.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
-            this.btnCalculator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalculator.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnCalculator.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCalculator.Location = new System.Drawing.Point(0, 222);
+            this.btnCalculator.Location = new System.Drawing.Point(45, 219);
             this.btnCalculator.Name = "btnCalculator";
-            this.btnCalculator.Size = new System.Drawing.Size(294, 37);
+            this.btnCalculator.Size = new System.Drawing.Size(204, 37);
             this.btnCalculator.TabIndex = 15;
             this.btnCalculator.Text = "Calculator";
             this.btnCalculator.UseVisualStyleBackColor = false;

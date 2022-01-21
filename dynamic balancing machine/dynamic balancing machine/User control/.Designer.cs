@@ -75,7 +75,7 @@ namespace dynamic_balancing_machine.User_control
             this.lblmode.AutoSize = true;
             this.lblmode.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblmode.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblmode.Location = new System.Drawing.Point(399, 2);
+            this.lblmode.Location = new System.Drawing.Point(433, 2);
             this.lblmode.Name = "lblmode";
             this.lblmode.Size = new System.Drawing.Size(115, 33);
             this.lblmode.TabIndex = 3;
@@ -210,7 +210,7 @@ namespace dynamic_balancing_machine.User_control
             this.txtMode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMode.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMode.ForeColor = System.Drawing.Color.White;
-            this.txtMode.Location = new System.Drawing.Point(529, 0);
+            this.txtMode.Location = new System.Drawing.Point(570, 0);
             this.txtMode.Name = "txtMode";
             this.txtMode.ReadOnly = true;
             this.txtMode.Size = new System.Drawing.Size(57, 40);

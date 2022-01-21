@@ -40,7 +40,6 @@ namespace dynamic_balancing_machine.User_control
             this.label36 = new System.Windows.Forms.Label();
             this.lblAnpha_21 = new System.Windows.Forms.Label();
             this.lblAnpha_11 = new System.Windows.Forms.Label();
-            this.btnCalculator = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -97,7 +96,6 @@ namespace dynamic_balancing_machine.User_control
             this.label22 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.btn1Plane_Load = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.label17 = new System.Windows.Forms.Label();
@@ -112,6 +110,8 @@ namespace dynamic_balancing_machine.User_control
             this.panel6 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.lblmode = new System.Windows.Forms.Label();
+            this.btn2Plane_Load = new System.Windows.Forms.Button();
+            this.btnCalculator = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -172,13 +172,13 @@ namespace dynamic_balancing_machine.User_control
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
+            this.panel3.Controls.Add(this.btnCalculator);
             this.panel3.Controls.Add(this.lblAnpha_22);
             this.panel3.Controls.Add(this.label37);
             this.panel3.Controls.Add(this.lblAnpha_12);
             this.panel3.Controls.Add(this.label36);
             this.panel3.Controls.Add(this.lblAnpha_21);
             this.panel3.Controls.Add(this.lblAnpha_11);
-            this.panel3.Controls.Add(this.btnCalculator);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.panel7);
@@ -250,22 +250,6 @@ namespace dynamic_balancing_machine.User_control
             this.lblAnpha_11.Size = new System.Drawing.Size(33, 19);
             this.lblAnpha_11.TabIndex = 23;
             this.lblAnpha_11.Text = "0.00";
-            // 
-            // btnCalculator
-            // 
-            this.btnCalculator.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnCalculator.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCalculator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnCalculator.FlatAppearance.BorderSize = 0;
-            this.btnCalculator.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
-            this.btnCalculator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCalculator.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCalculator.Location = new System.Drawing.Point(0, 231);
-            this.btnCalculator.Name = "btnCalculator";
-            this.btnCalculator.Size = new System.Drawing.Size(244, 37);
-            this.btnCalculator.TabIndex = 15;
-            this.btnCalculator.Text = "Calculator";
-            this.btnCalculator.UseVisualStyleBackColor = false;
             // 
             // label12
             // 
@@ -791,6 +775,7 @@ namespace dynamic_balancing_machine.User_control
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.btn2Plane_Load);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label24);
@@ -799,7 +784,6 @@ namespace dynamic_balancing_machine.User_control
             this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.radioButton4);
-            this.panel1.Controls.Add(this.btn1Plane_Load);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.radioButton3);
             this.panel1.Controls.Add(this.label17);
@@ -905,22 +889,6 @@ namespace dynamic_balancing_machine.User_control
             this.radioButton4.TabIndex = 16;
             this.radioButton4.Text = "Lần 3";
             this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // btn1Plane_Load
-            // 
-            this.btn1Plane_Load.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btn1Plane_Load.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn1Plane_Load.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn1Plane_Load.FlatAppearance.BorderSize = 0;
-            this.btn1Plane_Load.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
-            this.btn1Plane_Load.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1Plane_Load.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn1Plane_Load.Location = new System.Drawing.Point(0, 233);
-            this.btn1Plane_Load.Name = "btn1Plane_Load";
-            this.btn1Plane_Load.Size = new System.Drawing.Size(297, 37);
-            this.btn1Plane_Load.TabIndex = 14;
-            this.btn1Plane_Load.Text = "Load";
-            this.btn1Plane_Load.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
@@ -1085,6 +1053,36 @@ namespace dynamic_balancing_machine.User_control
             this.lblmode.Text = "Tính toán";
             this.lblmode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btn2Plane_Load
+            // 
+            this.btn2Plane_Load.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btn2Plane_Load.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn2Plane_Load.FlatAppearance.BorderSize = 0;
+            this.btn2Plane_Load.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
+            this.btn2Plane_Load.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btn2Plane_Load.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn2Plane_Load.Location = new System.Drawing.Point(46, 230);
+            this.btn2Plane_Load.Name = "btn2Plane_Load";
+            this.btn2Plane_Load.Size = new System.Drawing.Size(204, 37);
+            this.btn2Plane_Load.TabIndex = 23;
+            this.btn2Plane_Load.Text = "Load";
+            this.btn2Plane_Load.UseVisualStyleBackColor = false;
+            // 
+            // btnCalculator
+            // 
+            this.btnCalculator.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnCalculator.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCalculator.FlatAppearance.BorderSize = 0;
+            this.btnCalculator.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
+            this.btnCalculator.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnCalculator.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCalculator.Location = new System.Drawing.Point(20, 228);
+            this.btnCalculator.Name = "btnCalculator";
+            this.btnCalculator.Size = new System.Drawing.Size(204, 37);
+            this.btnCalculator.TabIndex = 28;
+            this.btnCalculator.Text = "Calculator";
+            this.btnCalculator.UseVisualStyleBackColor = false;
+            // 
             // Calculator_2Plane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 22F);
@@ -1131,7 +1129,6 @@ namespace dynamic_balancing_machine.User_control
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblAnpha_21;
         private System.Windows.Forms.Label lblAnpha_11;
-        private System.Windows.Forms.Button btnCalculator;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel7;
@@ -1162,7 +1159,6 @@ namespace dynamic_balancing_machine.User_control
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.Button btn1Plane_Load;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.Label label17;
@@ -1207,5 +1203,7 @@ namespace dynamic_balancing_machine.User_control
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label lblAnpha_12;
         private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Button btn2Plane_Load;
+        private System.Windows.Forms.Button btnCalculator;
     }
 }
