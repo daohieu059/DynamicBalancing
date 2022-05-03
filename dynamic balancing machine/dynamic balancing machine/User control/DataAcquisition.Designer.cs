@@ -70,6 +70,8 @@ namespace dynamic_balancing_machine.User_control
             this.zed = new ZedGraph.ZedGraphControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtDataReceive = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.txtAmAverage_P2_2P = new System.Windows.Forms.TextBox();
@@ -83,8 +85,6 @@ namespace dynamic_balancing_machine.User_control
             this.label15 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
-            this.txtDataReceive = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rateNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.samplesPerChannelNumeric)).BeginInit();
@@ -584,6 +584,26 @@ namespace dynamic_balancing_machine.User_control
             this.panel7.Size = new System.Drawing.Size(438, 201);
             this.panel7.TabIndex = 55;
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label16.Location = new System.Drawing.Point(11, 177);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(96, 17);
+            this.label16.TabIndex = 57;
+            this.label16.Text = "Data Receive";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtDataReceive
+            // 
+            this.txtDataReceive.Font = new System.Drawing.Font("Bahnschrift Condensed", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDataReceive.Location = new System.Drawing.Point(136, 171);
+            this.txtDataReceive.Name = "txtDataReceive";
+            this.txtDataReceive.Size = new System.Drawing.Size(256, 28);
+            this.txtDataReceive.TabIndex = 56;
+            // 
             // label22
             // 
             this.label22.AutoSize = true;
@@ -715,26 +735,6 @@ namespace dynamic_balancing_machine.User_control
             this.label17.TabIndex = 9;
             this.label17.Text = "Calculate the collected data";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtDataReceive
-            // 
-            this.txtDataReceive.Font = new System.Drawing.Font("Bahnschrift Condensed", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDataReceive.Location = new System.Drawing.Point(135, 171);
-            this.txtDataReceive.Name = "txtDataReceive";
-            this.txtDataReceive.Size = new System.Drawing.Size(255, 28);
-            this.txtDataReceive.TabIndex = 56;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label16.Location = new System.Drawing.Point(11, 177);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(96, 17);
-            this.label16.TabIndex = 57;
-            this.label16.Text = "Data Receive";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DataAcquisition
             // 
