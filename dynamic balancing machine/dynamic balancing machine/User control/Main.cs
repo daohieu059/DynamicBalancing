@@ -16,10 +16,10 @@ namespace dynamic_balancing_machine.User_control
     public partial class Main : UserControl
     {
         int Mode;
-        public int MyText
+        /*public int MyText
         {
             get { return int.Parse(this.txtMode.Text); } 
-        }
+        }*/
         public Main()
         {
             InitializeComponent();
@@ -27,10 +27,9 @@ namespace dynamic_balancing_machine.User_control
         
 
         private void NextButton_Click(object sender, EventArgs e)
-        {
+        {        
             
-            
-            if ((Mode != 1)&(Mode != 2))
+            if ((Mode != 1) & (Mode != 2))
             {
                 labelWarn.Visible = false;
                 labelWarn.Text = "   "+"Vui lòng chọn chế độ cân bằng";

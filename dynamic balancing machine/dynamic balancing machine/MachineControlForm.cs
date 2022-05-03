@@ -23,7 +23,7 @@ namespace dynamic_balancing_machine
         {
             InitializeComponent();
 
-
+           
             PanelProcess.Controls.Add(new Main());
             PanelProcess.Controls.Add(new DataAcquisition());
             PanelProcess.Controls.Add(new Calculator_1Plane());
@@ -32,7 +32,7 @@ namespace dynamic_balancing_machine
             PanelProcess.Controls.Add(new Result_2Plane());
 
 
-            PanelProcess.Controls.Add(new Calculator_2Plane());
+            //PanelProcess.Controls.Add(new Calculator_2Plane());
             //Form
 
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
@@ -41,7 +41,7 @@ namespace dynamic_balancing_machine
         }
         private void MachineControlForm_Load(object sender, EventArgs e)
         {
-            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 28, 28));
+           this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 28, 28));
             
         }
         //Radius form

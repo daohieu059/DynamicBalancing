@@ -29,6 +29,14 @@ namespace dynamic_balancing_machine.User_control
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            "STT",
+            "Khối lượng",
+            "Vị trí MCB",
+            "Vị trí thêm",
+            "Khối lượng",
+            "Vị trí MCB",
+            "Vị trí thêm"}, -1);
             this.BackButton = new System.Windows.Forms.Button();
             this.FinishButton = new System.Windows.Forms.Button();
             this.pnl1 = new System.Windows.Forms.Panel();
@@ -42,9 +50,9 @@ namespace dynamic_balancing_machine.User_control
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPhiM1_add = new System.Windows.Forms.TextBox();
+            this.txtPhiM1 = new System.Windows.Forms.TextBox();
+            this.txtM1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -54,24 +62,29 @@ namespace dynamic_balancing_machine.User_control
             this.label9 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtPhiM2_add = new System.Windows.Forms.TextBox();
+            this.txtPhiM2 = new System.Windows.Forms.TextBox();
+            this.txtM2 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lblResult = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.btnReturn = new System.Windows.Forms.Button();
+            this.btnSaveDatabase = new System.Windows.Forms.Button();
+            this.txtPhase2 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtAm2 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtPhase1 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtAm1 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnDiagnostic = new System.Windows.Forms.Button();
+            this.btnRun = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
             this.lblAnpha_22 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.lblAnpha_12 = new System.Windows.Forms.Label();
@@ -80,8 +93,14 @@ namespace dynamic_balancing_machine.User_control
             this.lblAnpha_11 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.btnRun = new System.Windows.Forms.Button();
+            this.ListViewDatabase = new System.Windows.Forms.ListView();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnl1.SuspendLayout();
             this.pnl2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -236,9 +255,9 @@ namespace dynamic_balancing_machine.User_control
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.87845F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.12155F));
             this.tableLayoutPanel3.Controls.Add(this.label6, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.textBox3, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.textBox2, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.textBox1, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.txtPhiM1_add, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.txtPhiM1, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.txtM1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label4, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label5, 1, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -264,47 +283,47 @@ namespace dynamic_balancing_machine.User_control
             this.label6.Text = "deg";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox3
+            // txtPhiM1_add
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox3.Font = new System.Drawing.Font("Bahnschrift Condensed", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox3.Location = new System.Drawing.Point(3, 107);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(107, 46);
-            this.textBox3.TabIndex = 4;
-            this.textBox3.Text = "0.000";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPhiM1_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPhiM1_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtPhiM1_add.Font = new System.Drawing.Font("Bahnschrift Condensed", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhiM1_add.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtPhiM1_add.Location = new System.Drawing.Point(3, 107);
+            this.txtPhiM1_add.Name = "txtPhiM1_add";
+            this.txtPhiM1_add.ReadOnly = true;
+            this.txtPhiM1_add.Size = new System.Drawing.Size(107, 46);
+            this.txtPhiM1_add.TabIndex = 4;
+            this.txtPhiM1_add.Text = "0.000";
+            this.txtPhiM1_add.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox2
+            // txtPhiM1
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox2.Font = new System.Drawing.Font("Bahnschrift Condensed", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox2.Location = new System.Drawing.Point(3, 55);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(107, 46);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "0.000";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPhiM1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPhiM1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtPhiM1.Font = new System.Drawing.Font("Bahnschrift Condensed", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhiM1.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtPhiM1.Location = new System.Drawing.Point(3, 55);
+            this.txtPhiM1.Name = "txtPhiM1";
+            this.txtPhiM1.ReadOnly = true;
+            this.txtPhiM1.Size = new System.Drawing.Size(107, 46);
+            this.txtPhiM1.TabIndex = 3;
+            this.txtPhiM1.Text = "0.000";
+            this.txtPhiM1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox1
+            // txtM1
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox1.Font = new System.Drawing.Font("Bahnschrift Condensed", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox1.Location = new System.Drawing.Point(3, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(107, 46);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "0.000";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtM1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtM1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtM1.Font = new System.Drawing.Font("Bahnschrift Condensed", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtM1.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtM1.Location = new System.Drawing.Point(3, 3);
+            this.txtM1.Name = "txtM1";
+            this.txtM1.ReadOnly = true;
+            this.txtM1.Size = new System.Drawing.Size(107, 46);
+            this.txtM1.TabIndex = 0;
+            this.txtM1.Text = "0.000";
+            this.txtM1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
@@ -412,9 +431,9 @@ namespace dynamic_balancing_machine.User_control
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.87845F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.12155F));
             this.tableLayoutPanel6.Controls.Add(this.label10, 1, 2);
-            this.tableLayoutPanel6.Controls.Add(this.textBox4, 0, 2);
-            this.tableLayoutPanel6.Controls.Add(this.textBox5, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(this.textBox6, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.txtPhiM2_add, 0, 2);
+            this.tableLayoutPanel6.Controls.Add(this.txtPhiM2, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.txtM2, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.label11, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.label12, 1, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -440,47 +459,47 @@ namespace dynamic_balancing_machine.User_control
             this.label10.Text = "deg";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox4
+            // txtPhiM2_add
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox4.Font = new System.Drawing.Font("Bahnschrift Condensed", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox4.Location = new System.Drawing.Point(3, 107);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(107, 46);
-            this.textBox4.TabIndex = 4;
-            this.textBox4.Text = "0.000";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPhiM2_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPhiM2_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtPhiM2_add.Font = new System.Drawing.Font("Bahnschrift Condensed", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhiM2_add.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtPhiM2_add.Location = new System.Drawing.Point(3, 107);
+            this.txtPhiM2_add.Name = "txtPhiM2_add";
+            this.txtPhiM2_add.ReadOnly = true;
+            this.txtPhiM2_add.Size = new System.Drawing.Size(107, 46);
+            this.txtPhiM2_add.TabIndex = 4;
+            this.txtPhiM2_add.Text = "0.000";
+            this.txtPhiM2_add.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox5
+            // txtPhiM2
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox5.Font = new System.Drawing.Font("Bahnschrift Condensed", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox5.Location = new System.Drawing.Point(3, 55);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(107, 46);
-            this.textBox5.TabIndex = 3;
-            this.textBox5.Text = "0.000";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPhiM2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPhiM2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtPhiM2.Font = new System.Drawing.Font("Bahnschrift Condensed", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhiM2.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtPhiM2.Location = new System.Drawing.Point(3, 55);
+            this.txtPhiM2.Name = "txtPhiM2";
+            this.txtPhiM2.ReadOnly = true;
+            this.txtPhiM2.Size = new System.Drawing.Size(107, 46);
+            this.txtPhiM2.TabIndex = 3;
+            this.txtPhiM2.Text = "0.000";
+            this.txtPhiM2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox6
+            // txtM2
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.textBox6.Font = new System.Drawing.Font("Bahnschrift Condensed", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox6.Location = new System.Drawing.Point(3, 3);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(107, 46);
-            this.textBox6.TabIndex = 0;
-            this.textBox6.Text = "0.000";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtM2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtM2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtM2.Font = new System.Drawing.Font("Bahnschrift Condensed", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtM2.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtM2.Location = new System.Drawing.Point(3, 3);
+            this.txtM2.Name = "txtM2";
+            this.txtM2.ReadOnly = true;
+            this.txtM2.Size = new System.Drawing.Size(107, 46);
+            this.txtM2.TabIndex = 0;
+            this.txtM2.Text = "0.000";
+            this.txtM2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label11
             // 
@@ -524,82 +543,21 @@ namespace dynamic_balancing_machine.User_control
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.textBox9);
+            this.panel1.Controls.Add(this.btnReturn);
+            this.panel1.Controls.Add(this.btnSaveDatabase);
+            this.panel1.Controls.Add(this.txtPhase2);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.textBox10);
+            this.panel1.Controls.Add(this.txtAm2);
             this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.txtPhase1);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Location = new System.Drawing.Point(858, 61);
+            this.panel1.Controls.Add(this.txtAm1);
+            this.panel1.Location = new System.Drawing.Point(853, 61);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(122, 514);
+            this.panel1.Size = new System.Drawing.Size(127, 514);
             this.panel1.TabIndex = 8;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox7.Location = new System.Drawing.Point(8, 124);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(107, 43);
-            this.textBox7.TabIndex = 24;
-            this.textBox7.Text = "000";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label13.Location = new System.Drawing.Point(-1, 104);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 17);
-            this.label13.TabIndex = 23;
-            this.label13.Text = "Pha (deg):";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label14.Location = new System.Drawing.Point(-1, 33);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(85, 17);
-            this.label14.TabIndex = 21;
-            this.label14.Text = "Điện áp (V):";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox8.Location = new System.Drawing.Point(8, 53);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(107, 43);
-            this.textBox8.TabIndex = 0;
-            this.textBox8.Text = "000";
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label15.Location = new System.Drawing.Point(27, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(69, 29);
-            this.label15.TabIndex = 25;
-            this.label15.Text = "Plane 1";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label16
             // 
@@ -614,18 +572,53 @@ namespace dynamic_balancing_machine.User_control
             this.label16.Text = "Plane 2";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox9
+            // btnReturn
             // 
-            this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox9.Location = new System.Drawing.Point(8, 323);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(107, 43);
-            this.textBox9.TabIndex = 29;
-            this.textBox9.Text = "000";
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnReturn.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnReturn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReturn.FlatAppearance.BorderSize = 0;
+            this.btnReturn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReturn.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnReturn.Location = new System.Drawing.Point(8, 417);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(112, 37);
+            this.btnReturn.TabIndex = 142;
+            this.btnReturn.Text = "Return";
+            this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Visible = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
+            // btnSaveDatabase
+            // 
+            this.btnSaveDatabase.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnSaveDatabase.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveDatabase.FlatAppearance.BorderSize = 0;
+            this.btnSaveDatabase.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSaveDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveDatabase.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveDatabase.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSaveDatabase.Location = new System.Drawing.Point(8, 470);
+            this.btnSaveDatabase.Name = "btnSaveDatabase";
+            this.btnSaveDatabase.Size = new System.Drawing.Size(112, 37);
+            this.btnSaveDatabase.TabIndex = 141;
+            this.btnSaveDatabase.Text = "Database";
+            this.btnSaveDatabase.UseVisualStyleBackColor = false;
+            this.btnSaveDatabase.Click += new System.EventHandler(this.btnSaveDatabase_Click);
+            // 
+            // txtPhase2
+            // 
+            this.txtPhase2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPhase2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPhase2.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhase2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtPhase2.Location = new System.Drawing.Point(8, 323);
+            this.txtPhase2.Name = "txtPhase2";
+            this.txtPhase2.Size = new System.Drawing.Size(112, 43);
+            this.txtPhase2.TabIndex = 29;
+            this.txtPhase2.Text = "000";
+            this.txtPhase2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label17
             // 
@@ -651,22 +644,86 @@ namespace dynamic_balancing_machine.User_control
             this.label18.Text = "Điện áp (V):";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox10
+            // txtAm2
             // 
-            this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox10.Location = new System.Drawing.Point(8, 252);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(107, 43);
-            this.textBox10.TabIndex = 26;
-            this.textBox10.Text = "000";
-            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAm2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAm2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAm2.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAm2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtAm2.Location = new System.Drawing.Point(8, 252);
+            this.txtAm2.Name = "txtAm2";
+            this.txtAm2.Size = new System.Drawing.Size(112, 43);
+            this.txtAm2.TabIndex = 26;
+            this.txtAm2.Text = "000";
+            this.txtAm2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label15.Location = new System.Drawing.Point(27, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(69, 29);
+            this.label15.TabIndex = 25;
+            this.label15.Text = "Plane 1";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtPhase1
+            // 
+            this.txtPhase1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPhase1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPhase1.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhase1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtPhase1.Location = new System.Drawing.Point(8, 124);
+            this.txtPhase1.Name = "txtPhase1";
+            this.txtPhase1.Size = new System.Drawing.Size(112, 43);
+            this.txtPhase1.TabIndex = 24;
+            this.txtPhase1.Text = "000";
+            this.txtPhase1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label13.Location = new System.Drawing.Point(-1, 104);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(76, 17);
+            this.label13.TabIndex = 23;
+            this.label13.Text = "Pha (deg):";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label14.Location = new System.Drawing.Point(-1, 33);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(85, 17);
+            this.label14.TabIndex = 21;
+            this.label14.Text = "Điện áp (V):";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtAm1
+            // 
+            this.txtAm1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAm1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAm1.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAm1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.txtAm1.Location = new System.Drawing.Point(8, 53);
+            this.txtAm1.Name = "txtAm1";
+            this.txtAm1.Size = new System.Drawing.Size(112, 43);
+            this.txtAm1.TabIndex = 0;
+            this.txtAm1.Text = "000";
+            this.txtAm1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
+            this.panel3.Controls.Add(this.btnDiagnostic);
             this.panel3.Controls.Add(this.btnRun);
             this.panel3.Controls.Add(this.label21);
             this.panel3.Controls.Add(this.lblAnpha_22);
@@ -681,6 +738,54 @@ namespace dynamic_balancing_machine.User_control
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(128, 514);
             this.panel3.TabIndex = 22;
+            // 
+            // btnDiagnostic
+            // 
+            this.btnDiagnostic.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnDiagnostic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDiagnostic.FlatAppearance.BorderSize = 0;
+            this.btnDiagnostic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
+            this.btnDiagnostic.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnDiagnostic.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDiagnostic.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnDiagnostic.Location = new System.Drawing.Point(6, 402);
+            this.btnDiagnostic.Name = "btnDiagnostic";
+            this.btnDiagnostic.Size = new System.Drawing.Size(116, 37);
+            this.btnDiagnostic.TabIndex = 29;
+            this.btnDiagnostic.Text = "Diagnostic";
+            this.btnDiagnostic.UseVisualStyleBackColor = false;
+            this.btnDiagnostic.Click += new System.EventHandler(this.btnDiagnostic_Click);
+            // 
+            // btnRun
+            // 
+            this.btnRun.BackColor = System.Drawing.Color.Green;
+            this.btnRun.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRun.FlatAppearance.BorderSize = 0;
+            this.btnRun.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
+            this.btnRun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRun.Font = new System.Drawing.Font("BankGothic Md BT", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRun.ForeColor = System.Drawing.Color.White;
+            this.btnRun.Location = new System.Drawing.Point(6, 445);
+            this.btnRun.Name = "btnRun";
+            this.btnRun.Size = new System.Drawing.Size(116, 51);
+            this.btnRun.TabIndex = 23;
+            this.btnRun.Text = "RUN";
+            this.btnRun.UseVisualStyleBackColor = false;
+            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label21.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label21.Location = new System.Drawing.Point(0, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(128, 25);
+            this.label21.TabIndex = 28;
+            this.label21.Text = "Hệ số ảnh hưởng";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblAnpha_22
             // 
@@ -770,40 +875,77 @@ namespace dynamic_balancing_machine.User_control
             this.label20.Text = "Anpha_11:";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label21
+            // ListViewDatabase
             // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label21.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label21.Location = new System.Drawing.Point(0, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(128, 25);
-            this.label21.TabIndex = 28;
-            this.label21.Text = "Hệ số ảnh hưởng";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ListViewDatabase.Activation = System.Windows.Forms.ItemActivation.OneClick;
+            this.ListViewDatabase.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10,
+            this.columnHeader11});
+            this.ListViewDatabase.FullRowSelect = true;
+            this.ListViewDatabase.GridLines = true;
+            this.ListViewDatabase.HideSelection = false;
+            this.ListViewDatabase.HoverSelection = true;
+            this.ListViewDatabase.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem2});
+            this.ListViewDatabase.Location = new System.Drawing.Point(154, 581);
+            this.ListViewDatabase.Name = "ListViewDatabase";
+            this.ListViewDatabase.Size = new System.Drawing.Size(673, 320);
+            this.ListViewDatabase.TabIndex = 140;
+            this.ListViewDatabase.UseCompatibleStateImageBehavior = false;
+            this.ListViewDatabase.View = System.Windows.Forms.View.Details;
+            this.ListViewDatabase.Visible = false;
             // 
-            // btnRun
+            // columnHeader3
             // 
-            this.btnRun.BackColor = System.Drawing.Color.Green;
-            this.btnRun.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRun.FlatAppearance.BorderSize = 0;
-            this.btnRun.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
-            this.btnRun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRun.Font = new System.Drawing.Font("BankGothic Md BT", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRun.ForeColor = System.Drawing.Color.White;
-            this.btnRun.Location = new System.Drawing.Point(6, 445);
-            this.btnRun.Name = "btnRun";
-            this.btnRun.Size = new System.Drawing.Size(116, 51);
-            this.btnRun.TabIndex = 23;
-            this.btnRun.Text = "RUN";
-            this.btnRun.UseVisualStyleBackColor = false;
+            this.columnHeader3.Text = "";
+            this.columnHeader3.Width = 57;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 97;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Plane 1";
+            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader7.Width = 102;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "";
+            this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader8.Width = 105;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "";
+            this.columnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader9.Width = 105;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Plane 2";
+            this.columnHeader10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader10.Width = 104;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "";
+            this.columnHeader11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader11.Width = 88;
             // 
             // Result_2Plane
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.Controls.Add(this.ListViewDatabase);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblResult);
@@ -817,6 +959,7 @@ namespace dynamic_balancing_machine.User_control
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "Result_2Plane";
             this.Size = new System.Drawing.Size(980, 650);
+            this.Load += new System.EventHandler(this.Result_2Plane_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Result_2Plane_Paint);
             this.pnl1.ResumeLayout(false);
             this.pnl2.ResumeLayout(false);
@@ -854,9 +997,9 @@ namespace dynamic_balancing_machine.User_control
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPhiM1_add;
+        private System.Windows.Forms.TextBox txtPhiM1;
+        private System.Windows.Forms.TextBox txtM1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
@@ -866,23 +1009,23 @@ namespace dynamic_balancing_machine.User_control
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtPhiM2_add;
+        private System.Windows.Forms.TextBox txtPhiM2;
+        private System.Windows.Forms.TextBox txtM2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtPhase2;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtAm2;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtPhase1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtAm1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label lblAnpha_22;
@@ -894,5 +1037,16 @@ namespace dynamic_balancing_machine.User_control
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button btnRun;
+        private System.Windows.Forms.Button btnDiagnostic;
+        private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.Button btnSaveDatabase;
+        private System.Windows.Forms.ListView ListViewDatabase;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
     }
 }

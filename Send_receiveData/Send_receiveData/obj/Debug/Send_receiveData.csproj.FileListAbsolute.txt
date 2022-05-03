@@ -36,3 +36,30 @@ C:\Users\DAO TRUNG HIEU\OneDrive\Study\Luận văn\Thu thập data\C#\Send_recei
 C:\Users\DAO TRUNG HIEU\OneDrive\Study\Luận văn\Thu thập data\C#\Send_receiveData\Send_receiveData\bin\Debug\zh-cn\ZedGraph.resources.dll
 C:\Users\DAO TRUNG HIEU\OneDrive\Study\Luận văn\Thu thập data\C#\Send_receiveData\Send_receiveData\bin\Debug\zh-tw\ZedGraph.resources.dll
 C:\Users\DAO TRUNG HIEU\OneDrive\Study\Luận văn\Thu thập data\C#\Send_receiveData\Send_receiveData\obj\Debug\Send_receiveData.csproj.CopyComplete
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\bin\Debug\Send_receiveData.exe.config
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\bin\Debug\Send_receiveData.exe
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\bin\Debug\Send_receiveData.pdb
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\bin\Debug\ZedGraph.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\bin\Debug\ZedGraph.xml
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\bin\Debug\ZedGraph.Web.xml
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\bin\Debug\de\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\bin\Debug\es\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\bin\Debug\fr\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\bin\Debug\hu\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\bin\Debug\it\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\bin\Debug\ja\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\bin\Debug\pt\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\bin\Debug\ru\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\bin\Debug\sk\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\bin\Debug\sv\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\bin\Debug\tr\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\bin\Debug\zh-cn\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\bin\Debug\zh-tw\ZedGraph.resources.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\obj\Debug\Send_receiveData.csprojAssemblyReference.cache
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\obj\Debug\Send_receiveData.Form1.resources
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\obj\Debug\Send_receiveData.Properties.Resources.resources
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\obj\Debug\Send_receiveData.csproj.GenerateResource.cache
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\obj\Debug\Send_receiveData.csproj.CoreCompileInputs.cache
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\obj\Debug\Send_receiveData.csproj.CopyComplete
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\obj\Debug\Send_receiveData.exe
+D:\GitHub\DynamicBalancing\DynamicBalancing\Send_receiveData\Send_receiveData\obj\Debug\Send_receiveData.pdb

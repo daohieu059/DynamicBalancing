@@ -29,7 +29,6 @@ namespace dynamic_balancing_machine.User_control
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.NextButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
             this.lblmode = new System.Windows.Forms.Label();
@@ -39,8 +38,8 @@ namespace dynamic_balancing_machine.User_control
             this.label4 = new System.Windows.Forms.Label();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPhiM = new System.Windows.Forms.TextBox();
+            this.txtM = new System.Windows.Forms.TextBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -63,24 +62,31 @@ namespace dynamic_balancing_machine.User_control
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblAnpha_y = new System.Windows.Forms.Label();
             this.lblAnpha_x = new System.Windows.Forms.Label();
-            this.btnCalculator = new System.Windows.Forms.Button();
+            this.btnDiagnostic = new System.Windows.Forms.Button();
+            this.btnDatabase = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtAm = new System.Windows.Forms.TextBox();
+            this.txtGoc = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnFFT = new System.Windows.Forms.Button();
-            this.btnPause = new System.Windows.Forms.Button();
-            this.btnStart = new System.Windows.Forms.Button();
-            this.txtAmAverage = new System.Windows.Forms.TextBox();
-            this.txtAnpha = new System.Windows.Forms.TextBox();
-            this.txtAnphaDFT = new System.Windows.Forms.TextBox();
+            this.btnReturn = new System.Windows.Forms.Button();
+            this.btnSaveDatabase = new System.Windows.Forms.Button();
+            this.btnLoadDatabase = new System.Windows.Forms.Button();
+            this.ListViewDatabase = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Anpha_y = new System.Windows.Forms.TextBox();
+            this.Anpha_x = new System.Windows.Forms.TextBox();
+            this.Phi1 = new System.Windows.Forms.TextBox();
+            this.Phizero = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.label21 = new System.Windows.Forms.Label();
-            this.zed = new ZedGraph.ZedGraphControl();
+            this.label20 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -155,15 +161,15 @@ namespace dynamic_balancing_machine.User_control
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.radioButton3);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtPhiM);
+            this.panel1.Controls.Add(this.txtM);
             this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.panel6);
-            this.panel1.Location = new System.Drawing.Point(37, 38);
+            this.panel1.Location = new System.Drawing.Point(182, 84);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(297, 261);
             this.panel1.TabIndex = 7;
@@ -175,6 +181,7 @@ namespace dynamic_balancing_machine.User_control
             this.btn1Plane_Load.FlatAppearance.BorderSize = 0;
             this.btn1Plane_Load.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
             this.btn1Plane_Load.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btn1Plane_Load.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn1Plane_Load.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn1Plane_Load.Location = new System.Drawing.Point(46, 221);
             this.btn1Plane_Load.Name = "btn1Plane_Load";
@@ -182,6 +189,7 @@ namespace dynamic_balancing_machine.User_control
             this.btn1Plane_Load.TabIndex = 14;
             this.btn1Plane_Load.Text = "Load";
             this.btn1Plane_Load.UseVisualStyleBackColor = false;
+            this.btn1Plane_Load.Click += new System.EventHandler(this.btn1Plane_Load_Click);
             // 
             // label4
             // 
@@ -220,21 +228,21 @@ namespace dynamic_balancing_machine.User_control
             this.label3.Text = "Tính A1 và Phi1";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
+            // txtPhiM
             // 
-            this.textBox2.Font = new System.Drawing.Font("Bahnschrift Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(165, 193);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(62, 23);
-            this.textBox2.TabIndex = 14;
+            this.txtPhiM.Font = new System.Drawing.Font("Bahnschrift Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhiM.Location = new System.Drawing.Point(165, 193);
+            this.txtPhiM.Name = "txtPhiM";
+            this.txtPhiM.Size = new System.Drawing.Size(62, 23);
+            this.txtPhiM.TabIndex = 14;
             // 
-            // textBox1
+            // txtM
             // 
-            this.textBox1.Font = new System.Drawing.Font("Bahnschrift Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(165, 167);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(62, 23);
-            this.textBox1.TabIndex = 14;
+            this.txtM.Font = new System.Drawing.Font("Bahnschrift Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtM.Location = new System.Drawing.Point(165, 167);
+            this.txtM.Name = "txtM";
+            this.txtM.Size = new System.Drawing.Size(62, 23);
+            this.txtM.TabIndex = 14;
             // 
             // radioButton2
             // 
@@ -323,7 +331,7 @@ namespace dynamic_balancing_machine.User_control
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.panel5);
-            this.panel2.Location = new System.Drawing.Point(343, 38);
+            this.panel2.Location = new System.Drawing.Point(498, 84);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(300, 259);
             this.panel2.TabIndex = 14;
@@ -457,13 +465,14 @@ namespace dynamic_balancing_machine.User_control
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
             this.panel3.Controls.Add(this.lblAnpha_y);
             this.panel3.Controls.Add(this.lblAnpha_x);
-            this.panel3.Controls.Add(this.btnCalculator);
+            this.panel3.Controls.Add(this.btnDiagnostic);
+            this.panel3.Controls.Add(this.btnDatabase);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.panel7);
-            this.panel3.Location = new System.Drawing.Point(649, 38);
+            this.panel3.Location = new System.Drawing.Point(182, 356);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(294, 259);
+            this.panel3.Size = new System.Drawing.Size(616, 162);
             this.panel3.TabIndex = 15;
             // 
             // lblAnpha_y
@@ -486,20 +495,39 @@ namespace dynamic_balancing_machine.User_control
             this.lblAnpha_x.TabIndex = 23;
             this.lblAnpha_x.Text = "0.00";
             // 
-            // btnCalculator
+            // btnDiagnostic
             // 
-            this.btnCalculator.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnCalculator.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCalculator.FlatAppearance.BorderSize = 0;
-            this.btnCalculator.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
-            this.btnCalculator.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnCalculator.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCalculator.Location = new System.Drawing.Point(45, 219);
-            this.btnCalculator.Name = "btnCalculator";
-            this.btnCalculator.Size = new System.Drawing.Size(204, 37);
-            this.btnCalculator.TabIndex = 15;
-            this.btnCalculator.Text = "Calculator";
-            this.btnCalculator.UseVisualStyleBackColor = false;
+            this.btnDiagnostic.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnDiagnostic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDiagnostic.FlatAppearance.BorderSize = 0;
+            this.btnDiagnostic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
+            this.btnDiagnostic.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnDiagnostic.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDiagnostic.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnDiagnostic.Location = new System.Drawing.Point(306, 39);
+            this.btnDiagnostic.Name = "btnDiagnostic";
+            this.btnDiagnostic.Size = new System.Drawing.Size(204, 37);
+            this.btnDiagnostic.TabIndex = 15;
+            this.btnDiagnostic.Text = "Diagnostic";
+            this.btnDiagnostic.UseVisualStyleBackColor = false;
+            this.btnDiagnostic.Click += new System.EventHandler(this.btnDiagnostic_Click);
+            // 
+            // btnDatabase
+            // 
+            this.btnDatabase.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnDatabase.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDatabase.FlatAppearance.BorderSize = 0;
+            this.btnDatabase.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
+            this.btnDatabase.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnDatabase.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatabase.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnDatabase.Location = new System.Drawing.Point(306, 84);
+            this.btnDatabase.Name = "btnDatabase";
+            this.btnDatabase.Size = new System.Drawing.Size(204, 37);
+            this.btnDatabase.TabIndex = 15;
+            this.btnDatabase.Text = "Open Database";
+            this.btnDatabase.UseVisualStyleBackColor = false;
+            this.btnDatabase.Click += new System.EventHandler(this.btnDatabase_Click);
             // 
             // label12
             // 
@@ -532,7 +560,7 @@ namespace dynamic_balancing_machine.User_control
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(294, 33);
+            this.panel7.Size = new System.Drawing.Size(616, 33);
             this.panel7.TabIndex = 22;
             // 
             // label8
@@ -549,162 +577,247 @@ namespace dynamic_balancing_machine.User_control
             this.label8.Text = "Tính toán hệ số ảnh hưởng";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txtAm
+            // 
+            this.txtAm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtAm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAm.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAm.ForeColor = System.Drawing.Color.White;
+            this.txtAm.Location = new System.Drawing.Point(343, 610);
+            this.txtAm.Name = "txtAm";
+            this.txtAm.ReadOnly = true;
+            this.txtAm.Size = new System.Drawing.Size(57, 40);
+            this.txtAm.TabIndex = 17;
+            this.txtAm.Text = "0.00";
+            this.txtAm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAm.Visible = false;
+            // 
+            // txtGoc
+            // 
+            this.txtGoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.txtGoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtGoc.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGoc.ForeColor = System.Drawing.Color.White;
+            this.txtGoc.Location = new System.Drawing.Point(412, 610);
+            this.txtGoc.Name = "txtGoc";
+            this.txtGoc.ReadOnly = true;
+            this.txtGoc.Size = new System.Drawing.Size(57, 40);
+            this.txtGoc.TabIndex = 17;
+            this.txtGoc.Text = "0.00";
+            this.txtGoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGoc.Visible = false;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Control;
-            this.panel4.Controls.Add(this.btnFFT);
-            this.panel4.Controls.Add(this.btnPause);
-            this.panel4.Controls.Add(this.btnStart);
-            this.panel4.Controls.Add(this.txtAmAverage);
-            this.panel4.Controls.Add(this.txtAnpha);
-            this.panel4.Controls.Add(this.txtAnphaDFT);
+            this.panel4.Controls.Add(this.btnReturn);
+            this.panel4.Controls.Add(this.btnSaveDatabase);
+            this.panel4.Controls.Add(this.btnLoadDatabase);
+            this.panel4.Controls.Add(this.ListViewDatabase);
+            this.panel4.Controls.Add(this.Anpha_y);
+            this.panel4.Controls.Add(this.Anpha_x);
+            this.panel4.Controls.Add(this.Phi1);
+            this.panel4.Controls.Add(this.Phizero);
             this.panel4.Controls.Add(this.label16);
+            this.panel4.Controls.Add(this.label17);
+            this.panel4.Controls.Add(this.label18);
             this.panel4.Controls.Add(this.label19);
-            this.panel4.Controls.Add(this.label20);
             this.panel4.Controls.Add(this.panel8);
-            this.panel4.Location = new System.Drawing.Point(37, 305);
+            this.panel4.Location = new System.Drawing.Point(273, 84);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(297, 280);
-            this.panel4.TabIndex = 14;
+            this.panel4.Size = new System.Drawing.Size(434, 434);
+            this.panel4.TabIndex = 18;
+            this.panel4.Visible = false;
             // 
-            // btnFFT
+            // btnReturn
             // 
-            this.btnFFT.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFFT.Location = new System.Drawing.Point(201, 233);
-            this.btnFFT.Name = "btnFFT";
-            this.btnFFT.Size = new System.Drawing.Size(86, 34);
-            this.btnFFT.TabIndex = 22;
-            this.btnFFT.Text = "FFT";
-            this.btnFFT.UseVisualStyleBackColor = true;
+            this.btnReturn.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnReturn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReturn.FlatAppearance.BorderSize = 0;
+            this.btnReturn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
+            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnReturn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnReturn.Location = new System.Drawing.Point(0, 397);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(65, 37);
+            this.btnReturn.TabIndex = 138;
+            this.btnReturn.Text = "Return";
+            this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
-            // btnPause
+            // btnSaveDatabase
             // 
-            this.btnPause.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPause.Location = new System.Drawing.Point(105, 233);
-            this.btnPause.Name = "btnPause";
-            this.btnPause.Size = new System.Drawing.Size(86, 34);
-            this.btnPause.TabIndex = 21;
-            this.btnPause.Text = "Pause";
-            this.btnPause.UseVisualStyleBackColor = true;
+            this.btnSaveDatabase.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnSaveDatabase.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveDatabase.FlatAppearance.BorderSize = 0;
+            this.btnSaveDatabase.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
+            this.btnSaveDatabase.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnSaveDatabase.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSaveDatabase.Location = new System.Drawing.Point(115, 341);
+            this.btnSaveDatabase.Name = "btnSaveDatabase";
+            this.btnSaveDatabase.Size = new System.Drawing.Size(204, 37);
+            this.btnSaveDatabase.TabIndex = 137;
+            this.btnSaveDatabase.Text = "Save Database";
+            this.btnSaveDatabase.UseVisualStyleBackColor = false;
+            this.btnSaveDatabase.Click += new System.EventHandler(this.btnSaveDatabase_Click);
             // 
-            // btnStart
+            // btnLoadDatabase
             // 
-            this.btnStart.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStart.Location = new System.Drawing.Point(9, 233);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(86, 34);
-            this.btnStart.TabIndex = 20;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnLoadDatabase.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnLoadDatabase.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoadDatabase.FlatAppearance.BorderSize = 0;
+            this.btnLoadDatabase.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
+            this.btnLoadDatabase.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnLoadDatabase.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnLoadDatabase.Location = new System.Drawing.Point(115, 384);
+            this.btnLoadDatabase.Name = "btnLoadDatabase";
+            this.btnLoadDatabase.Size = new System.Drawing.Size(204, 37);
+            this.btnLoadDatabase.TabIndex = 136;
+            this.btnLoadDatabase.Text = "Load Database";
+            this.btnLoadDatabase.UseVisualStyleBackColor = false;
+            this.btnLoadDatabase.Click += new System.EventHandler(this.btnLoadDatabase_Click);
             // 
-            // txtAmAverage
+            // ListViewDatabase
             // 
-            this.txtAmAverage.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAmAverage.Location = new System.Drawing.Point(165, 121);
-            this.txtAmAverage.Name = "txtAmAverage";
-            this.txtAmAverage.Size = new System.Drawing.Size(100, 27);
-            this.txtAmAverage.TabIndex = 16;
+            this.ListViewDatabase.Activation = System.Windows.Forms.ItemActivation.OneClick;
+            this.ListViewDatabase.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
+            this.columnHeader6});
+            this.ListViewDatabase.FullRowSelect = true;
+            this.ListViewDatabase.GridLines = true;
+            this.ListViewDatabase.HideSelection = false;
+            this.ListViewDatabase.HoverSelection = true;
+            this.ListViewDatabase.Location = new System.Drawing.Point(240, 52);
+            this.ListViewDatabase.Name = "ListViewDatabase";
+            this.ListViewDatabase.Size = new System.Drawing.Size(182, 260);
+            this.ListViewDatabase.TabIndex = 135;
+            this.ListViewDatabase.UseCompatibleStateImageBehavior = false;
+            this.ListViewDatabase.View = System.Windows.Forms.View.Details;
             // 
-            // txtAnpha
+            // columnHeader5
             // 
-            this.txtAnpha.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnpha.Location = new System.Drawing.Point(165, 83);
-            this.txtAnpha.Name = "txtAnpha";
-            this.txtAnpha.Size = new System.Drawing.Size(100, 27);
-            this.txtAnpha.TabIndex = 15;
+            this.columnHeader5.Text = "Fields";
+            this.columnHeader5.Width = 76;
             // 
-            // txtAnphaDFT
+            // columnHeader6
             // 
-            this.txtAnphaDFT.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnphaDFT.Location = new System.Drawing.Point(165, 45);
-            this.txtAnphaDFT.Name = "txtAnphaDFT";
-            this.txtAnphaDFT.Size = new System.Drawing.Size(100, 27);
-            this.txtAnphaDFT.TabIndex = 14;
+            this.columnHeader6.Text = "Value";
+            this.columnHeader6.Width = 86;
+            // 
+            // Anpha_y
+            // 
+            this.Anpha_y.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Anpha_y.Location = new System.Drawing.Point(115, 283);
+            this.Anpha_y.Name = "Anpha_y";
+            this.Anpha_y.Size = new System.Drawing.Size(100, 27);
+            this.Anpha_y.TabIndex = 18;
+            // 
+            // Anpha_x
+            // 
+            this.Anpha_x.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Anpha_x.Location = new System.Drawing.Point(115, 206);
+            this.Anpha_x.Name = "Anpha_x";
+            this.Anpha_x.Size = new System.Drawing.Size(100, 27);
+            this.Anpha_x.TabIndex = 17;
+            // 
+            // Phi1
+            // 
+            this.Phi1.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Phi1.Location = new System.Drawing.Point(115, 129);
+            this.Phi1.Name = "Phi1";
+            this.Phi1.Size = new System.Drawing.Size(100, 27);
+            this.Phi1.TabIndex = 15;
+            // 
+            // Phizero
+            // 
+            this.Phizero.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Phizero.Location = new System.Drawing.Point(115, 52);
+            this.Phizero.Name = "Phizero";
+            this.Phizero.Size = new System.Drawing.Size(100, 27);
+            this.Phizero.TabIndex = 14;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label16.Location = new System.Drawing.Point(5, 123);
+            this.label16.Location = new System.Drawing.Point(7, 293);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(92, 17);
-            this.label16.TabIndex = 13;
-            this.label16.Text = "Am_Average";
+            this.label16.Size = new System.Drawing.Size(68, 17);
+            this.label16.TabIndex = 12;
+            this.label16.Text = "Anpha_y:";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label17.Location = new System.Drawing.Point(7, 139);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(81, 17);
+            this.label17.TabIndex = 11;
+            this.label17.Text = "Phi 1 (deg):";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label18.Location = new System.Drawing.Point(7, 216);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(68, 17);
+            this.label18.TabIndex = 10;
+            this.label18.Text = "Anpha_x:";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label19.Location = new System.Drawing.Point(5, 85);
+            this.label19.Location = new System.Drawing.Point(7, 62);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(51, 17);
-            this.label19.TabIndex = 10;
-            this.label19.Text = "Anpha";
+            this.label19.Size = new System.Drawing.Size(101, 17);
+            this.label19.TabIndex = 9;
+            this.label19.Text = "Phi zero (deg):";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label20.Location = new System.Drawing.Point(5, 47);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(79, 17);
-            this.label20.TabIndex = 9;
-            this.label20.Text = "Anpha_DFT";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel8.Controls.Add(this.label21);
+            this.panel8.Controls.Add(this.label20);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(297, 33);
+            this.panel8.Size = new System.Drawing.Size(434, 33);
             this.panel8.TabIndex = 19;
             // 
-            // label21
+            // label20
             // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label21.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label21.Location = new System.Drawing.Point(0, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(65, 33);
-            this.label21.TabIndex = 9;
-            this.label21.Text = "Đồ thị";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // zed
-            // 
-            this.zed.Location = new System.Drawing.Point(343, 305);
-            this.zed.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.zed.Name = "zed";
-            this.zed.ScrollGrace = 0D;
-            this.zed.ScrollMaxX = 0D;
-            this.zed.ScrollMaxY = 0D;
-            this.zed.ScrollMaxY2 = 0D;
-            this.zed.ScrollMinX = 0D;
-            this.zed.ScrollMinY = 0D;
-            this.zed.ScrollMinY2 = 0D;
-            this.zed.Size = new System.Drawing.Size(600, 279);
-            this.zed.TabIndex = 16;
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label20.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label20.Location = new System.Drawing.Point(0, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(149, 33);
+            this.label20.TabIndex = 9;
+            this.label20.Text = "Cân bằng 1 mặt";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Calculator_1Plane
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.Controls.Add(this.zed);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.txtGoc);
+            this.Controls.Add(this.txtAm);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblmode);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.NextButton);
@@ -758,7 +871,7 @@ namespace dynamic_balancing_machine.User_control
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnCalculator;
+        private System.Windows.Forms.Button btnDatabase;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel6;
@@ -767,24 +880,31 @@ namespace dynamic_balancing_machine.User_control
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPhiM;
+        private System.Windows.Forms.TextBox txtM;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnDiagnostic;
+        private System.Windows.Forms.TextBox txtAm;
+        private System.Windows.Forms.TextBox txtGoc;
         private System.Windows.Forms.Label lblAnpha_y;
         private System.Windows.Forms.Label lblAnpha_x;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox txtAmAverage;
-        private System.Windows.Forms.TextBox txtAnpha;
-        private System.Windows.Forms.TextBox txtAnphaDFT;
+        private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.Button btnSaveDatabase;
+        private System.Windows.Forms.Button btnLoadDatabase;
+        private System.Windows.Forms.ListView ListViewDatabase;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.TextBox Anpha_y;
+        private System.Windows.Forms.TextBox Anpha_x;
+        private System.Windows.Forms.TextBox Phi1;
+        private System.Windows.Forms.TextBox Phizero;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Button btnFFT;
-        private System.Windows.Forms.Button btnPause;
-        private System.Windows.Forms.Button btnStart;
-        private ZedGraph.ZedGraphControl zed;
+        private System.Windows.Forms.Label label20;
     }
 }

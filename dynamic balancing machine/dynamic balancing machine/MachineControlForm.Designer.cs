@@ -113,7 +113,7 @@ namespace dynamic_balancing_machine
             // 
             // btnLogout
             // 
-            this.btnLogout.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(133)))), ((int)(((byte)(139)))));
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -399,7 +399,6 @@ namespace dynamic_balancing_machine
             this.Name = "MachineControlForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MachineControlForm";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.MachineControlForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MachineControlForm_MouseDown);
             this.panel1.ResumeLayout(false);

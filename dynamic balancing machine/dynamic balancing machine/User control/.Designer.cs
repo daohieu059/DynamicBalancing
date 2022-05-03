@@ -207,15 +207,15 @@ namespace dynamic_balancing_machine.User_control
             // txtMode
             // 
             this.txtMode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.txtMode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMode.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMode.ForeColor = System.Drawing.Color.White;
-            this.txtMode.Location = new System.Drawing.Point(570, 0);
+            this.txtMode.Location = new System.Drawing.Point(554, 3);
             this.txtMode.Name = "txtMode";
             this.txtMode.ReadOnly = true;
-            this.txtMode.Size = new System.Drawing.Size(57, 40);
+            this.txtMode.Size = new System.Drawing.Size(57, 33);
             this.txtMode.TabIndex = 5;
-            this.txtMode.Text = "Mode";
+            this.txtMode.Text = "0";
             this.txtMode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMode.Visible = false;
             // 

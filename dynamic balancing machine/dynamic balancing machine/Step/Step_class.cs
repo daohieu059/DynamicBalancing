@@ -60,9 +60,20 @@ namespace dynamic_balancing_machine.Step
             TextBox textBox = (TextBox)ParentForm.Controls.Find("PanelProcess", false)[0].Controls.Find(Pagename, false)[0].Controls.Find(txtBox, false)[0];
             return textBox;
         }
+        public TextBox TextBox1(Form ParentForm, string txt, string pnl, string Pagename)
+        {
+            TextBox TextBox = (TextBox)ParentForm.Controls.Find("PanelProcess", false)[0].Controls.Find(Pagename, false)[0].Controls.Find(pnl, false)[0].Controls.Find(txt, false)[0];
+            return TextBox;
+        }
+        public Label Label(Form ParentForm,  string lbl, string pnl, string Pagename)
+        {
+            Label label = (Label)ParentForm.Controls.Find("PanelProcess", false)[0].Controls.Find(Pagename, false)[0].Controls.Find(pnl, false)[0].Controls.Find(lbl, false)[0];
+            return label;
+        }
         public void findUser(Form ParentForm, string txtBox, string Pagename)
         {
             UserControl userControl = (UserControl)ParentForm.Controls.Find("PanelProcess", false)[0].Controls.Find(Pagename, false)[0];
         }
+        
     }
 }
