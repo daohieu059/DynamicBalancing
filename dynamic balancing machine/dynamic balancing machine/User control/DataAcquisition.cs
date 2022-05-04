@@ -15,7 +15,7 @@ namespace dynamic_balancing_machine.User_control
     public partial class DataAcquisition : UserControl
     {
         int Mode;
-        int time;
+        int t=0;
         int begin;
         int i = 0;
         public DataAcquisition()
@@ -93,7 +93,7 @@ namespace dynamic_balancing_machine.User_control
                 Array.Clear(RX_3, 0, RX_3.Length);
                 Array.Clear(rx_buffer, 0, rx_buffer.Length);
                 Array.Clear(time, 0, time.Length);*/
-                time = 0;i = 0;
+                t = 0;i = 0;
                 timer1.Enabled = true;
                 timer1.Start();
             }
@@ -107,14 +107,14 @@ namespace dynamic_balancing_machine.User_control
             }
         }
 
-        /*double[] piezo = new double[1500];
+        double[] piezo = new double[1500];
         double[] quang = new double[1500];
         double[] piezo1 = new double[1500];
-        double[] piezo2 = new double[1500];*/
-        double[] piezo;
+        double[] piezo2 = new double[1500];
+        /*double[] piezo;
         double[] quang;
         double[] piezo1;
-        double[] piezo2;
+        double[] piezo2;*/
         string data = "";        
         double data1, data2, data3;
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
@@ -123,23 +123,21 @@ namespace dynamic_balancing_machine.User_control
             data = serialPort1.ReadLine();
             txtDataReceive.Text = data;
             string[] sub_data = data.Split(',');
-            //textBox1.Text = sub_data[2];
+            
             data1 = double.Parse(sub_data[1]) * 5 / 327;
             data2 = double.Parse(sub_data[2]) * 5 / 32768;
-            data3 = double.Parse(sub_data[3]) * 5 / 32768;
-            serialPort1.WriteLine(time.ToString());
-            quang[i] = data1;
-            piezo[i] = data2;
+            data3 = double.Parse(sub_data[3]) * 5 / 32768;           
+            
             
             //hien thi data va ve do thi
-            if (Mode==1)
+            /*if (Mode==1)
             {
                 quang[i] = data1;
                 piezo[i] = data2;
                 i++;
-                if (time == 1000)
+                if (t == 500)
                 {
-                    CreateGraph(zed, piezo, quang, Color.Green, Color.Blue, txtAmAverage_P1, txtAnphaAverage_P1, txtDolechpha_P1);
+                    CreateGraph(zed, piezo, quang, Color.Green, Color.Blue, txtAmAverage_P1, txtAnphaAverage_P1, txtDolechpha_P1, i);
                     Array.Clear(quang, 0, quang.Length);
                     Array.Clear(piezo, 0, piezo.Length);
                     i = 0;
@@ -150,30 +148,30 @@ namespace dynamic_balancing_machine.User_control
             {
                 quang[i] = data1;
                 piezo1[i] = data2;
-                piezo[i] = data3;
+                piezo2[i] = data3;
                 i++;
                 if (time == 1000)
                 {
-                    CreateGraph(zed, piezo1, quang, Color.Green, Color.Blue, txtAmAverage_P1, txtAnphaAverage_P1, txtDolechpha_P1);
-                    CreateGraph(zed, piezo2, quang, Color.Yellow, Color.Pink, txtAmAverage_P2_2P, txtAnphaAverage_P2_2P, txtDolechpha_P2_2P);
+                    CreateGraph(zed, piezo1, quang, Color.Green, Color.Blue, txtAmAverage_P1, txtAnphaAverage_P1, txtDolechpha_P1, i);
+                    CreateGraph(zed, piezo2, quang, Color.Yellow, Color.Pink, txtAmAverage_P2_2P, txtAnphaAverage_P2_2P, txtDolechpha_P2_2P, i);
                     Array.Clear(quang, 0, quang.Length);
                     Array.Clear(piezo1, 0, piezo1.Length);
                     Array.Clear(piezo2, 0, piezo2.Length);
                     i = 0;
                     time = 0;
                 }                
-            }
+            }*/
         }
 
         
         private void timer1_Tick(object sender, EventArgs e)
         {
-            time++;
+            t++;
         
         }
 
         public void CreateGraph(ZedGraphControl zgc, double[] piezo, double[] quang, Color pie, Color dft, 
-            TextBox txtAmAverage, TextBox txtAnphaAverage, TextBox txtDolechpha)
+            TextBox txtAmAverage, TextBox txtAnphaAverage, TextBox txtDolechpha, int len)
         {
             // vẽ đồ thị
             GraphPane myPane = zgc.GraphPane;
@@ -191,21 +189,21 @@ namespace dynamic_balancing_machine.User_control
             
 
             // xử lí data      
-            int[] cbquang = new int[100];
+            int[] cbquang = new int[500];
             int th = 0;
             double y0 = 0;
             double tb = 0;
 
-            for (int i = 0; i < piezo.Length; i++)
+            for (int i = 0; i < len; i++)
             {
                 tb += piezo[i];
 
             }
-            double average = tb / piezo.Length;// tinh trung binh data
+            double average = tb / len;// tinh trung binh data
 
             double y11 = 0;
             double y1 = quang[0];
-            for (int j = 0; j < quang.Length; j++)
+            for (int j = 0; j < len; j++)
             {
                 y11 = y1;
                 y1 = quang[j];
@@ -221,6 +219,7 @@ namespace dynamic_balancing_machine.User_control
                     cbquang[th] = j - 1;
                     th++;
                 }
+                list1.Add(j, y1);
             }
             // vẽ data từ cbquang 0 đến cbquang finish
             for (int k = cbquang[0]; k < cbquang[th - 1]; k++)
@@ -295,7 +294,6 @@ namespace dynamic_balancing_machine.User_control
             double min = 0;
             int Poi = 0;
             // vẽ hình sin dựa vào biên độ và pha DFT
-            // for (int i = 0; i < m.Length; i++)
             for (int i = cbquang[0]; i < cbquang[th - 1]; i++)
             {
                 double p = Am1 * Math.Sin(2 * Math.PI * i / (cbquang[1] - cbquang[0]) + Phi1_DFT * Math.PI / 180);
@@ -318,7 +316,7 @@ namespace dynamic_balancing_machine.User_control
               /* + "  " + Poi.ToString("0.000")*/; // hiển thị pha trung bình và điểm nhỏ nhất của đồ thị vẽ lại
 
             // xuất tốc độ vật mẫu;
-            //rate_object.Text = (60 * samplesPerChannelNumeric.Value * 1000 / ((cbquang[1] - cbquang[0]) * rateNumeric.Value)).ToString("0.000");
+            txtRateobject.Text = (60 * i / ((cbquang[1] - cbquang[0]) * t/1000)).ToString("0.000");
 
             if (Mode==1)
             {
@@ -346,11 +344,13 @@ namespace dynamic_balancing_machine.User_control
         
         private void btnSpeed_Click(object sender, EventArgs e)
         {
-            try
+            if(serialPort1.IsOpen)
             {
+                /*byte[] DO_Chars = { (byte)Byte.Parse(txtNumericSpeed.Text)};                
+                serialPort1.Write(DO_Chars, 0,1);*/
                 serialPort1.WriteLine(txtNumericSpeed.Text);
             }
-            catch
+            else
             {
                 MessageBox.Show("Please connect Com Port");
             }
@@ -358,11 +358,13 @@ namespace dynamic_balancing_machine.User_control
 
         private void btnStop_Click(object sender, EventArgs e)
         {
-            try
+            if (serialPort1.IsOpen)
             {
+                /*byte[] DO_Chars = { (byte)0 };
+                serialPort1.Write(DO_Chars, 0, 1);*/
                 serialPort1.WriteLine("0");
             }
-            catch
+            else
             {
                 MessageBox.Show("Please connect Com Port");
             }

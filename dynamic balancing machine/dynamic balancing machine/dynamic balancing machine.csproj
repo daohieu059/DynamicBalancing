@@ -122,12 +122,6 @@
     <Compile Include="User control\Calculator_2Plane.Designer.cs">
       <DependentUpon>Calculator_2Plane.cs</DependentUpon>
     </Compile>
-    <Compile Include="User control\Database.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="User control\Database.Designer.cs">
-      <DependentUpon>Database.cs</DependentUpon>
-    </Compile>
     <Compile Include="User control\Main.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -169,9 +163,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User control\Calculator_2Plane.resx">
       <DependentUpon>Calculator_2Plane.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User control\Database.resx">
-      <DependentUpon>Database.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User control\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

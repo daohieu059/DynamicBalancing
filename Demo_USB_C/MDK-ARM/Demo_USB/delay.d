@@ -1,0 +1,9 @@
+demo_usb\delay.o: ..\Hardware\delay.c
+demo_usb\delay.o: ..\Hardware\delay.h
+demo_usb\delay.o: ..\Hardware\stm32f10x.h
+demo_usb\delay.o: ../Drivers/CMSIS/Include/core_cm3.h
+demo_usb\delay.o: D:\STM\Program\ARM\ARMCC\Bin\..\include\stdint.h
+demo_usb\delay.o: ../Drivers/CMSIS/Include/cmsis_version.h
+demo_usb\delay.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
+demo_usb\delay.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+demo_usb\delay.o: ..\Hardware\system_stm32f10x.h

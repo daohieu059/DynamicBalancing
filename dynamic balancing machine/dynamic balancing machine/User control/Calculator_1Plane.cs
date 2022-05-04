@@ -113,11 +113,7 @@ namespace dynamic_balancing_machine.User_control
                 anpha_y = (A / M) * Math.Sin(goc - phiM);
                 A_anpha = Math.Sqrt(anpha_x * anpha_x + anpha_y * anpha_y);
                 goc_anpha = Math.Atan2(anpha_y, anpha_x);
-
-                /*A_anpha_1p.Text = A_anpha.ToString("0.000");
-                phi_anpha1p.Text = goc_anpha.ToString("0.000");            
-                phizero_1p.Text = txtPhizero.Text;
-                phiA11_1p.Text = txtPhi1.Text;*/
+                
                 lblAnpha_x.Text = anpha_x.ToString("0.000");
                 lblAnpha_y.Text = anpha_y.ToString("0.000");
 

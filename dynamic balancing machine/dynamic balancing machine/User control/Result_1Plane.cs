@@ -40,12 +40,11 @@ namespace dynamic_balancing_machine.User_control
         {
             draw();
         }
+
         double anpha_x, anpha_y;
         private void Result_1Plane_Load(object sender, EventArgs e)
-        {          
-
-            
-
+        {     
+                       
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -71,6 +70,7 @@ namespace dynamic_balancing_machine.User_control
                 TextBox txtPhi1 = new Step_class().TextBox1(ParentForm, "Phi1", "panel4", "Calculator_1Plane");
                 TextBox Anphax = new Step_class().TextBox1(ParentForm, "Anpha_x", "panel4", "Calculator_1Plane");
                 TextBox Anphay = new Step_class().TextBox1(ParentForm, "Anpha_y", "panel4", "Calculator_1Plane");
+
                 lblAnpha_x.Text = Anphax.Text;
                 lblAnpha_y.Text = Anphay.Text;
                 anpha_x = double.Parse(lblAnpha_x.Text);

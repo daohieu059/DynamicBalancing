@@ -47,6 +47,8 @@ namespace dynamic_balancing_machine.User_control
             this.label5 = new System.Windows.Forms.Label();
             this.lblResult = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReturn = new System.Windows.Forms.Button();
+            this.btnSaveDatabase = new System.Windows.Forms.Button();
             this.txtPhase = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -59,13 +61,11 @@ namespace dynamic_balancing_machine.User_control
             this.lblAnpha_x = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.btnSaveDatabase = new System.Windows.Forms.Button();
             this.ListViewDatabase = new System.Windows.Forms.ListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnReturn = new System.Windows.Forms.Button();
             this.pnl1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -319,6 +319,41 @@ namespace dynamic_balancing_machine.User_control
             this.panel1.Size = new System.Drawing.Size(152, 514);
             this.panel1.TabIndex = 7;
             // 
+            // btnReturn
+            // 
+            this.btnReturn.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnReturn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReturn.FlatAppearance.BorderSize = 0;
+            this.btnReturn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReturn.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnReturn.Location = new System.Drawing.Point(8, 413);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(137, 37);
+            this.btnReturn.TabIndex = 139;
+            this.btnReturn.Text = "Return";
+            this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Visible = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
+            // btnSaveDatabase
+            // 
+            this.btnSaveDatabase.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnSaveDatabase.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveDatabase.FlatAppearance.BorderSize = 0;
+            this.btnSaveDatabase.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSaveDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveDatabase.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveDatabase.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSaveDatabase.Location = new System.Drawing.Point(8, 466);
+            this.btnSaveDatabase.Name = "btnSaveDatabase";
+            this.btnSaveDatabase.Size = new System.Drawing.Size(137, 37);
+            this.btnSaveDatabase.TabIndex = 138;
+            this.btnSaveDatabase.Text = "Database";
+            this.btnSaveDatabase.UseVisualStyleBackColor = false;
+            this.btnSaveDatabase.Click += new System.EventHandler(this.btnSaveDatabase_Click);
+            // 
             // txtPhase
             // 
             this.txtPhase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -477,23 +512,6 @@ namespace dynamic_balancing_machine.User_control
             this.label11.Text = "Anpha_x:";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnSaveDatabase
-            // 
-            this.btnSaveDatabase.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnSaveDatabase.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSaveDatabase.FlatAppearance.BorderSize = 0;
-            this.btnSaveDatabase.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSaveDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveDatabase.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveDatabase.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSaveDatabase.Location = new System.Drawing.Point(8, 466);
-            this.btnSaveDatabase.Name = "btnSaveDatabase";
-            this.btnSaveDatabase.Size = new System.Drawing.Size(137, 37);
-            this.btnSaveDatabase.TabIndex = 138;
-            this.btnSaveDatabase.Text = "Database";
-            this.btnSaveDatabase.UseVisualStyleBackColor = false;
-            this.btnSaveDatabase.Click += new System.EventHandler(this.btnSaveDatabase_Click);
-            // 
             // ListViewDatabase
             // 
             this.ListViewDatabase.Activation = System.Windows.Forms.ItemActivation.OneClick;
@@ -533,24 +551,6 @@ namespace dynamic_balancing_machine.User_control
             // 
             this.columnHeader2.Text = "Vị trí thêm";
             this.columnHeader2.Width = 90;
-            // 
-            // btnReturn
-            // 
-            this.btnReturn.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnReturn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReturn.FlatAppearance.BorderSize = 0;
-            this.btnReturn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReturn.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnReturn.Location = new System.Drawing.Point(8, 413);
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(137, 37);
-            this.btnReturn.TabIndex = 139;
-            this.btnReturn.Text = "Return";
-            this.btnReturn.UseVisualStyleBackColor = false;
-            this.btnReturn.Visible = false;
-            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // Result_1Plane
             // 

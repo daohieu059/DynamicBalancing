@@ -1,0 +1,9 @@
+demo_usb\stm32f10x_rcc.o: ..\Hardware\stm32f10x_rcc.c
+demo_usb\stm32f10x_rcc.o: ..\Hardware\stm32f10x_rcc.h
+demo_usb\stm32f10x_rcc.o: ..\Hardware\stm32f10x.h
+demo_usb\stm32f10x_rcc.o: ../Drivers/CMSIS/Include/core_cm3.h
+demo_usb\stm32f10x_rcc.o: D:\STM\Program\ARM\ARMCC\Bin\..\include\stdint.h
+demo_usb\stm32f10x_rcc.o: ../Drivers/CMSIS/Include/cmsis_version.h
+demo_usb\stm32f10x_rcc.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
+demo_usb\stm32f10x_rcc.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+demo_usb\stm32f10x_rcc.o: ..\Hardware\system_stm32f10x.h
