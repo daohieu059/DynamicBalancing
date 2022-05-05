@@ -61,6 +61,7 @@ namespace dynamic_balancing_machine.User_control
             this.NextButton.FlatAppearance.BorderSize = 0;
             this.NextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
             this.NextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NextButton.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextButton.ForeColor = System.Drawing.Color.White;
             this.NextButton.Location = new System.Drawing.Point(821, 599);
             this.NextButton.Name = "NextButton";
@@ -75,11 +76,11 @@ namespace dynamic_balancing_machine.User_control
             this.lblmode.AutoSize = true;
             this.lblmode.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblmode.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblmode.Location = new System.Drawing.Point(433, 2);
+            this.lblmode.Location = new System.Drawing.Point(435, 2);
             this.lblmode.Name = "lblmode";
-            this.lblmode.Size = new System.Drawing.Size(115, 33);
+            this.lblmode.Size = new System.Drawing.Size(110, 33);
             this.lblmode.TabIndex = 3;
-            this.lblmode.Text = "Chọn Mode ";
+            this.lblmode.Text = "Chọn Mode";
             this.lblmode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelMode1
@@ -100,6 +101,7 @@ namespace dynamic_balancing_machine.User_control
             this.btn1Plane.FlatAppearance.BorderSize = 0;
             this.btn1Plane.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
             this.btn1Plane.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn1Plane.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn1Plane.ForeColor = System.Drawing.Color.White;
             this.btn1Plane.Location = new System.Drawing.Point(0, 0);
             this.btn1Plane.Name = "btn1Plane";
@@ -151,6 +153,7 @@ namespace dynamic_balancing_machine.User_control
             this.btn2Plane.FlatAppearance.BorderSize = 0;
             this.btn2Plane.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
             this.btn2Plane.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn2Plane.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn2Plane.ForeColor = System.Drawing.Color.White;
             this.btn2Plane.Location = new System.Drawing.Point(0, 0);
             this.btn2Plane.Name = "btn2Plane";
@@ -210,7 +213,7 @@ namespace dynamic_balancing_machine.User_control
             this.txtMode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMode.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMode.ForeColor = System.Drawing.Color.White;
-            this.txtMode.Location = new System.Drawing.Point(554, 3);
+            this.txtMode.Location = new System.Drawing.Point(462, 51);
             this.txtMode.Name = "txtMode";
             this.txtMode.ReadOnly = true;
             this.txtMode.Size = new System.Drawing.Size(57, 33);

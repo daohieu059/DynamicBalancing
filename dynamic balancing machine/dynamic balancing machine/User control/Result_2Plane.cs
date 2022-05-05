@@ -34,15 +34,14 @@ namespace dynamic_balancing_machine.User_control
         
 
         private void Result_2Plane_Load(object sender, EventArgs e)
-        {
-            
+        {            
                         
         }
-        
 
-        private void FinishButton_Click_1(object sender, EventArgs e)
+        private void FinishButton_Click(object sender, EventArgs e)
         {
-            new Step_class().Finish(ParentForm, "step4", "Result_2Plane", "StepProcess");
+            new Step_class().Finish(ParentForm, "step1", "step2", "step3", "step4", "Main", "StepProcess");
+            stt = 1;
         }
 
         private void BackButton_Click_1(object sender, EventArgs e)
@@ -79,6 +78,7 @@ namespace dynamic_balancing_machine.User_control
                 txtPhiM2.Text = (PhiB2 * 180 / Math.PI).ToString("f2");
                 txtPhiM2_add.Text = (180 + PhiB2 * 180 / Math.PI).ToString("f2");
 
+                //draw point
                 draw_result(PhiB1, PhiB2);
             }
             catch { MessageBox.Show("Please data collection"); }            
@@ -100,10 +100,10 @@ namespace dynamic_balancing_machine.User_control
                 txtPhase1.Text = Dolechpha1.Text;
                 txtPhase2.Text = Dolechpha2.Text;
 
-                TextBox Phizero1 = new Step_class().TextBox1(ParentForm, "Phizero_1", "panel4", "Calculator_2Plane");
-                TextBox Phizero2 = new Step_class().TextBox1(ParentForm, "Phizero_1", "panel4", "Calculator_2Plane");
+                TextBox Phizero_1 = new Step_class().TextBox1(ParentForm, "Phizero_1", "panel4", "Calculator_2Plane");
+                TextBox Phizero_2 = new Step_class().TextBox1(ParentForm, "Phizero_2", "panel4", "Calculator_2Plane");
                 TextBox Phi_10 = new Step_class().TextBox1(ParentForm, "Phi_V10", "panel4", "Calculator_2Plane");
-                TextBox Phi_20 = new Step_class().TextBox1(ParentForm, "Phi_V10", "panel4", "Calculator_2Plane");
+                TextBox Phi_20 = new Step_class().TextBox1(ParentForm, "Phi_V20", "panel4", "Calculator_2Plane");
 
                 TextBox Anpha_11 = new Step_class().TextBox1(ParentForm, "Anpha_11", "panel4", "Calculator_2Plane");
                 TextBox Anpha_12 = new Step_class().TextBox1(ParentForm, "Anpha_12", "panel4", "Calculator_2Plane");
@@ -133,21 +133,21 @@ namespace dynamic_balancing_machine.User_control
 
                 V1_2P = double.Parse(txtAm1.Text);
                 V2_2P = double.Parse(txtAm2.Text);
-                if ((double.Parse(Phi_10.Text) - double.Parse(Phizero1.Text)) < 0)
+                if ((double.Parse(Phi_10.Text) - double.Parse(Phizero_1.Text)) < 0)
                 {
-                    Phi1_2P = double.Parse(txtPhase1.Text) - double.Parse(Phizero1.Text);
+                    Phi1_2P = double.Parse(txtPhase1.Text) - double.Parse(Phizero_1.Text);
                 }
                 else
                 {
-                    Phi1_2P = double.Parse(Phizero1.Text) - double.Parse(txtPhase1.Text);
+                    Phi1_2P = double.Parse(Phizero_1.Text) - double.Parse(txtPhase1.Text);
                 }
-                if ((double.Parse(Phi_20.Text) - double.Parse(Phizero2.Text)) < 0)
+                if ((double.Parse(Phi_20.Text) - double.Parse(Phizero_2.Text)) < 0)
                 {
-                    Phi2_2P = double.Parse(txtPhase2.Text) - double.Parse(Phizero2.Text);
+                    Phi2_2P = double.Parse(txtPhase2.Text) - double.Parse(Phizero_2.Text);
                 }
                 else
                 {
-                    Phi2_2P = double.Parse(Phizero2.Text) - double.Parse(txtPhase2.Text);
+                    Phi2_2P = double.Parse(Phizero_2.Text) - double.Parse(txtPhase2.Text);
                 }
                 Phi1_2P = Phi1_2P * Math.PI / 180;
                 Phi2_2P = Phi2_2P * Math.PI / 180;
@@ -183,9 +183,9 @@ namespace dynamic_balancing_machine.User_control
                 txtM2.Text = B2.ToString("f2");
                 txtPhiM2.Text = (PhiB2 * 180 / Math.PI).ToString("f2");
                 txtPhiM2_add.Text = (180 + PhiB2 * 180 / Math.PI).ToString("f2");
-                
+
                 //draw point
-                draw_result(PhiB1, PhiB2);
+                draw(); draw_result(PhiB1, PhiB2);
 
                 //ListView
                 ListViewItem item1 = new ListViewItem();
@@ -223,6 +223,20 @@ namespace dynamic_balancing_machine.User_control
             }
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (ListViewDatabase.SelectedItems.Count > 0)
+            {
+                DialogResult dl = MessageBox.Show("Do you want to delete?", "Notify", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dl == DialogResult.Yes)
+                {
+                    ListViewDatabase.Items.Remove(ListViewDatabase.SelectedItems[0]);
+                    stt--;
+                }
+            }
+        }
+
+        
         private void btnReturn_Click(object sender, EventArgs e)
         {
             btnSaveDatabase.Text = "Database";
@@ -435,7 +449,7 @@ namespace dynamic_balancing_machine.User_control
             SolidBrush brBlue = new SolidBrush(Color.Blue);
             SolidBrush brGreen = new SolidBrush(Color.Green);
             SolidBrush brWhite = new SolidBrush(Color.White);
-            //SolidBrush drawBrush = new SolidBrush(Color.Black);
+            SolidBrush drawBrush = new SolidBrush(Color.FromArgb(46, 51, 73));
 
             // Create string to draw.
             String string1 = "0", string2 = "90", string3 = "180", string4 = "270";
@@ -454,7 +468,7 @@ namespace dynamic_balancing_machine.User_control
             f.DrawString(string4, drawFont, brWhite, drawPoint4);
 
 
-            g.FillRectangle(br, 0, 0, 260, 260); // re fill - clear pannel
+            g.FillRectangle(drawBrush, 0, 0, 260, 260); // re fill - clear pannel
             // draw circle
             g.DrawEllipse(pen2, 5, 5, 250, 250);
             g.DrawEllipse(pen1, 30, 30, 200, 200);
@@ -508,6 +522,7 @@ namespace dynamic_balancing_machine.User_control
             brBlue.Dispose();
             brGreen.Dispose();
             brWhite.Dispose();
+            drawBrush.Dispose();
             //*************************** End simulation drawing ***************************//        
         }
 

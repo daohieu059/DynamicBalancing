@@ -104,6 +104,7 @@ namespace dynamic_balancing_machine.User_control
             this.NextButton.FlatAppearance.BorderSize = 0;
             this.NextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
             this.NextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NextButton.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextButton.ForeColor = System.Drawing.Color.White;
             this.NextButton.Location = new System.Drawing.Point(821, 599);
             this.NextButton.Name = "NextButton";
@@ -120,6 +121,7 @@ namespace dynamic_balancing_machine.User_control
             this.BackButton.FlatAppearance.BorderSize = 0;
             this.BackButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
             this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackButton.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackButton.ForeColor = System.Drawing.Color.White;
             this.BackButton.Location = new System.Drawing.Point(0, 599);
             this.BackButton.Name = "BackButton";
@@ -171,7 +173,7 @@ namespace dynamic_balancing_machine.User_control
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Location = new System.Drawing.Point(182, 84);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(297, 261);
+            this.panel1.Size = new System.Drawing.Size(297, 277);
             this.panel1.TabIndex = 7;
             // 
             // btn1Plane_Load
@@ -183,7 +185,7 @@ namespace dynamic_balancing_machine.User_control
             this.btn1Plane_Load.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btn1Plane_Load.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn1Plane_Load.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn1Plane_Load.Location = new System.Drawing.Point(46, 221);
+            this.btn1Plane_Load.Location = new System.Drawing.Point(46, 229);
             this.btn1Plane_Load.Name = "btn1Plane_Load";
             this.btn1Plane_Load.Size = new System.Drawing.Size(204, 37);
             this.btn1Plane_Load.TabIndex = 14;
@@ -333,13 +335,13 @@ namespace dynamic_balancing_machine.User_control
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Location = new System.Drawing.Point(498, 84);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(300, 259);
+            this.panel2.Size = new System.Drawing.Size(300, 277);
             this.panel2.TabIndex = 14;
             // 
             // txtA2
             // 
             this.txtA2.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtA2.Location = new System.Drawing.Point(12, 185);
+            this.txtA2.Location = new System.Drawing.Point(12, 195);
             this.txtA2.Name = "txtA2";
             this.txtA2.Size = new System.Drawing.Size(100, 27);
             this.txtA2.TabIndex = 18;
@@ -347,7 +349,7 @@ namespace dynamic_balancing_machine.User_control
             // txtA1
             // 
             this.txtA1.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtA1.Location = new System.Drawing.Point(12, 117);
+            this.txtA1.Location = new System.Drawing.Point(12, 127);
             this.txtA1.Name = "txtA1";
             this.txtA1.Size = new System.Drawing.Size(100, 27);
             this.txtA1.TabIndex = 17;
@@ -355,7 +357,7 @@ namespace dynamic_balancing_machine.User_control
             // txtPhi2
             // 
             this.txtPhi2.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhi2.Location = new System.Drawing.Point(168, 185);
+            this.txtPhi2.Location = new System.Drawing.Point(168, 195);
             this.txtPhi2.Name = "txtPhi2";
             this.txtPhi2.Size = new System.Drawing.Size(100, 27);
             this.txtPhi2.TabIndex = 16;
@@ -363,7 +365,7 @@ namespace dynamic_balancing_machine.User_control
             // txtPhi1
             // 
             this.txtPhi1.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhi1.Location = new System.Drawing.Point(168, 117);
+            this.txtPhi1.Location = new System.Drawing.Point(168, 127);
             this.txtPhi1.Name = "txtPhi1";
             this.txtPhi1.Size = new System.Drawing.Size(100, 27);
             this.txtPhi1.TabIndex = 15;
@@ -371,7 +373,7 @@ namespace dynamic_balancing_machine.User_control
             // txtPhizero
             // 
             this.txtPhizero.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhizero.Location = new System.Drawing.Point(168, 39);
+            this.txtPhizero.Location = new System.Drawing.Point(168, 49);
             this.txtPhizero.Name = "txtPhizero";
             this.txtPhizero.Size = new System.Drawing.Size(100, 27);
             this.txtPhizero.TabIndex = 14;
@@ -381,7 +383,7 @@ namespace dynamic_balancing_machine.User_control
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Location = new System.Drawing.Point(164, 161);
+            this.label9.Location = new System.Drawing.Point(164, 171);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(81, 17);
             this.label9.TabIndex = 13;
@@ -393,7 +395,7 @@ namespace dynamic_balancing_machine.User_control
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label10.Location = new System.Drawing.Point(8, 161);
+            this.label10.Location = new System.Drawing.Point(8, 171);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(50, 17);
             this.label10.TabIndex = 12;
@@ -405,7 +407,7 @@ namespace dynamic_balancing_machine.User_control
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(164, 93);
+            this.label6.Location = new System.Drawing.Point(164, 103);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 17);
             this.label6.TabIndex = 11;
@@ -417,7 +419,7 @@ namespace dynamic_balancing_machine.User_control
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(8, 93);
+            this.label5.Location = new System.Drawing.Point(8, 103);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 17);
             this.label5.TabIndex = 10;
@@ -429,7 +431,7 @@ namespace dynamic_balancing_machine.User_control
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label7.Location = new System.Drawing.Point(8, 46);
+            this.label7.Location = new System.Drawing.Point(8, 56);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(101, 17);
             this.label7.TabIndex = 9;
@@ -470,7 +472,7 @@ namespace dynamic_balancing_machine.User_control
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.panel7);
-            this.panel3.Location = new System.Drawing.Point(182, 356);
+            this.panel3.Location = new System.Drawing.Point(182, 377);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(616, 162);
             this.panel3.TabIndex = 15;
@@ -479,7 +481,7 @@ namespace dynamic_balancing_machine.User_control
             // 
             this.lblAnpha_y.AutoSize = true;
             this.lblAnpha_y.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnpha_y.Location = new System.Drawing.Point(119, 93);
+            this.lblAnpha_y.Location = new System.Drawing.Point(119, 100);
             this.lblAnpha_y.Name = "lblAnpha_y";
             this.lblAnpha_y.Size = new System.Drawing.Size(33, 19);
             this.lblAnpha_y.TabIndex = 23;
@@ -521,7 +523,7 @@ namespace dynamic_balancing_machine.User_control
             this.btnDatabase.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnDatabase.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDatabase.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDatabase.Location = new System.Drawing.Point(306, 84);
+            this.btnDatabase.Location = new System.Drawing.Point(306, 89);
             this.btnDatabase.Name = "btnDatabase";
             this.btnDatabase.Size = new System.Drawing.Size(204, 37);
             this.btnDatabase.TabIndex = 15;
@@ -534,7 +536,7 @@ namespace dynamic_balancing_machine.User_control
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label12.Location = new System.Drawing.Point(5, 93);
+            this.label12.Location = new System.Drawing.Point(5, 100);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(68, 17);
             this.label12.TabIndex = 20;
@@ -623,9 +625,9 @@ namespace dynamic_balancing_machine.User_control
             this.panel4.Controls.Add(this.label18);
             this.panel4.Controls.Add(this.label19);
             this.panel4.Controls.Add(this.panel8);
-            this.panel4.Location = new System.Drawing.Point(273, 84);
+            this.panel4.Location = new System.Drawing.Point(244, 84);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(434, 434);
+            this.panel4.Size = new System.Drawing.Size(493, 434);
             this.panel4.TabIndex = 18;
             this.panel4.Visible = false;
             // 
@@ -636,8 +638,9 @@ namespace dynamic_balancing_machine.User_control
             this.btnReturn.FlatAppearance.BorderSize = 0;
             this.btnReturn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
             this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnReturn.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnReturn.Location = new System.Drawing.Point(0, 397);
+            this.btnReturn.Location = new System.Drawing.Point(3, 394);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(65, 37);
             this.btnReturn.TabIndex = 138;
@@ -652,8 +655,9 @@ namespace dynamic_balancing_machine.User_control
             this.btnSaveDatabase.FlatAppearance.BorderSize = 0;
             this.btnSaveDatabase.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
             this.btnSaveDatabase.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnSaveDatabase.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveDatabase.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSaveDatabase.Location = new System.Drawing.Point(115, 341);
+            this.btnSaveDatabase.Location = new System.Drawing.Point(144, 341);
             this.btnSaveDatabase.Name = "btnSaveDatabase";
             this.btnSaveDatabase.Size = new System.Drawing.Size(204, 37);
             this.btnSaveDatabase.TabIndex = 137;
@@ -668,8 +672,9 @@ namespace dynamic_balancing_machine.User_control
             this.btnLoadDatabase.FlatAppearance.BorderSize = 0;
             this.btnLoadDatabase.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
             this.btnLoadDatabase.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnLoadDatabase.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoadDatabase.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLoadDatabase.Location = new System.Drawing.Point(115, 384);
+            this.btnLoadDatabase.Location = new System.Drawing.Point(144, 384);
             this.btnLoadDatabase.Name = "btnLoadDatabase";
             this.btnLoadDatabase.Size = new System.Drawing.Size(204, 37);
             this.btnLoadDatabase.TabIndex = 136;
@@ -687,9 +692,9 @@ namespace dynamic_balancing_machine.User_control
             this.ListViewDatabase.GridLines = true;
             this.ListViewDatabase.HideSelection = false;
             this.ListViewDatabase.HoverSelection = true;
-            this.ListViewDatabase.Location = new System.Drawing.Point(240, 52);
+            this.ListViewDatabase.Location = new System.Drawing.Point(261, 52);
             this.ListViewDatabase.Name = "ListViewDatabase";
-            this.ListViewDatabase.Size = new System.Drawing.Size(182, 260);
+            this.ListViewDatabase.Size = new System.Drawing.Size(209, 258);
             this.ListViewDatabase.TabIndex = 135;
             this.ListViewDatabase.UseCompatibleStateImageBehavior = false;
             this.ListViewDatabase.View = System.Windows.Forms.View.Details;
@@ -791,7 +796,7 @@ namespace dynamic_balancing_machine.User_control
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(434, 33);
+            this.panel8.Size = new System.Drawing.Size(493, 33);
             this.panel8.TabIndex = 19;
             // 
             // label20
@@ -813,7 +818,6 @@ namespace dynamic_balancing_machine.User_control
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtGoc);
             this.Controls.Add(this.txtAm);
@@ -821,6 +825,7 @@ namespace dynamic_balancing_machine.User_control
             this.Controls.Add(this.lblmode);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.NextButton);
+            this.Controls.Add(this.panel4);
             this.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "Calculator_1Plane";

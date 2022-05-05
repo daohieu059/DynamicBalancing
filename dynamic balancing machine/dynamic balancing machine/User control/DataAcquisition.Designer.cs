@@ -32,13 +32,6 @@ namespace dynamic_balancing_machine.User_control
             this.components = new System.ComponentModel.Container();
             this.BackButton = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.rateNumeric = new System.Windows.Forms.NumericUpDown();
-            this.samplesPerChannelNumeric = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnStop = new System.Windows.Forms.Button();
             this.btnSpeed = new System.Windows.Forms.Button();
@@ -85,10 +78,6 @@ namespace dynamic_balancing_machine.User_control
             this.label15 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rateNumeric)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.samplesPerChannelNumeric)).BeginInit();
-            this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -106,7 +95,7 @@ namespace dynamic_balancing_machine.User_control
             this.BackButton.FlatAppearance.BorderSize = 0;
             this.BackButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
             this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BackButton.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F);
+            this.BackButton.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F);
             this.BackButton.ForeColor = System.Drawing.Color.White;
             this.BackButton.Location = new System.Drawing.Point(0, 599);
             this.BackButton.Name = "BackButton";
@@ -123,7 +112,7 @@ namespace dynamic_balancing_machine.User_control
             this.NextButton.FlatAppearance.BorderSize = 0;
             this.NextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
             this.NextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NextButton.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F);
+            this.NextButton.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F);
             this.NextButton.ForeColor = System.Drawing.Color.White;
             this.NextButton.Location = new System.Drawing.Point(821, 599);
             this.NextButton.Name = "NextButton";
@@ -132,104 +121,6 @@ namespace dynamic_balancing_machine.User_control
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = false;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.Control;
-            this.panel3.Controls.Add(this.rateNumeric);
-            this.panel3.Controls.Add(this.samplesPerChannelNumeric);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(0, 426);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(223, 162);
-            this.panel3.TabIndex = 14;
-            // 
-            // rateNumeric
-            // 
-            this.rateNumeric.DecimalPlaces = 2;
-            this.rateNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rateNumeric.Location = new System.Drawing.Point(130, 94);
-            this.rateNumeric.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.rateNumeric.Name = "rateNumeric";
-            this.rateNumeric.Size = new System.Drawing.Size(90, 22);
-            this.rateNumeric.TabIndex = 13;
-            this.rateNumeric.Value = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            // 
-            // samplesPerChannelNumeric
-            // 
-            this.samplesPerChannelNumeric.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.samplesPerChannelNumeric.Location = new System.Drawing.Point(130, 60);
-            this.samplesPerChannelNumeric.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.samplesPerChannelNumeric.Name = "samplesPerChannelNumeric";
-            this.samplesPerChannelNumeric.Size = new System.Drawing.Size(90, 22);
-            this.samplesPerChannelNumeric.TabIndex = 13;
-            this.samplesPerChannelNumeric.Value = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(3, 96);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 17);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Rate (Hz):";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(3, 62);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(126, 17);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Samples/Channel:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(223, 33);
-            this.panel4.TabIndex = 1;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label8.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(0, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(200, 33);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Timming Parameters";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel5
             // 
@@ -243,46 +134,51 @@ namespace dynamic_balancing_machine.User_control
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Location = new System.Drawing.Point(235, 48);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(289, 201);
+            this.panel5.Size = new System.Drawing.Size(289, 212);
             this.panel5.TabIndex = 14;
             // 
             // btnStop
             // 
             this.btnStop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnStop.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStop.Location = new System.Drawing.Point(143, 127);
+            this.btnStop.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStop.ForeColor = System.Drawing.Color.Red;
+            this.btnStop.Location = new System.Drawing.Point(146, 159);
+            this.btnStop.Margin = new System.Windows.Forms.Padding(2);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(133, 32);
-            this.btnStop.TabIndex = 51;
+            this.btnStop.Size = new System.Drawing.Size(133, 40);
+            this.btnStop.TabIndex = 53;
             this.btnStop.Text = "Stop Motor";
+            this.btnStop.UseVisualStyleBackColor = true;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // btnSpeed
             // 
             this.btnSpeed.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSpeed.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnSpeed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSpeed.Location = new System.Drawing.Point(143, 74);
+            this.btnSpeed.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSpeed.ForeColor = System.Drawing.Color.Green;
+            this.btnSpeed.Location = new System.Drawing.Point(9, 159);
+            this.btnSpeed.Margin = new System.Windows.Forms.Padding(2);
             this.btnSpeed.Name = "btnSpeed";
-            this.btnSpeed.Size = new System.Drawing.Size(133, 32);
-            this.btnSpeed.TabIndex = 50;
+            this.btnSpeed.Size = new System.Drawing.Size(133, 40);
+            this.btnSpeed.TabIndex = 52;
             this.btnSpeed.Text = "Run Motor";
+            this.btnSpeed.UseVisualStyleBackColor = true;
             this.btnSpeed.Click += new System.EventHandler(this.btnSpeed_Click);
             // 
             // txtRateobject
             // 
-            this.txtRateobject.Location = new System.Drawing.Point(6, 134);
+            this.txtRateobject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRateobject.Location = new System.Drawing.Point(155, 82);
             this.txtRateobject.Name = "txtRateobject";
-            this.txtRateobject.Size = new System.Drawing.Size(118, 20);
+            this.txtRateobject.Size = new System.Drawing.Size(118, 26);
             this.txtRateobject.TabIndex = 49;
             // 
             // txtNumericSpeed
             // 
-            this.txtNumericSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumericSpeed.Location = new System.Drawing.Point(6, 80);
+            this.txtNumericSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumericSpeed.Location = new System.Drawing.Point(16, 82);
             this.txtNumericSpeed.Name = "txtNumericSpeed";
-            this.txtNumericSpeed.Size = new System.Drawing.Size(118, 22);
+            this.txtNumericSpeed.Size = new System.Drawing.Size(118, 26);
             this.txtNumericSpeed.TabIndex = 46;
             this.txtNumericSpeed.Text = "20";
             // 
@@ -291,7 +187,7 @@ namespace dynamic_balancing_machine.User_control
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(3, 58);
+            this.label10.Location = new System.Drawing.Point(13, 58);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(70, 17);
             this.label10.TabIndex = 14;
@@ -303,7 +199,7 @@ namespace dynamic_balancing_machine.User_control
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(3, 114);
+            this.label7.Location = new System.Drawing.Point(152, 58);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(121, 17);
             this.label7.TabIndex = 12;
@@ -329,9 +225,9 @@ namespace dynamic_balancing_machine.User_control
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label11.Location = new System.Drawing.Point(0, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(139, 33);
+            this.label11.Size = new System.Drawing.Size(240, 33);
             this.label11.TabIndex = 9;
-            this.label11.Text = "Control Speed";
+            this.label11.Text = "Điều khiển tốc độ động cơ";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblmode
@@ -354,7 +250,7 @@ namespace dynamic_balancing_machine.User_control
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, 48);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(223, 359);
+            this.panel1.Size = new System.Drawing.Size(223, 540);
             this.panel1.TabIndex = 52;
             // 
             // groupBox2
@@ -362,23 +258,24 @@ namespace dynamic_balancing_machine.User_control
             this.groupBox2.Controls.Add(this.btonConnect);
             this.groupBox2.Controls.Add(this.progressBar1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(6, 255);
+            this.groupBox2.Location = new System.Drawing.Point(4, 332);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(214, 93);
+            this.groupBox2.Size = new System.Drawing.Size(214, 115);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Connect COM";
             // 
             // btonConnect
             // 
+            this.btonConnect.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btonConnect.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btonConnect.ForeColor = System.Drawing.Color.Green;
             this.btonConnect.Location = new System.Drawing.Point(4, 27);
             this.btonConnect.Margin = new System.Windows.Forms.Padding(2);
             this.btonConnect.Name = "btonConnect";
-            this.btonConnect.Size = new System.Drawing.Size(201, 30);
+            this.btonConnect.Size = new System.Drawing.Size(201, 44);
             this.btonConnect.TabIndex = 0;
             this.btonConnect.Text = "Connect";
             this.btonConnect.UseVisualStyleBackColor = true;
@@ -386,7 +283,7 @@ namespace dynamic_balancing_machine.User_control
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(4, 62);
+            this.progressBar1.Location = new System.Drawing.Point(4, 79);
             this.progressBar1.Margin = new System.Windows.Forms.Padding(2);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(201, 23);
@@ -404,12 +301,12 @@ namespace dynamic_balancing_machine.User_control
             this.groupBox1.Controls.Add(this.cBoxDatabits);
             this.groupBox1.Controls.Add(this.cBoxBaud);
             this.groupBox1.Controls.Add(this.cBoxCOM);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(6, 38);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.groupBox1.Location = new System.Drawing.Point(4, 69);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(214, 205);
+            this.groupBox1.Size = new System.Drawing.Size(214, 220);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Serial COM Port";
@@ -533,18 +430,19 @@ namespace dynamic_balancing_machine.User_control
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(228, 33);
+            this.label3.Size = new System.Drawing.Size(160, 33);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Connect Serial Com Port";
+            this.label3.Text = "Kết nối Com Port";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // serialPort1
             // 
+            this.serialPort1.BaudRate = 115200;
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
             // zed
             // 
-            this.zed.Location = new System.Drawing.Point(235, 260);
+            this.zed.Location = new System.Drawing.Point(235, 271);
             this.zed.Margin = new System.Windows.Forms.Padding(3, 8, 3, 8);
             this.zed.Name = "zed";
             this.zed.ScrollGrace = 0D;
@@ -554,7 +452,7 @@ namespace dynamic_balancing_machine.User_control
             this.zed.ScrollMinX = 0D;
             this.zed.ScrollMinY = 0D;
             this.zed.ScrollMinY2 = 0D;
-            this.zed.Size = new System.Drawing.Size(745, 328);
+            this.zed.Size = new System.Drawing.Size(745, 317);
             this.zed.TabIndex = 55;
             // 
             // timer1
@@ -581,7 +479,7 @@ namespace dynamic_balancing_machine.User_control
             this.panel7.Controls.Add(this.panel10);
             this.panel7.Location = new System.Drawing.Point(542, 48);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(438, 201);
+            this.panel7.Size = new System.Drawing.Size(438, 212);
             this.panel7.TabIndex = 55;
             // 
             // label16
@@ -731,9 +629,9 @@ namespace dynamic_balancing_machine.User_control
             this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label17.Location = new System.Drawing.Point(0, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(265, 33);
+            this.label17.Size = new System.Drawing.Size(240, 33);
             this.label17.TabIndex = 9;
-            this.label17.Text = "Calculate the collected data";
+            this.label17.Text = "Tính toán dữ liệu thu thập";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DataAcquisition
@@ -745,19 +643,12 @@ namespace dynamic_balancing_machine.User_control
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblmode);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.panel7);
             this.Name = "DataAcquisition";
             this.Size = new System.Drawing.Size(980, 650);
             this.Load += new System.EventHandler(this.DataAcquisition_Load);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rateNumeric)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.samplesPerChannelNumeric)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -781,13 +672,6 @@ namespace dynamic_balancing_machine.User_control
 
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Button NextButton;
-        private System.Windows.Forms.Panel panel3;
-        internal System.Windows.Forms.NumericUpDown rateNumeric;
-        private System.Windows.Forms.NumericUpDown samplesPerChannelNumeric;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtRateobject;
         private System.Windows.Forms.TextBox txtNumericSpeed;
@@ -795,8 +679,6 @@ namespace dynamic_balancing_machine.User_control
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button btnStop;
-        private System.Windows.Forms.Button btnSpeed;
         private System.Windows.Forms.Label lblmode;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -834,5 +716,7 @@ namespace dynamic_balancing_machine.User_control
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtDataReceive;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btnSpeed;
+        private System.Windows.Forms.Button btnStop;
     }
 }

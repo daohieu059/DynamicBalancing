@@ -54,7 +54,13 @@ namespace dynamic_balancing_machine.User_control
             new Step_class().Back(ParentForm, "step4", "step3", "Calculator_1Plane", "StepProcess");
 
         }
-        double Am_mcb, goc_mcb;
+        private void FinishButton_Click(object sender, EventArgs e)
+        {
+            new Step_class().Finish(ParentForm, "step1", "step2", "step3", "step4", "Main", "StepProcess");
+            stt = 1;
+        }
+
+    double Am_mcb, goc_mcb;
         private void btnRun_Click(object sender, EventArgs e)
         {            
             try
@@ -100,8 +106,8 @@ namespace dynamic_balancing_machine.User_control
                 txtPhiM.Text = (goc_mcb * 180 / Math.PI).ToString("f2");
                 txtPhiM_add.Text = (180 + goc_mcb * 180 / Math.PI).ToString("f2");
 
-                draw_result(goc_mcb);
-
+                draw(); draw_result(goc_mcb);
+                
                 //ListView
 
                 ListViewItem item1 = new ListViewItem();
@@ -135,11 +141,7 @@ namespace dynamic_balancing_machine.User_control
             
         }
 
-        private void FinishButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void btnSaveDatabase_Click(object sender, EventArgs e)
         {
             if(btnSaveDatabase.Text == "Database")
@@ -148,6 +150,7 @@ namespace dynamic_balancing_machine.User_control
                 ListViewDatabase.Location = new Point(330, 62);
                 btnSaveDatabase.Text = "Save Database";
                 btnReturn.Visible = true;
+                btnDelete.Visible = true;
                 //ListViewDatabase.Items.Clear();
 
 
@@ -166,10 +169,22 @@ namespace dynamic_balancing_machine.User_control
             btnSaveDatabase.Text = "Database";
             ListViewDatabase.Visible = false;
             btnReturn.Visible = false;
+            btnDelete.Visible = false;
             draw(); draw_result(goc_mcb);
         }
-        
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (ListViewDatabase.SelectedItems.Count > 0)
+            {
+                DialogResult dl = MessageBox.Show("Do you want to delete?", "Notify", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dl == DialogResult.Yes)
+                {
+                    ListViewDatabase.Items.Remove(ListViewDatabase.SelectedItems[0]);
+                    stt--;
+                }
+            }            
+        }
         static void SaveExcel_function(ListView dataTable)
         {
             // save item
@@ -234,6 +249,7 @@ namespace dynamic_balancing_machine.User_control
             }
 
         }
+                
 
         private void draw_result(double PhiB)
         {            
@@ -242,7 +258,7 @@ namespace dynamic_balancing_machine.User_control
             beta_1 = PhiB * 180 / Math.PI;
             beta_2 = 180 + PhiB * 180 / Math.PI;
             Graphics g = pnlResult_1P.CreateGraphics();
-
+            
             SolidBrush brRed = new SolidBrush(Color.Red);
             x = x_0 + Convert.ToInt32(R * Math.Sin(Math.PI - beta_1 * Math.PI / 180)) - 5;
             y = y_0 + Convert.ToInt32(R * Math.Cos(Math.PI - beta_1 * Math.PI / 180)) - 5;
@@ -270,7 +286,7 @@ namespace dynamic_balancing_machine.User_control
             SolidBrush brBlue = new SolidBrush(Color.Blue);
             SolidBrush brGreen = new SolidBrush(Color.Green);
             SolidBrush brWhite = new SolidBrush(Color.White);
-            //SolidBrush drawBrush = new SolidBrush(Color.Black);
+            SolidBrush drawBrush = new SolidBrush(Color.FromArgb(46, 51, 73));
 
             // Create string to draw.
             String string1 = "0", string2 = "90", string3 = "180", string4 = "270";
@@ -289,7 +305,7 @@ namespace dynamic_balancing_machine.User_control
             f.DrawString(string4, drawFont, brWhite, drawPoint4);
 
 
-            g.FillRectangle(br, 0, 0, 260, 260); // re fill - clear pannel
+            g.FillRectangle(drawBrush, 0, 0, 260, 260); // re fill - clear pannel
             // draw circle
             g.DrawEllipse(pen2, 5, 5, 250, 250);
             g.DrawEllipse(pen1, 30, 30, 200, 200);
@@ -314,7 +330,7 @@ namespace dynamic_balancing_machine.User_control
             brBlue.Dispose();
             brGreen.Dispose();
             brWhite.Dispose();
-
+            drawBrush.Dispose();
             //*************************** End simulation drawing ***************************//        
         }
 

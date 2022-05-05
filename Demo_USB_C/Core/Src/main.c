@@ -25,6 +25,7 @@
 /* USER CODE BEGIN Includes */
 #include "usbd_cdc_if.h"
 #include "AD7606.h"
+
 //#include "dwt_stm32_delay.h"  
 
 /* USER CODE END Includes */
@@ -48,12 +49,12 @@ DAC_HandleTypeDef hdac;
 
 /* USER CODE BEGIN PV */
 char data[1000];
-uint8_t x, k;
+uint8_t x, k;float t;
 uint16_t adc[10];
 
-uint32_t FRE=0;
+uint32_t FRE=0, FRE1=0, FRE2=0;
 uint8_t buffer[100];
-uint8_t zero[100] = {};
+uint8_t zero[100];
 uint32_t len=0;
 
 /* USER CODE END PV */
@@ -116,27 +117,31 @@ int main(void)
 		//CDC_Transmit_FS((uint8_t *)"adc", 3);
 		//HAL_Delay(500);
 		
-		if (VCP_retrieveInputData(buffer,&len)!=0)
+		if (VCP_retrieveInputData(buffer,&len)==1)
 		{			
-			//export it to char buffer first. 
 			FRE=(buffer[0] - 48)*10 + (buffer[1]-48);
-			FRE = FRE/50*4095;
-			if (FRE>4095)
-			{
-				sprintf(data,"please enter frequency less than or equal to 50HZ");				
-				CDC_Transmit_FS((uint8_t *)data, strlen(data));
-				FRE = 0;
+			t = (float)FRE/50*4095;
+			FRE = (uint32_t)t;
+			FRE1=buffer[1];
+			FRE2=buffer[2];
+			if (FRE<=4095)
+			{			
+				HAL_DAC_Start(&hdac,DAC1_CHANNEL_1);
+				HAL_DAC_SetValue(&hdac,DAC1_CHANNEL_1,DAC_ALIGN_12B_L,FRE);
 			}
-			HAL_DAC_Start(&hdac,DAC1_CHANNEL_1);
-			HAL_DAC_SetValue(&hdac,DAC1_CHANNEL_1,DAC_ALIGN_12B_L,FRE);		
-			memcpy(buffer,zero,sizeof(buffer));
+			else FRE = 0;
+			//len=0;
+			memset(buffer,0x00,sizeof(buffer));
 		}
+		/*sprintf(data,"adc, %d, %d, %d, %d, %d, %d, %d\r\n",adc[0],adc[1], adc[2], FRE, FRE1, FRE2, len);				
+		CDC_Transmit_FS((uint8_t *)data, strlen(data));*/
 		if (FRE!=0)
 			{
 				//k = AD7606_readConversionValue(adc);
-				sprintf(data,"adc, %d, %d, %d, %d\r\n",adc[0],adc[1], adc[2], FRE);				
+				sprintf(data,"adc, %d, %d, %d, %d, %d\r\n",adc[0],adc[1], adc[2], FRE, FRE1);				
 		    CDC_Transmit_FS((uint8_t *)data, strlen(data));
-			}		
+			}
+		HAL_Delay(1000);
 		
     /* USER CODE END WHILE */
 

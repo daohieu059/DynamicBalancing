@@ -326,7 +326,7 @@ int8_t VCP_retrieveInputData(uint8_t* Buf, uint32_t *Len)
 	int index=s_RxBuffers.pos_process;	
 	*Len=s_RxBuffers.CommandsLens[index]; //return the length 
 	memcpy(Buf,s_RxBuffers.UserRxBufferFS[index],*Len); 
-	Buf[*Len]= '\0'; //testing only. make sure there is ending char in the returned command string
+	//Buf[*Len]= '\0'; //testing only. make sure there is ending char in the returned command string
 	s_RxBuffers.pos_process++; //check if all data were processed.
 	if (s_RxBuffers.pos_process>=MaxCommandsInBuffer)	
 	{

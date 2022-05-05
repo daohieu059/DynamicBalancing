@@ -109,7 +109,6 @@ D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic ba
 D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.User_control.Result_1Plane.resources
 D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.User_control.Main.resources
 D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.User_control.Result_2Plane.resources
-D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.User_control.Database.resources
 D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\EPPlus.dll
 D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
 D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\System.ComponentModel.Annotations.dll

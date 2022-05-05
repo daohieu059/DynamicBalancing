@@ -35,7 +35,7 @@ namespace dynamic_balancing_machine.User_control
         {            
             Control.CheckForIllegalCrossThreadCalls = false;
             cBoxCOM.DataSource = SerialPort.GetPortNames();
-            cBoxCOM.SelectedIndex = 1;
+            cBoxCOM.SelectedIndex = 2;
             cBoxBaud.SelectedIndex = 7;
             cBoxDatabits.SelectedIndex = 2;
             cBoxStopbits.SelectedIndex = 0;
@@ -123,8 +123,9 @@ namespace dynamic_balancing_machine.User_control
             data = serialPort1.ReadLine();
             txtDataReceive.Text = data;
             string[] sub_data = data.Split(',');
-            
-            data1 = double.Parse(sub_data[1]) * 5 / 327;
+            txtAmAverage_P2_2P.Text = sub_data[4];
+
+            /*data1 = double.Parse(sub_data[1]) * 5 / 32768;
             data2 = double.Parse(sub_data[2]) * 5 / 32768;
             data3 = double.Parse(sub_data[3]) * 5 / 32768;           
             
@@ -346,9 +347,12 @@ namespace dynamic_balancing_machine.User_control
         {
             if(serialPort1.IsOpen)
             {
-                /*byte[] DO_Chars = { (byte)Byte.Parse(txtNumericSpeed.Text)};                
-                serialPort1.Write(DO_Chars, 0,1);*/
-                serialPort1.WriteLine(txtNumericSpeed.Text);
+                int x = int.Parse(txtNumericSpeed.Text);
+                int chuc = x / 10;
+                int donvi = x % 10;
+                byte[] DO_Chars = { (byte)(chuc+48), (byte)(donvi+48)};                
+                serialPort1.Write(DO_Chars, 0,2);
+                //serialPort1.WriteLine(txtNumericSpeed.Text);
             }
             else
             {
@@ -360,9 +364,9 @@ namespace dynamic_balancing_machine.User_control
         {
             if (serialPort1.IsOpen)
             {
-                /*byte[] DO_Chars = { (byte)0 };
-                serialPort1.Write(DO_Chars, 0, 1);*/
-                serialPort1.WriteLine("0");
+                byte[] DO_Chars = { (byte)48 };
+                serialPort1.Write(DO_Chars, 0, 1);
+                //serialPort1.WriteLine("0");
             }
             else
             {

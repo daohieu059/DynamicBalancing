@@ -81,10 +81,7 @@ namespace dynamic_balancing_machine.User_control
         
         private void Calculator_2Plane_Load(object sender, EventArgs e)
         {
-            txtV1.Text = "2";
-            txtPhiV1.Text = "3.14";
-            txtV2.Text = "2";
-            txtPhiV2.Text = "6.28";
+            
         }
 
         // tính an pha trong cân bằng 2 mặt
@@ -94,8 +91,6 @@ namespace dynamic_balancing_machine.User_control
         double AnPha22, PhiAnPha22;
         double Am_det, Phi_det;
         double V1, PhiV1;// vị trí mất cân bằng calib
-
-
         double V2, PhiV2;
 
 

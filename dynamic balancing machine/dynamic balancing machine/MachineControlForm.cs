@@ -90,6 +90,12 @@ namespace dynamic_balancing_machine
         private void btnHome_Click(object sender, EventArgs e)
         {
             MoveSidePanel(btnHome);
+            step1.Image = Properties.Resources.Current;
+            step2.Image = Properties.Resources.Pending;
+            step3.Image = Properties.Resources.Pending;
+            step4.Image = Properties.Resources.Pending;
+            StepProcess.Value = 0;
+            PanelProcess.Controls.Find("Main", false)[0].BringToFront();
         }                
         
         private void btnExit_Click(object sender, EventArgs e)

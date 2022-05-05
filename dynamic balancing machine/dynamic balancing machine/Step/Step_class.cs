@@ -43,17 +43,23 @@ namespace dynamic_balancing_machine.Step
             ProgressBar progressbar1 = (ProgressBar)ParentForm.Controls.Find(progressbar, false)[0];
             progressbar1.Value += 33;
         }
-        public void Finish(Form ParentForm, string currentImageBox, string nextPageName, string progressbar)
+        public void Finish(Form ParentForm, string step1, string step2, string step3, string step4, string main, string progressbar)
         {
             // resolve images
-            PictureBox currentPictureBox = (PictureBox)ParentForm.Controls.Find(currentImageBox, false)[0];
-            currentPictureBox.Image = Properties.Resources.Complete_check;
+            PictureBox step_1 = (PictureBox)ParentForm.Controls.Find(step1, false)[0];
+            step_1.Image = Properties.Resources.Current;
+            PictureBox step_2 = (PictureBox)ParentForm.Controls.Find(step2, false)[0];
+            step_2.Image = Properties.Resources.Pending;
+            PictureBox step_3 = (PictureBox)ParentForm.Controls.Find(step3, false)[0];
+            step_3.Image = Properties.Resources.Pending;
+            PictureBox step_4 = (PictureBox)ParentForm.Controls.Find(step4, false)[0];
+            step_4.Image = Properties.Resources.Pending;
 
             // resolve pages
-            ParentForm.Controls.Find("PanelProcess", false)[0].Controls.Find(nextPageName, false)[0].BringToFront();
+            ParentForm.Controls.Find("PanelProcess", false)[0].Controls.Find(main, false)[0].BringToFront();
 
             ProgressBar progressbar1 = (ProgressBar)ParentForm.Controls.Find(progressbar, false)[0];
-            progressbar1.Value = 100;
+            progressbar1.Value = 0;
         }
         public TextBox TextBox(Form ParentForm, string txtBox, string Pagename)
         {
