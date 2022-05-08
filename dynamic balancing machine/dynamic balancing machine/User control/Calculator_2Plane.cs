@@ -35,8 +35,8 @@ namespace dynamic_balancing_machine.User_control
         {            
             if (radioButton1.Checked == true | radioButton2.Checked == true | radioButton3.Checked == true | radioButton4.Checked == true)
             {
-                TextBox AmAverage1 = new Step_class().TextBox1(ParentForm, "txtAmAverage_P1", "panel7", "DataAcquisition");
-                TextBox Dolechpha1 = new Step_class().TextBox1(ParentForm, "txtDolechpha_P1", "panel7", "DataAcquisition");
+                TextBox AmAverage1 = new Step_class().TextBox1(ParentForm, "txtAmAverage_P1_2P", "panel7", "DataAcquisition");
+                TextBox Dolechpha1 = new Step_class().TextBox1(ParentForm, "txtDolechpha_P1_2P", "panel7", "DataAcquisition");
                 TextBox AmAverage2 = new Step_class().TextBox1(ParentForm, "txtAmAverage_P2_2P", "panel7", "DataAcquisition");
                 TextBox Dolechpha2 = new Step_class().TextBox1(ParentForm, "txtDolechpha_P2_2P", "panel7", "DataAcquisition");
                 if (radioButton1.Checked == true)

@@ -56,6 +56,7 @@ namespace dynamic_balancing_machine.User_control
             this.label12 = new System.Windows.Forms.Label();
             this.txtAm = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnGetdata = new System.Windows.Forms.Button();
             this.btnDiagnostic = new System.Windows.Forms.Button();
             this.btnRun = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -68,7 +69,6 @@ namespace dynamic_balancing_machine.User_control
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnGetdata = new System.Windows.Forms.Button();
             this.pnl1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -458,6 +458,23 @@ namespace dynamic_balancing_machine.User_control
             this.panel3.Size = new System.Drawing.Size(152, 514);
             this.panel3.TabIndex = 16;
             // 
+            // btnGetdata
+            // 
+            this.btnGetdata.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnGetdata.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGetdata.FlatAppearance.BorderSize = 0;
+            this.btnGetdata.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnGetdata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGetdata.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetdata.ForeColor = System.Drawing.Color.White;
+            this.btnGetdata.Location = new System.Drawing.Point(8, 378);
+            this.btnGetdata.Name = "btnGetdata";
+            this.btnGetdata.Size = new System.Drawing.Size(137, 50);
+            this.btnGetdata.TabIndex = 26;
+            this.btnGetdata.Text = "Get data";
+            this.btnGetdata.UseVisualStyleBackColor = false;
+            this.btnGetdata.Click += new System.EventHandler(this.btnGetdata_Click);
+            // 
             // btnDiagnostic
             // 
             this.btnDiagnostic.BackColor = System.Drawing.SystemColors.ButtonShadow;
@@ -590,23 +607,6 @@ namespace dynamic_balancing_machine.User_control
             // 
             this.columnHeader2.Text = "Vị trí thêm";
             this.columnHeader2.Width = 90;
-            // 
-            // btnGetdata
-            // 
-            this.btnGetdata.BackColor = System.Drawing.Color.DarkBlue;
-            this.btnGetdata.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGetdata.FlatAppearance.BorderSize = 0;
-            this.btnGetdata.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnGetdata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGetdata.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGetdata.ForeColor = System.Drawing.Color.White;
-            this.btnGetdata.Location = new System.Drawing.Point(8, 378);
-            this.btnGetdata.Name = "btnGetdata";
-            this.btnGetdata.Size = new System.Drawing.Size(137, 50);
-            this.btnGetdata.TabIndex = 26;
-            this.btnGetdata.Text = "Get data";
-            this.btnGetdata.UseVisualStyleBackColor = false;
-            this.btnGetdata.Click += new System.EventHandler(this.btnGetdata_Click);
             // 
             // Result_1Plane
             // 

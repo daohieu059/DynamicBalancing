@@ -71,6 +71,7 @@ namespace dynamic_balancing_machine.User_control
             this.txtAm = new System.Windows.Forms.TextBox();
             this.txtGoc = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnLoadSQL = new System.Windows.Forms.Button();
             this.btnSaveSQL = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
             this.btnSaveDatabase = new System.Windows.Forms.Button();
@@ -88,7 +89,6 @@ namespace dynamic_balancing_machine.User_control
             this.label19 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
-            this.btnLoadSQL = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -635,6 +635,23 @@ namespace dynamic_balancing_machine.User_control
             this.panel4.TabIndex = 18;
             this.panel4.Visible = false;
             // 
+            // btnLoadSQL
+            // 
+            this.btnLoadSQL.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnLoadSQL.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoadSQL.FlatAppearance.BorderSize = 0;
+            this.btnLoadSQL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
+            this.btnLoadSQL.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnLoadSQL.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoadSQL.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnLoadSQL.Location = new System.Drawing.Point(380, 384);
+            this.btnLoadSQL.Name = "btnLoadSQL";
+            this.btnLoadSQL.Size = new System.Drawing.Size(148, 37);
+            this.btnLoadSQL.TabIndex = 140;
+            this.btnLoadSQL.Text = "Load Database SQL";
+            this.btnLoadSQL.UseVisualStyleBackColor = false;
+            this.btnLoadSQL.Click += new System.EventHandler(this.btnLoadSQL_Click);
+            // 
             // btnSaveSQL
             // 
             this.btnSaveSQL.BackColor = System.Drawing.SystemColors.AppWorkspace;
@@ -833,23 +850,6 @@ namespace dynamic_balancing_machine.User_control
             this.label20.TabIndex = 9;
             this.label20.Text = "Cân bằng 1 mặt";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnLoadSQL
-            // 
-            this.btnLoadSQL.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnLoadSQL.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLoadSQL.FlatAppearance.BorderSize = 0;
-            this.btnLoadSQL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
-            this.btnLoadSQL.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnLoadSQL.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoadSQL.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLoadSQL.Location = new System.Drawing.Point(380, 384);
-            this.btnLoadSQL.Name = "btnLoadSQL";
-            this.btnLoadSQL.Size = new System.Drawing.Size(148, 37);
-            this.btnLoadSQL.TabIndex = 140;
-            this.btnLoadSQL.Text = "Load Database SQL";
-            this.btnLoadSQL.UseVisualStyleBackColor = false;
-            this.btnLoadSQL.Click += new System.EventHandler(this.btnLoadSQL_Click);
             // 
             // Calculator_1Plane
             // 

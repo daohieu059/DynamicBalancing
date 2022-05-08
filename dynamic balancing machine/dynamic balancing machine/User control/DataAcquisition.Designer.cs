@@ -64,21 +64,32 @@ namespace dynamic_balancing_machine.User_control
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel7 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
-            this.txtDataReceive = new System.Windows.Forms.TextBox();
+            this.txtDataReceive2 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.txtAmAverage_P2_2P = new System.Windows.Forms.TextBox();
-            this.txtAmAverage_P1 = new System.Windows.Forms.TextBox();
+            this.txtAmAverage_P1_2P = new System.Windows.Forms.TextBox();
             this.txtDolechpha_P2_2P = new System.Windows.Forms.TextBox();
-            this.txtDolechpha_P1 = new System.Windows.Forms.TextBox();
+            this.txtDolechpha_P1_2P = new System.Windows.Forms.TextBox();
             this.txtAnphaAverage_P2_2P = new System.Windows.Forms.TextBox();
-            this.txtAnphaAverage_P1 = new System.Windows.Forms.TextBox();
+            this.txtAnphaAverage_P1_2P = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.btnReturnStep4 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtDataReceive1 = new System.Windows.Forms.TextBox();
+            this.txtAmAverage_1P = new System.Windows.Forms.TextBox();
+            this.txtDolechpha_1P = new System.Windows.Forms.TextBox();
+            this.txtAnphaAverage_1P = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -87,6 +98,8 @@ namespace dynamic_balancing_machine.User_control
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // BackButton
@@ -466,15 +479,15 @@ namespace dynamic_balancing_machine.User_control
             // 
             this.panel7.BackColor = System.Drawing.SystemColors.Control;
             this.panel7.Controls.Add(this.label16);
-            this.panel7.Controls.Add(this.txtDataReceive);
+            this.panel7.Controls.Add(this.txtDataReceive2);
             this.panel7.Controls.Add(this.label22);
             this.panel7.Controls.Add(this.label18);
             this.panel7.Controls.Add(this.txtAmAverage_P2_2P);
-            this.panel7.Controls.Add(this.txtAmAverage_P1);
+            this.panel7.Controls.Add(this.txtAmAverage_P1_2P);
             this.panel7.Controls.Add(this.txtDolechpha_P2_2P);
-            this.panel7.Controls.Add(this.txtDolechpha_P1);
+            this.panel7.Controls.Add(this.txtDolechpha_P1_2P);
             this.panel7.Controls.Add(this.txtAnphaAverage_P2_2P);
-            this.panel7.Controls.Add(this.txtAnphaAverage_P1);
+            this.panel7.Controls.Add(this.txtAnphaAverage_P1_2P);
             this.panel7.Controls.Add(this.label9);
             this.panel7.Controls.Add(this.label13);
             this.panel7.Controls.Add(this.label15);
@@ -496,13 +509,13 @@ namespace dynamic_balancing_machine.User_control
             this.label16.Text = "Data Receive";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtDataReceive
+            // txtDataReceive2
             // 
-            this.txtDataReceive.Font = new System.Drawing.Font("Bahnschrift Condensed", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDataReceive.Location = new System.Drawing.Point(136, 171);
-            this.txtDataReceive.Name = "txtDataReceive";
-            this.txtDataReceive.Size = new System.Drawing.Size(256, 28);
-            this.txtDataReceive.TabIndex = 56;
+            this.txtDataReceive2.Font = new System.Drawing.Font("Bahnschrift Condensed", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDataReceive2.Location = new System.Drawing.Point(136, 171);
+            this.txtDataReceive2.Name = "txtDataReceive2";
+            this.txtDataReceive2.Size = new System.Drawing.Size(256, 28);
+            this.txtDataReceive2.TabIndex = 56;
             // 
             // label22
             // 
@@ -536,13 +549,13 @@ namespace dynamic_balancing_machine.User_control
             this.txtAmAverage_P2_2P.Size = new System.Drawing.Size(100, 27);
             this.txtAmAverage_P2_2P.TabIndex = 16;
             // 
-            // txtAmAverage_P1
+            // txtAmAverage_P1_2P
             // 
-            this.txtAmAverage_P1.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAmAverage_P1.Location = new System.Drawing.Point(136, 134);
-            this.txtAmAverage_P1.Name = "txtAmAverage_P1";
-            this.txtAmAverage_P1.Size = new System.Drawing.Size(100, 27);
-            this.txtAmAverage_P1.TabIndex = 16;
+            this.txtAmAverage_P1_2P.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAmAverage_P1_2P.Location = new System.Drawing.Point(136, 134);
+            this.txtAmAverage_P1_2P.Name = "txtAmAverage_P1_2P";
+            this.txtAmAverage_P1_2P.Size = new System.Drawing.Size(100, 27);
+            this.txtAmAverage_P1_2P.TabIndex = 16;
             // 
             // txtDolechpha_P2_2P
             // 
@@ -552,13 +565,13 @@ namespace dynamic_balancing_machine.User_control
             this.txtDolechpha_P2_2P.Size = new System.Drawing.Size(100, 27);
             this.txtDolechpha_P2_2P.TabIndex = 15;
             // 
-            // txtDolechpha_P1
+            // txtDolechpha_P1_2P
             // 
-            this.txtDolechpha_P1.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDolechpha_P1.Location = new System.Drawing.Point(135, 96);
-            this.txtDolechpha_P1.Name = "txtDolechpha_P1";
-            this.txtDolechpha_P1.Size = new System.Drawing.Size(100, 27);
-            this.txtDolechpha_P1.TabIndex = 15;
+            this.txtDolechpha_P1_2P.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDolechpha_P1_2P.Location = new System.Drawing.Point(135, 96);
+            this.txtDolechpha_P1_2P.Name = "txtDolechpha_P1_2P";
+            this.txtDolechpha_P1_2P.Size = new System.Drawing.Size(100, 27);
+            this.txtDolechpha_P1_2P.TabIndex = 15;
             // 
             // txtAnphaAverage_P2_2P
             // 
@@ -568,13 +581,13 @@ namespace dynamic_balancing_machine.User_control
             this.txtAnphaAverage_P2_2P.Size = new System.Drawing.Size(100, 27);
             this.txtAnphaAverage_P2_2P.TabIndex = 14;
             // 
-            // txtAnphaAverage_P1
+            // txtAnphaAverage_P1_2P
             // 
-            this.txtAnphaAverage_P1.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAnphaAverage_P1.Location = new System.Drawing.Point(135, 58);
-            this.txtAnphaAverage_P1.Name = "txtAnphaAverage_P1";
-            this.txtAnphaAverage_P1.Size = new System.Drawing.Size(100, 27);
-            this.txtAnphaAverage_P1.TabIndex = 14;
+            this.txtAnphaAverage_P1_2P.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnphaAverage_P1_2P.Location = new System.Drawing.Point(135, 58);
+            this.txtAnphaAverage_P1_2P.Name = "txtAnphaAverage_P1_2P";
+            this.txtAnphaAverage_P1_2P.Size = new System.Drawing.Size(100, 27);
+            this.txtAnphaAverage_P1_2P.TabIndex = 14;
             // 
             // label9
             // 
@@ -654,6 +667,127 @@ namespace dynamic_balancing_machine.User_control
             this.btnReturnStep4.Visible = false;
             this.btnReturnStep4.Click += new System.EventHandler(this.btnReturnStep4_Click);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.Control;
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.txtDataReceive1);
+            this.panel3.Controls.Add(this.txtAmAverage_1P);
+            this.panel3.Controls.Add(this.txtDolechpha_1P);
+            this.panel3.Controls.Add(this.txtAnphaAverage_1P);
+            this.panel3.Controls.Add(this.label19);
+            this.panel3.Controls.Add(this.label20);
+            this.panel3.Controls.Add(this.label21);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Location = new System.Drawing.Point(542, 48);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(438, 212);
+            this.panel3.TabIndex = 58;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label5.Location = new System.Drawing.Point(11, 177);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(96, 17);
+            this.label5.TabIndex = 57;
+            this.label5.Text = "Data Receive";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtDataReceive1
+            // 
+            this.txtDataReceive1.Font = new System.Drawing.Font("Bahnschrift Condensed", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDataReceive1.Location = new System.Drawing.Point(136, 171);
+            this.txtDataReceive1.Name = "txtDataReceive1";
+            this.txtDataReceive1.Size = new System.Drawing.Size(256, 28);
+            this.txtDataReceive1.TabIndex = 56;
+            // 
+            // txtAmAverage_1P
+            // 
+            this.txtAmAverage_1P.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAmAverage_1P.Location = new System.Drawing.Point(136, 134);
+            this.txtAmAverage_1P.Name = "txtAmAverage_1P";
+            this.txtAmAverage_1P.Size = new System.Drawing.Size(100, 27);
+            this.txtAmAverage_1P.TabIndex = 16;
+            // 
+            // txtDolechpha_1P
+            // 
+            this.txtDolechpha_1P.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDolechpha_1P.Location = new System.Drawing.Point(135, 96);
+            this.txtDolechpha_1P.Name = "txtDolechpha_1P";
+            this.txtDolechpha_1P.Size = new System.Drawing.Size(100, 27);
+            this.txtDolechpha_1P.TabIndex = 15;
+            // 
+            // txtAnphaAverage_1P
+            // 
+            this.txtAnphaAverage_1P.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnphaAverage_1P.Location = new System.Drawing.Point(135, 58);
+            this.txtAnphaAverage_1P.Name = "txtAnphaAverage_1P";
+            this.txtAnphaAverage_1P.Size = new System.Drawing.Size(100, 27);
+            this.txtAnphaAverage_1P.TabIndex = 14;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label19.Location = new System.Drawing.Point(11, 140);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(92, 17);
+            this.label19.TabIndex = 13;
+            this.label19.Text = "Am_Average";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label20.Location = new System.Drawing.Point(11, 102);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(51, 17);
+            this.label20.TabIndex = 10;
+            this.label20.Text = "Anpha";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label21.Location = new System.Drawing.Point(11, 64);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(79, 17);
+            this.label21.TabIndex = 9;
+            this.label21.Text = "Anpha_DFT";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel4.Controls.Add(this.label23);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(438, 33);
+            this.panel4.TabIndex = 19;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label23.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label23.Location = new System.Drawing.Point(0, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(240, 33);
+            this.label23.TabIndex = 9;
+            this.label23.Text = "Tính toán dữ liệu thu thập";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // DataAcquisition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -666,6 +800,7 @@ namespace dynamic_balancing_machine.User_control
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.btnReturnStep4);
             this.Controls.Add(this.NextButton);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel7);
             this.Name = "DataAcquisition";
             this.Size = new System.Drawing.Size(980, 650);
@@ -684,6 +819,10 @@ namespace dynamic_balancing_machine.User_control
             this.panel7.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -725,20 +864,31 @@ namespace dynamic_balancing_machine.User_control
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtAmAverage_P2_2P;
-        private System.Windows.Forms.TextBox txtAmAverage_P1;
+        private System.Windows.Forms.TextBox txtAmAverage_P1_2P;
         private System.Windows.Forms.TextBox txtDolechpha_P2_2P;
-        private System.Windows.Forms.TextBox txtDolechpha_P1;
+        private System.Windows.Forms.TextBox txtDolechpha_P1_2P;
         private System.Windows.Forms.TextBox txtAnphaAverage_P2_2P;
-        private System.Windows.Forms.TextBox txtAnphaAverage_P1;
+        private System.Windows.Forms.TextBox txtAnphaAverage_P1_2P;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox txtDataReceive;
+        private System.Windows.Forms.TextBox txtDataReceive2;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btnSpeed;
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.Button btnReturnStep4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtDataReceive1;
+        private System.Windows.Forms.TextBox txtAmAverage_1P;
+        private System.Windows.Forms.TextBox txtDolechpha_1P;
+        private System.Windows.Forms.TextBox txtAnphaAverage_1P;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label23;
     }
 }

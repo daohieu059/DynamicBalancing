@@ -39,6 +39,14 @@ namespace dynamic_balancing_machine.User_control
             }  
             else
             {
+                if (Mode==1)
+                {
+                    ParentForm.Controls.Find("PanelProcess", false)[0].Controls.Find("DataAcquisition", false)[0].Controls.Find("panel3", false)[0].BringToFront();
+                }   
+                else if (Mode==2)
+                {
+                    ParentForm.Controls.Find("PanelProcess", false)[0].Controls.Find("DataAcquisition", false)[0].Controls.Find("panel7", false)[0].BringToFront();
+                }    
                 new Step_class().Forward(ParentForm, "step1", "step2", "DataAcquisition", "StepProcess");
                 labelWarn.Visible = false;
             }

@@ -78,8 +78,8 @@ namespace dynamic_balancing_machine.User_control
             {
                 double A_anpha, goc_anpha, V, PhiV, Re_Am, Im_Am;
                 
-                TextBox AmAverage = new Step_class().TextBox1(ParentForm, "txtAmAverage_P1", "panel7", "DataAcquisition");
-                TextBox Dolechpha = new Step_class().TextBox1(ParentForm, "txtDolechpha_P1", "panel7", "DataAcquisition");
+                TextBox AmAverage = new Step_class().TextBox1(ParentForm, "txtAmAverage_1P", "panel3", "DataAcquisition");
+                TextBox Dolechpha = new Step_class().TextBox1(ParentForm, "txtDolechpha_1P", "panel3", "DataAcquisition");
                 /*txtAm.Text = AmAverage.Text;
                 txtPhase.Text = Dolechpha.Text;*/
 

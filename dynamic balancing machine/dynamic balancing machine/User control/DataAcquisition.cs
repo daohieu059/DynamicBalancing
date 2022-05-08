@@ -126,9 +126,10 @@ namespace dynamic_balancing_machine.User_control
         {
             //Nhan data            
             data = serialPort1.ReadLine();
-            txtDataReceive.Text = data;
+            txtDataReceive1.Text = data;
+            txtDataReceive2.Text = data;
             string[] sub_data = data.Split(',');
-            txtAmAverage_P2_2P.Text = sub_data[4];
+            //txtAmAverage_P2_2P.Text = sub_data[4];
 
             /*data1 = double.Parse(sub_data[1]) * 5 / 32768;
             data2 = double.Parse(sub_data[2]) * 5 / 32768;
@@ -143,7 +144,7 @@ namespace dynamic_balancing_machine.User_control
                 i++;
                 if (t == 500)
                 {
-                    CreateGraph(zed, piezo, quang, Color.Green, Color.Blue, txtAmAverage_P1, txtAnphaAverage_P1, txtDolechpha_P1, i);
+                    CreateGraph(zed, piezo, quang, Color.Green, Color.Blue, txtAmAverage_1P, txtAnphaAverage_1P, txtDolechpha_1P, i);
                     Array.Clear(quang, 0, quang.Length);
                     Array.Clear(piezo, 0, piezo.Length);
                     i = 0;
@@ -158,7 +159,7 @@ namespace dynamic_balancing_machine.User_control
                 i++;
                 if (time == 1000)
                 {
-                    CreateGraph(zed, piezo1, quang, Color.Green, Color.Blue, txtAmAverage_P1, txtAnphaAverage_P1, txtDolechpha_P1, i);
+                    CreateGraph(zed, piezo1, quang, Color.Green, Color.Blue, txtAmAverage_P1_2P, txtAnphaAverage_P1_2P, txtDolechpha_P1_2P, i);
                     CreateGraph(zed, piezo2, quang, Color.Yellow, Color.Pink, txtAmAverage_P2_2P, txtAnphaAverage_P2_2P, txtDolechpha_P2_2P, i);
                     Array.Clear(quang, 0, quang.Length);
                     Array.Clear(piezo1, 0, piezo1.Length);
