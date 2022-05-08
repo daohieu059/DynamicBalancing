@@ -44,7 +44,7 @@ namespace dynamic_balancing_machine.User_control
             this.lblmode = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btonConnect = new System.Windows.Forms.Button();
+            this.btnConnect = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -78,6 +78,7 @@ namespace dynamic_balancing_machine.User_control
             this.label15 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
+            this.btnReturnStep4 = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -255,7 +256,7 @@ namespace dynamic_balancing_machine.User_control
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btonConnect);
+            this.groupBox2.Controls.Add(this.btnConnect);
             this.groupBox2.Controls.Add(this.progressBar1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(4, 332);
@@ -267,19 +268,19 @@ namespace dynamic_balancing_machine.User_control
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Connect COM";
             // 
-            // btonConnect
+            // btnConnect
             // 
-            this.btonConnect.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btonConnect.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btonConnect.ForeColor = System.Drawing.Color.Green;
-            this.btonConnect.Location = new System.Drawing.Point(4, 27);
-            this.btonConnect.Margin = new System.Windows.Forms.Padding(2);
-            this.btonConnect.Name = "btonConnect";
-            this.btonConnect.Size = new System.Drawing.Size(201, 44);
-            this.btonConnect.TabIndex = 0;
-            this.btonConnect.Text = "Connect";
-            this.btonConnect.UseVisualStyleBackColor = true;
-            this.btonConnect.Click += new System.EventHandler(this.btonConnect_Click);
+            this.btnConnect.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConnect.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConnect.ForeColor = System.Drawing.Color.Green;
+            this.btnConnect.Location = new System.Drawing.Point(4, 27);
+            this.btnConnect.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(201, 44);
+            this.btnConnect.TabIndex = 0;
+            this.btnConnect.Text = "Connect";
+            this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // progressBar1
             // 
@@ -410,6 +411,7 @@ namespace dynamic_balancing_machine.User_control
             this.cBoxCOM.Name = "cBoxCOM";
             this.cBoxCOM.Size = new System.Drawing.Size(95, 30);
             this.cBoxCOM.TabIndex = 1;
+            this.cBoxCOM.Text = "COM3";
             // 
             // panel2
             // 
@@ -634,6 +636,24 @@ namespace dynamic_balancing_machine.User_control
             this.label17.Text = "Tính toán dữ liệu thu thập";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnReturnStep4
+            // 
+            this.btnReturnStep4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.btnReturnStep4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReturnStep4.FlatAppearance.BorderSize = 0;
+            this.btnReturnStep4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
+            this.btnReturnStep4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReturnStep4.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F);
+            this.btnReturnStep4.ForeColor = System.Drawing.Color.White;
+            this.btnReturnStep4.Location = new System.Drawing.Point(411, 599);
+            this.btnReturnStep4.Name = "btnReturnStep4";
+            this.btnReturnStep4.Size = new System.Drawing.Size(159, 51);
+            this.btnReturnStep4.TabIndex = 3;
+            this.btnReturnStep4.Text = "Return";
+            this.btnReturnStep4.UseVisualStyleBackColor = false;
+            this.btnReturnStep4.Visible = false;
+            this.btnReturnStep4.Click += new System.EventHandler(this.btnReturnStep4_Click);
+            // 
             // DataAcquisition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -644,6 +664,7 @@ namespace dynamic_balancing_machine.User_control
             this.Controls.Add(this.lblmode);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.BackButton);
+            this.Controls.Add(this.btnReturnStep4);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.panel7);
             this.Name = "DataAcquisition";
@@ -682,7 +703,7 @@ namespace dynamic_balancing_machine.User_control
         private System.Windows.Forms.Label lblmode;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btonConnect;
+        private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
@@ -718,5 +739,6 @@ namespace dynamic_balancing_machine.User_control
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btnSpeed;
         private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.Button btnReturnStep4;
     }
 }

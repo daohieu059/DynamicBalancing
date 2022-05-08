@@ -8,18 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using dynamic_balancing_machine.Step;
-using Excel = Microsoft.Office.Interop.Excel;
+using System.Data.SqlClient;
 
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace dynamic_balancing_machine.User_control
 {
     public partial class Calculator_1Plane : UserControl
     {
-
+        SQLClass sqlclass = new SQLClass();
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-OUODJF98\SQLEXPRESS;Initial Catalog=DynamicBalanceMachine;Integrated Security=True");
         public Calculator_1Plane()
         {
             InitializeComponent();
         }
+
+        private void Calculator_1Plane_Load(object sender, EventArgs e)
+        {
+            //LoadDataSQL();
+            
+        }        
 
         private void NextButton_Click(object sender, EventArgs e)
         {
@@ -31,11 +39,7 @@ namespace dynamic_balancing_machine.User_control
             new Step_class().Back(ParentForm, "step3", "step2", "DataAcquisition", "StepProcess");
         }
 
-        private void btnStart_Click(object sender, EventArgs e)
-        {
-            
-        }
-
+        
         private void btn1Plane_Load_Click(object sender, EventArgs e)
         {            
             if (radioButton1.Checked==true|radioButton2.Checked==true|radioButton3.Checked==true)
@@ -206,6 +210,15 @@ namespace dynamic_balancing_machine.User_control
             }
         }
 
+        private void btnLoadSQL_Click(object sender, EventArgs e)
+        {
+            LoadDataSQL();
+        }
+
+        private void btnSaveSQL_Click(object sender, EventArgs e)
+        {
+            UpdateDataSQL();
+        }
         static void SaveExcel_function(ListView dataTable)
         {
             // save item
@@ -322,5 +335,52 @@ namespace dynamic_balancing_machine.User_control
             {
             }
         }
+        private void UpdateDataSQL()
+        {
+            string phizero = Phizero.Text.Trim();
+            string phi1 = Phi1.Text.Trim();
+            string anphax = Anpha_x.Text.Trim();
+            string anphay = Anpha_y.Text.Trim();
+            sqlclass.excedata("update Parameters_1Plane set Value = " + phizero + " where Fields = 'Phi zero' ", sqlcon);
+            sqlclass.excedata("update Parameters_1Plane set Value = " + phi1 + " where Fields = 'Phi V1' ", sqlcon);
+            sqlclass.excedata("update Parameters_1Plane set Value = " + anphax + " where Fields = 'Anpha x' ", sqlcon);
+            sqlclass.excedata("update Parameters_1Plane set Value = " + anphay + " where Fields = 'Anpha y' ", sqlcon);
+        }
+
+        private void LoadDataSQL()
+        {
+            sqlclass.Open_Connect(sqlcon);
+            //var table_sinhvien = sqlclass.LoadData("select Field,Value from Parameters_1Plane");
+            SqlCommand cmds = new SqlCommand("select * from Parameters_1Plane", sqlcon);
+            /*cmds.CommandType = CommandType.Text;
+            cmds.CommandText = "select * from Parameters_1Plane";
+            cmds.Connection = sqlcon;*/
+            SqlDataReader reader = cmds.ExecuteReader();
+            ListViewDatabase.Items.Clear();
+            while (reader.Read())
+            {
+                string Field = (string)reader["Fields"];
+                float Value = (float)reader["Value"];
+                ListViewItem item = new ListViewItem(Field);
+                item.SubItems.Add(Value.ToString());
+                ListViewDatabase.Items.Add(item);
+            }
+            reader.Close();
+            sqlcon.Close();
+            double.TryParse(ListViewDatabase.Items[0].SubItems[1].Text, out Phizero_1P);
+            double.TryParse(ListViewDatabase.Items[1].SubItems[1].Text, out Phi1_1P);
+            double.TryParse(ListViewDatabase.Items[2].SubItems[1].Text, out An_x);
+            double.TryParse(ListViewDatabase.Items[3].SubItems[1].Text, out An_y);
+
+            Phizero.Text = Phizero_1P.ToString("0.000");
+            Phi1.Text = Phi1_1P.ToString("0.000");
+            Anpha_x.Text = An_x.ToString("0.000");
+            Anpha_y.Text = An_y.ToString("0.000");
+
+            lblAnpha_x.Text = An_x.ToString("0.000");
+            lblAnpha_y.Text = An_y.ToString("0.000");
+            txtPhizero.Text = Phizero_1P.ToString("0.000");
+        }
+
     }
 }

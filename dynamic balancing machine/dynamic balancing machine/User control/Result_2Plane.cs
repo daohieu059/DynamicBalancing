@@ -44,9 +44,21 @@ namespace dynamic_balancing_machine.User_control
             stt = 1;
         }
 
-        private void BackButton_Click_1(object sender, EventArgs e)
+        private void BackButton_Click(object sender, EventArgs e)
         {
             new Step_class().Back(ParentForm, "step4", "step3", "Calculator_2Plane", "StepProcess");
+        }
+
+        private void btnGetdata_Click(object sender, EventArgs e)
+        {
+            ParentForm.Controls.Find("PanelProcess", false)[0].Controls.Find("DataAcquisition", false)[0].BringToFront();
+            Button next = (Button)ParentForm.Controls.Find("PanelProcess", false)[0].Controls.Find("DataAcquisition", false)[0].Controls.Find("NextButton", false)[0];
+            Button back = (Button)ParentForm.Controls.Find("PanelProcess", false)[0].Controls.Find("DataAcquisition", false)[0].Controls.Find("BackButton", false)[0];
+            Button re = (Button)ParentForm.Controls.Find("PanelProcess", false)[0].Controls.Find("DataAcquisition", false)[0].Controls.Find("btnReturnStep4", false)[0];
+            next.Visible = false;
+            back.Visible = false;
+            re.Visible = true;
+
         }
 
         double B1, PhiB1;
@@ -236,7 +248,7 @@ namespace dynamic_balancing_machine.User_control
             }
         }
 
-        
+
         private void btnReturn_Click(object sender, EventArgs e)
         {
             btnSaveDatabase.Text = "Database";

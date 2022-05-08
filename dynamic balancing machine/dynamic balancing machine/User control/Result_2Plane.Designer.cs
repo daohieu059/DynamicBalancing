@@ -29,7 +29,7 @@ namespace dynamic_balancing_machine.User_control
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "STT",
             "Khối lượng",
             "Vị trí MCB",
@@ -102,6 +102,7 @@ namespace dynamic_balancing_machine.User_control
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnGetdata = new System.Windows.Forms.Button();
             this.pnl1.SuspendLayout();
             this.pnl2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -129,7 +130,7 @@ namespace dynamic_balancing_machine.User_control
             this.BackButton.TabIndex = 2;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = false;
-            this.BackButton.Click += new System.EventHandler(this.FinishButton_Click);
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // FinishButton
             // 
@@ -745,6 +746,7 @@ namespace dynamic_balancing_machine.User_control
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
+            this.panel3.Controls.Add(this.btnGetdata);
             this.panel3.Controls.Add(this.btnDiagnostic);
             this.panel3.Controls.Add(this.btnRun);
             this.panel3.Controls.Add(this.label21);
@@ -767,12 +769,12 @@ namespace dynamic_balancing_machine.User_control
             this.btnDiagnostic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDiagnostic.FlatAppearance.BorderSize = 0;
             this.btnDiagnostic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
-            this.btnDiagnostic.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnDiagnostic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiagnostic.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDiagnostic.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDiagnostic.Location = new System.Drawing.Point(8, 393);
+            this.btnDiagnostic.Location = new System.Drawing.Point(5, 346);
             this.btnDiagnostic.Name = "btnDiagnostic";
-            this.btnDiagnostic.Size = new System.Drawing.Size(116, 37);
+            this.btnDiagnostic.Size = new System.Drawing.Size(122, 37);
             this.btnDiagnostic.TabIndex = 29;
             this.btnDiagnostic.Text = "Diagnostic";
             this.btnDiagnostic.UseVisualStyleBackColor = false;
@@ -785,11 +787,11 @@ namespace dynamic_balancing_machine.User_control
             this.btnRun.FlatAppearance.BorderSize = 0;
             this.btnRun.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
             this.btnRun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRun.Font = new System.Drawing.Font("BankGothic Md BT", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRun.Font = new System.Drawing.Font("BankGothic Md BT", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRun.ForeColor = System.Drawing.Color.White;
-            this.btnRun.Location = new System.Drawing.Point(8, 445);
+            this.btnRun.Location = new System.Drawing.Point(5, 445);
             this.btnRun.Name = "btnRun";
-            this.btnRun.Size = new System.Drawing.Size(116, 51);
+            this.btnRun.Size = new System.Drawing.Size(122, 61);
             this.btnRun.TabIndex = 23;
             this.btnRun.Text = "RUN";
             this.btnRun.UseVisualStyleBackColor = false;
@@ -913,7 +915,7 @@ namespace dynamic_balancing_machine.User_control
             this.ListViewDatabase.HideSelection = false;
             this.ListViewDatabase.HoverSelection = true;
             this.ListViewDatabase.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.ListViewDatabase.Location = new System.Drawing.Point(154, 581);
             this.ListViewDatabase.Name = "ListViewDatabase";
             this.ListViewDatabase.Size = new System.Drawing.Size(673, 320);
@@ -962,6 +964,23 @@ namespace dynamic_balancing_machine.User_control
             this.columnHeader11.Text = "";
             this.columnHeader11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader11.Width = 88;
+            // 
+            // btnGetdata
+            // 
+            this.btnGetdata.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnGetdata.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGetdata.FlatAppearance.BorderSize = 0;
+            this.btnGetdata.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnGetdata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGetdata.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetdata.ForeColor = System.Drawing.Color.White;
+            this.btnGetdata.Location = new System.Drawing.Point(5, 389);
+            this.btnGetdata.Name = "btnGetdata";
+            this.btnGetdata.Size = new System.Drawing.Size(122, 50);
+            this.btnGetdata.TabIndex = 30;
+            this.btnGetdata.Text = "Get data";
+            this.btnGetdata.UseVisualStyleBackColor = false;
+            this.btnGetdata.Click += new System.EventHandler(this.btnGetdata_Click);
             // 
             // Result_2Plane
             // 
@@ -1071,5 +1090,6 @@ namespace dynamic_balancing_machine.User_control
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnGetdata;
     }
 }

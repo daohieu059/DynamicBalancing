@@ -119,15 +119,15 @@ int main(void)
 		
 		if (VCP_retrieveInputData(buffer,&len)==1)
 		{			
-			FRE=(buffer[0] - 48)*10 + (buffer[1]-48);
-			t = (float)FRE/50*4095;
+			t =(buffer[0] - 48)*10 + (buffer[1]-48) + (buffer[2]-48)*0.1;
+			t = t/50*4095;
 			FRE = (uint32_t)t;
 			FRE1=buffer[1];
 			FRE2=buffer[2];
 			if (FRE<=4095)
 			{			
 				HAL_DAC_Start(&hdac,DAC1_CHANNEL_1);
-				HAL_DAC_SetValue(&hdac,DAC1_CHANNEL_1,DAC_ALIGN_12B_L,FRE);
+				HAL_DAC_SetValue(&hdac,DAC1_CHANNEL_1,DAC_ALIGN_12B_R,FRE);
 			}
 			else FRE = 0;
 			//len=0;
@@ -137,11 +137,11 @@ int main(void)
 		CDC_Transmit_FS((uint8_t *)data, strlen(data));*/
 		if (FRE!=0)
 			{
-				//k = AD7606_readConversionValue(adc);
-				sprintf(data,"adc, %d, %d, %d, %d, %d\r\n",adc[0],adc[1], adc[2], FRE, FRE1);				
+				k = AD7606_readConversionValue(adc);
+				sprintf(data,"adc, %d, %d, %d, %d, %d %d\r\n",adc[0],adc[1], adc[2],adc[3] ,FRE, FRE1);				
 		    CDC_Transmit_FS((uint8_t *)data, strlen(data));
 			}
-		HAL_Delay(1000);
+		HAL_Delay(300);
 		
     /* USER CODE END WHILE */
 
@@ -225,6 +225,12 @@ static void MX_DAC_Init(void)
   sConfig.DAC_Trigger = DAC_TRIGGER_NONE;
   sConfig.DAC_OutputBuffer = DAC_OUTPUTBUFFER_ENABLE;
   if (HAL_DAC_ConfigChannel(&hdac, &sConfig, DAC_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /** DAC channel OUT2 config
+  */
+  if (HAL_DAC_ConfigChannel(&hdac, &sConfig, DAC_CHANNEL_2) != HAL_OK)
   {
     Error_Handler();
   }

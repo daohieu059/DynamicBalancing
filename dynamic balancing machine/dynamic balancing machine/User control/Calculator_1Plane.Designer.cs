@@ -71,6 +71,7 @@ namespace dynamic_balancing_machine.User_control
             this.txtAm = new System.Windows.Forms.TextBox();
             this.txtGoc = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnSaveSQL = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
             this.btnSaveDatabase = new System.Windows.Forms.Button();
             this.btnLoadDatabase = new System.Windows.Forms.Button();
@@ -87,6 +88,7 @@ namespace dynamic_balancing_machine.User_control
             this.label19 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
+            this.btnLoadSQL = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -612,6 +614,8 @@ namespace dynamic_balancing_machine.User_control
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Control;
+            this.panel4.Controls.Add(this.btnLoadSQL);
+            this.panel4.Controls.Add(this.btnSaveSQL);
             this.panel4.Controls.Add(this.btnReturn);
             this.panel4.Controls.Add(this.btnSaveDatabase);
             this.panel4.Controls.Add(this.btnLoadDatabase);
@@ -625,11 +629,28 @@ namespace dynamic_balancing_machine.User_control
             this.panel4.Controls.Add(this.label18);
             this.panel4.Controls.Add(this.label19);
             this.panel4.Controls.Add(this.panel8);
-            this.panel4.Location = new System.Drawing.Point(244, 84);
+            this.panel4.Location = new System.Drawing.Point(221, 84);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(493, 434);
+            this.panel4.Size = new System.Drawing.Size(538, 434);
             this.panel4.TabIndex = 18;
             this.panel4.Visible = false;
+            // 
+            // btnSaveSQL
+            // 
+            this.btnSaveSQL.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnSaveSQL.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveSQL.FlatAppearance.BorderSize = 0;
+            this.btnSaveSQL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
+            this.btnSaveSQL.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnSaveSQL.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveSQL.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSaveSQL.Location = new System.Drawing.Point(380, 341);
+            this.btnSaveSQL.Name = "btnSaveSQL";
+            this.btnSaveSQL.Size = new System.Drawing.Size(148, 37);
+            this.btnSaveSQL.TabIndex = 139;
+            this.btnSaveSQL.Text = "Save Database SQL";
+            this.btnSaveSQL.UseVisualStyleBackColor = false;
+            this.btnSaveSQL.Click += new System.EventHandler(this.btnSaveSQL_Click);
             // 
             // btnReturn
             // 
@@ -657,7 +678,7 @@ namespace dynamic_balancing_machine.User_control
             this.btnSaveDatabase.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnSaveDatabase.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveDatabase.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSaveDatabase.Location = new System.Drawing.Point(144, 341);
+            this.btnSaveDatabase.Location = new System.Drawing.Point(167, 341);
             this.btnSaveDatabase.Name = "btnSaveDatabase";
             this.btnSaveDatabase.Size = new System.Drawing.Size(204, 37);
             this.btnSaveDatabase.TabIndex = 137;
@@ -674,7 +695,7 @@ namespace dynamic_balancing_machine.User_control
             this.btnLoadDatabase.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnLoadDatabase.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoadDatabase.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLoadDatabase.Location = new System.Drawing.Point(144, 384);
+            this.btnLoadDatabase.Location = new System.Drawing.Point(167, 384);
             this.btnLoadDatabase.Name = "btnLoadDatabase";
             this.btnLoadDatabase.Size = new System.Drawing.Size(204, 37);
             this.btnLoadDatabase.TabIndex = 136;
@@ -692,9 +713,9 @@ namespace dynamic_balancing_machine.User_control
             this.ListViewDatabase.GridLines = true;
             this.ListViewDatabase.HideSelection = false;
             this.ListViewDatabase.HoverSelection = true;
-            this.ListViewDatabase.Location = new System.Drawing.Point(261, 52);
+            this.ListViewDatabase.Location = new System.Drawing.Point(298, 52);
             this.ListViewDatabase.Name = "ListViewDatabase";
-            this.ListViewDatabase.Size = new System.Drawing.Size(209, 258);
+            this.ListViewDatabase.Size = new System.Drawing.Size(230, 258);
             this.ListViewDatabase.TabIndex = 135;
             this.ListViewDatabase.UseCompatibleStateImageBehavior = false;
             this.ListViewDatabase.View = System.Windows.Forms.View.Details;
@@ -702,12 +723,12 @@ namespace dynamic_balancing_machine.User_control
             // columnHeader5
             // 
             this.columnHeader5.Text = "Fields";
-            this.columnHeader5.Width = 76;
+            this.columnHeader5.Width = 121;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Value";
-            this.columnHeader6.Width = 86;
+            this.columnHeader6.Width = 94;
             // 
             // Anpha_y
             // 
@@ -796,7 +817,7 @@ namespace dynamic_balancing_machine.User_control
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(493, 33);
+            this.panel8.Size = new System.Drawing.Size(538, 33);
             this.panel8.TabIndex = 19;
             // 
             // label20
@@ -813,23 +834,41 @@ namespace dynamic_balancing_machine.User_control
             this.label20.Text = "Cân bằng 1 mặt";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnLoadSQL
+            // 
+            this.btnLoadSQL.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnLoadSQL.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoadSQL.FlatAppearance.BorderSize = 0;
+            this.btnLoadSQL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
+            this.btnLoadSQL.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnLoadSQL.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoadSQL.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnLoadSQL.Location = new System.Drawing.Point(380, 384);
+            this.btnLoadSQL.Name = "btnLoadSQL";
+            this.btnLoadSQL.Size = new System.Drawing.Size(148, 37);
+            this.btnLoadSQL.TabIndex = 140;
+            this.btnLoadSQL.Text = "Load Database SQL";
+            this.btnLoadSQL.UseVisualStyleBackColor = false;
+            this.btnLoadSQL.Click += new System.EventHandler(this.btnLoadSQL_Click);
+            // 
             // Calculator_1Plane
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtGoc);
             this.Controls.Add(this.txtAm);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblmode);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.NextButton);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "Calculator_1Plane";
             this.Size = new System.Drawing.Size(980, 650);
+            this.Load += new System.EventHandler(this.Calculator_1Plane_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -911,5 +950,7 @@ namespace dynamic_balancing_machine.User_control
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button btnSaveSQL;
+        private System.Windows.Forms.Button btnLoadSQL;
     }
 }

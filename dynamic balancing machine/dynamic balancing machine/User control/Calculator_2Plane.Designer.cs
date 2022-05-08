@@ -44,6 +44,7 @@ namespace dynamic_balancing_machine.User_control
             this.label11 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnReturn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtA22 = new System.Windows.Forms.TextBox();
             this.txtPhi22 = new System.Windows.Forms.TextBox();
@@ -124,7 +125,6 @@ namespace dynamic_balancing_machine.User_control
             this.label39 = new System.Windows.Forms.Label();
             this.Anpha_22 = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
-            this.btnReturn = new System.Windows.Forms.Button();
             this.btnSaveDatabase = new System.Windows.Forms.Button();
             this.btnLoadDatabase = new System.Windows.Forms.Button();
             this.ListViewDatabase = new System.Windows.Forms.ListView();
@@ -198,8 +198,7 @@ namespace dynamic_balancing_machine.User_control
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.panel7);
-            this.panel3.Controls.Add(this.btnReturn);
-            this.panel3.Location = new System.Drawing.Point(0, 308);
+            this.panel3.Location = new System.Drawing.Point(115, 374);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(750, 182);
             this.panel3.TabIndex = 21;
@@ -349,6 +348,23 @@ namespace dynamic_balancing_machine.User_control
             this.label8.TabIndex = 9;
             this.label8.Text = "Tính toán hệ số ảnh hưởng";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnReturn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReturn.FlatAppearance.BorderSize = 0;
+            this.btnReturn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
+            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnReturn.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnReturn.Location = new System.Drawing.Point(3, 439);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(80, 37);
+            this.btnReturn.TabIndex = 138;
+            this.btnReturn.Text = "Return";
+            this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // panel2
             // 
@@ -1043,6 +1059,7 @@ namespace dynamic_balancing_machine.User_control
             this.panel4.Controls.Add(this.Phi_V20);
             this.panel4.Controls.Add(this.Phizero_2);
             this.panel4.Controls.Add(this.label44);
+            this.panel4.Controls.Add(this.btnReturn);
             this.panel4.Controls.Add(this.label45);
             this.panel4.Controls.Add(this.label46);
             this.panel4.Controls.Add(this.label47);
@@ -1064,10 +1081,9 @@ namespace dynamic_balancing_machine.User_control
             this.panel4.Controls.Add(this.label20);
             this.panel4.Controls.Add(this.label21);
             this.panel4.Controls.Add(this.panel8);
-            this.panel4.Controls.Add(this.panel3);
-            this.panel4.Location = new System.Drawing.Point(115, 57);
+            this.panel4.Location = new System.Drawing.Point(129, 57);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(750, 488);
+            this.panel4.Size = new System.Drawing.Size(723, 479);
             this.panel4.TabIndex = 30;
             this.panel4.Visible = false;
             // 
@@ -1271,23 +1287,6 @@ namespace dynamic_balancing_machine.User_control
             this.label38.Text = "Anpha_22:";
             this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnReturn
-            // 
-            this.btnReturn.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnReturn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReturn.FlatAppearance.BorderSize = 0;
-            this.btnReturn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
-            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnReturn.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnReturn.Location = new System.Drawing.Point(3, 140);
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(80, 37);
-            this.btnReturn.TabIndex = 138;
-            this.btnReturn.Text = "Return";
-            this.btnReturn.UseVisualStyleBackColor = false;
-            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
-            // 
             // btnSaveDatabase
             // 
             this.btnSaveDatabase.BackColor = System.Drawing.SystemColors.AppWorkspace;
@@ -1297,7 +1296,7 @@ namespace dynamic_balancing_machine.User_control
             this.btnSaveDatabase.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnSaveDatabase.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveDatabase.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSaveDatabase.Location = new System.Drawing.Point(284, 399);
+            this.btnSaveDatabase.Location = new System.Drawing.Point(270, 391);
             this.btnSaveDatabase.Name = "btnSaveDatabase";
             this.btnSaveDatabase.Size = new System.Drawing.Size(182, 37);
             this.btnSaveDatabase.TabIndex = 137;
@@ -1314,7 +1313,7 @@ namespace dynamic_balancing_machine.User_control
             this.btnLoadDatabase.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnLoadDatabase.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoadDatabase.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLoadDatabase.Location = new System.Drawing.Point(284, 442);
+            this.btnLoadDatabase.Location = new System.Drawing.Point(270, 434);
             this.btnLoadDatabase.Name = "btnLoadDatabase";
             this.btnLoadDatabase.Size = new System.Drawing.Size(182, 37);
             this.btnLoadDatabase.TabIndex = 136;
@@ -1332,9 +1331,9 @@ namespace dynamic_balancing_machine.User_control
             this.ListViewDatabase.GridLines = true;
             this.ListViewDatabase.HideSelection = false;
             this.ListViewDatabase.HoverSelection = true;
-            this.ListViewDatabase.Location = new System.Drawing.Point(530, 52);
+            this.ListViewDatabase.Location = new System.Drawing.Point(506, 52);
             this.ListViewDatabase.Name = "ListViewDatabase";
-            this.ListViewDatabase.Size = new System.Drawing.Size(206, 326);
+            this.ListViewDatabase.Size = new System.Drawing.Size(201, 326);
             this.ListViewDatabase.TabIndex = 135;
             this.ListViewDatabase.UseCompatibleStateImageBehavior = false;
             this.ListViewDatabase.View = System.Windows.Forms.View.Details;
@@ -1436,7 +1435,7 @@ namespace dynamic_balancing_machine.User_control
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(750, 33);
+            this.panel8.Size = new System.Drawing.Size(723, 33);
             this.panel8.TabIndex = 19;
             // 
             // label35
@@ -1458,6 +1457,7 @@ namespace dynamic_balancing_machine.User_control
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.txtPhiV1);
             this.Controls.Add(this.txtPhiV2);
             this.Controls.Add(this.txtV2);
@@ -1467,7 +1467,7 @@ namespace dynamic_balancing_machine.User_control
             this.Controls.Add(this.lblmode);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.NextButton);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
             this.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "Calculator_2Plane";

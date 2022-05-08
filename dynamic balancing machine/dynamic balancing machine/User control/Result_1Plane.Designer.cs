@@ -47,6 +47,7 @@ namespace dynamic_balancing_machine.User_control
             this.label5 = new System.Windows.Forms.Label();
             this.lblResult = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
             this.btnSaveDatabase = new System.Windows.Forms.Button();
@@ -67,7 +68,7 @@ namespace dynamic_balancing_machine.User_control
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label15 = new System.Windows.Forms.Label();
+            this.btnGetdata = new System.Windows.Forms.Button();
             this.pnl1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -325,6 +326,19 @@ namespace dynamic_balancing_machine.User_control
             this.panel1.Size = new System.Drawing.Size(152, 514);
             this.panel1.TabIndex = 7;
             // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label15.Location = new System.Drawing.Point(53, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(58, 29);
+            this.label15.TabIndex = 141;
+            this.label15.Text = "Plane";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.SystemColors.ButtonShadow;
@@ -431,6 +445,7 @@ namespace dynamic_balancing_machine.User_control
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
+            this.panel3.Controls.Add(this.btnGetdata);
             this.panel3.Controls.Add(this.btnDiagnostic);
             this.panel3.Controls.Add(this.btnRun);
             this.panel3.Controls.Add(this.label9);
@@ -445,14 +460,14 @@ namespace dynamic_balancing_machine.User_control
             // 
             // btnDiagnostic
             // 
-            this.btnDiagnostic.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnDiagnostic.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnDiagnostic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDiagnostic.FlatAppearance.BorderSize = 0;
-            this.btnDiagnostic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
-            this.btnDiagnostic.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnDiagnostic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnDiagnostic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiagnostic.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDiagnostic.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDiagnostic.Location = new System.Drawing.Point(8, 392);
+            this.btnDiagnostic.Location = new System.Drawing.Point(8, 335);
             this.btnDiagnostic.Name = "btnDiagnostic";
             this.btnDiagnostic.Size = new System.Drawing.Size(137, 37);
             this.btnDiagnostic.TabIndex = 25;
@@ -468,11 +483,11 @@ namespace dynamic_balancing_machine.User_control
             this.btnRun.FlatAppearance.BorderSize = 0;
             this.btnRun.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
             this.btnRun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRun.Font = new System.Drawing.Font("BankGothic Md BT", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRun.Font = new System.Drawing.Font("BankGothic Md BT", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRun.ForeColor = System.Drawing.Color.White;
-            this.btnRun.Location = new System.Drawing.Point(8, 445);
+            this.btnRun.Location = new System.Drawing.Point(8, 434);
             this.btnRun.Name = "btnRun";
-            this.btnRun.Size = new System.Drawing.Size(137, 51);
+            this.btnRun.Size = new System.Drawing.Size(137, 69);
             this.btnRun.TabIndex = 17;
             this.btnRun.Text = "RUN";
             this.btnRun.UseVisualStyleBackColor = false;
@@ -576,18 +591,22 @@ namespace dynamic_balancing_machine.User_control
             this.columnHeader2.Text = "Vị trí thêm";
             this.columnHeader2.Width = 90;
             // 
-            // label15
+            // btnGetdata
             // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label15.Location = new System.Drawing.Point(53, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(58, 29);
-            this.label15.TabIndex = 141;
-            this.label15.Text = "Plane";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnGetdata.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnGetdata.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGetdata.FlatAppearance.BorderSize = 0;
+            this.btnGetdata.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnGetdata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGetdata.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetdata.ForeColor = System.Drawing.Color.White;
+            this.btnGetdata.Location = new System.Drawing.Point(8, 378);
+            this.btnGetdata.Name = "btnGetdata";
+            this.btnGetdata.Size = new System.Drawing.Size(137, 50);
+            this.btnGetdata.TabIndex = 26;
+            this.btnGetdata.Text = "Get data";
+            this.btnGetdata.UseVisualStyleBackColor = false;
+            this.btnGetdata.Click += new System.EventHandler(this.btnGetdata_Click);
             // 
             // Result_1Plane
             // 
@@ -663,5 +682,6 @@ namespace dynamic_balancing_machine.User_control
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button btnGetdata;
     }
 }

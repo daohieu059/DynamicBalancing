@@ -60,7 +60,18 @@ namespace dynamic_balancing_machine.User_control
             stt = 1;
         }
 
-    double Am_mcb, goc_mcb;
+        private void btnGetdata_Click(object sender, EventArgs e)
+        {
+            ParentForm.Controls.Find("PanelProcess", false)[0].Controls.Find("DataAcquisition", false)[0].BringToFront();
+            Button next = (Button)ParentForm.Controls.Find("PanelProcess", false)[0].Controls.Find("DataAcquisition", false)[0].Controls.Find("NextButton", false)[0];
+            Button back = (Button)ParentForm.Controls.Find("PanelProcess", false)[0].Controls.Find("DataAcquisition", false)[0].Controls.Find("BackButton", false)[0];
+            Button re = (Button)ParentForm.Controls.Find("PanelProcess", false)[0].Controls.Find("DataAcquisition", false)[0].Controls.Find("btnReturnStep4", false)[0];
+            next.Visible = false;
+            back.Visible = false;
+            re.Visible = true;
+        }
+
+        double Am_mcb, goc_mcb;
         private void btnRun_Click(object sender, EventArgs e)
         {            
             try
@@ -69,8 +80,8 @@ namespace dynamic_balancing_machine.User_control
                 
                 TextBox AmAverage = new Step_class().TextBox1(ParentForm, "txtAmAverage_P1", "panel7", "DataAcquisition");
                 TextBox Dolechpha = new Step_class().TextBox1(ParentForm, "txtDolechpha_P1", "panel7", "DataAcquisition");
-                txtAm.Text = AmAverage.Text;
-                txtPhase.Text = Dolechpha.Text;
+                /*txtAm.Text = AmAverage.Text;
+                txtPhase.Text = Dolechpha.Text;*/
 
                 TextBox txtPhizero = new Step_class().TextBox1(ParentForm, "Phizero", "panel4", "Calculator_1Plane");
                 TextBox txtPhi1 = new Step_class().TextBox1(ParentForm, "Phi1", "panel4", "Calculator_1Plane");
@@ -249,7 +260,7 @@ namespace dynamic_balancing_machine.User_control
             }
 
         }
-                
+
 
         private void draw_result(double PhiB)
         {            

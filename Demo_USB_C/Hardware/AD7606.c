@@ -13,7 +13,7 @@ void AD7606_config(void)
     AD7606_CONVA_HIGH();
 		AD7606_CONVB_HIGH();
 
-    AD7606_SampleRate(AD7606_SAMPLE_200K);
+    AD7606_SampleRate(AD7606_SAMPLE_100K);
 }
 
 
@@ -124,16 +124,16 @@ uint8_t AD7606_readConversionValue(uint16_t *data)
 
     for (i = 1; i <= 7; i++)
     {
-        DWT_Delay_us(2);
+        DWT_Delay_us(10);
         AD7606_RD_LOW();    //RD
 
-        DWT_Delay_us(1);
+        DWT_Delay_us(10);
 			  data[i] = AD7606_ReadData();
 			
         //data[i] = AD7606_READ_DATA();   
         //data[i] = ((data[i] & 0xff) << 8) + (data[i] >> 8);
 
-        DWT_Delay_us(2);
+        DWT_Delay_us(5);
         AD7606_RD_HIGH();    
     }
 

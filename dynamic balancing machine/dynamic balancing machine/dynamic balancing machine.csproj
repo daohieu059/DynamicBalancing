@@ -109,6 +109,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Step\SQLClass.cs" />
     <Compile Include="Step\Step_class.cs" />
     <Compile Include="User control\DataAcquisition.cs">
       <SubType>UserControl</SubType>

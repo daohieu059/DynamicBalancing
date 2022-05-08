@@ -15,8 +15,7 @@ namespace dynamic_balancing_machine.User_control
     public partial class DataAcquisition : UserControl
     {
         int Mode;
-        int t=0;
-        int begin;
+        int t = 0;        
         int i = 0;
         public DataAcquisition()
         {
@@ -35,33 +34,14 @@ namespace dynamic_balancing_machine.User_control
         {            
             Control.CheckForIllegalCrossThreadCalls = false;
             cBoxCOM.DataSource = SerialPort.GetPortNames();
-            cBoxCOM.SelectedIndex = 2;
+            //cBoxCOM.SelectedIndex = 1;
             cBoxBaud.SelectedIndex = 7;
             cBoxDatabits.SelectedIndex = 2;
             cBoxStopbits.SelectedIndex = 0;
             cBoxParitybits.SelectedIndex = 0;
         }        
 
-        private void NextButton_Click(object sender, EventArgs e)
-        {
-            TextBox textBox = new Step_class().TextBox(ParentForm, "txtMode", "Main");
-            Mode = int.Parse(textBox.Text);
-            if (Mode ==1)
-            {
-                new Step_class().Forward(ParentForm, "step2", "step3", "Calculator_1Plane", "StepProcess");
-            }    
-            else if (Mode==2)
-            {
-                new Step_class().Forward(ParentForm, "step2", "step3", "Calculator_2Plane", "StepProcess");
-            }    
-        }
-
-        private void BackButton_Click(object sender, EventArgs e)
-        {
-            new Step_class().Back(ParentForm, "step2", "step1", "Main", "StepProcess");
-        }
-
-        private void btonConnect_Click(object sender, EventArgs e)
+        private void btnConnect_Click(object sender, EventArgs e)
         {
             if (serialPort1.IsOpen)
             {
@@ -69,16 +49,18 @@ namespace dynamic_balancing_machine.User_control
                 timer1.Enabled = false;i = 0;
                 progressBar1.Value = 0;
                 //serialPort1.DataReceived += new SerialDataReceivedEventHandler(serialPort1_DataReceived);
-                btonConnect.Text = "Connect";
-                btonConnect.ForeColor = Color.Green;
+                btnConnect.Text = "Connect";
+                btnConnect.ForeColor = Color.Green;
+                MessageBox.Show("Disconnect sucessfully");
 
             }
             else
             {
                 TextBox textBox = new Step_class().TextBox(ParentForm, "txtMode", "Main");
                 Mode = int.Parse(textBox.Text);
-                btonConnect.Text = "Disconnect";
-                btonConnect.ForeColor = Color.Red;
+                btnConnect.Text = "Disconnect";
+                btnConnect.ForeColor = Color.Red;
+                MessageBox.Show("Connect sucessfully");
                 serialPort1.PortName = cBoxCOM.Text;
                 serialPort1.BaudRate = Convert.ToInt32(cBoxBaud.Text);
                 serialPort1.DataBits = Convert.ToInt32(cBoxDatabits.Text);
@@ -87,24 +69,47 @@ namespace dynamic_balancing_machine.User_control
                 serialPort1.Open();
                 progressBar1.Value = 100;
 
-                /*serialPort1.DiscardInBuffer();
-                Array.Clear(RX_1, 0, RX_1.Length);
-                Array.Clear(RX_2, 0, RX_2.Length);
-                Array.Clear(RX_3, 0, RX_3.Length);
-                Array.Clear(rx_buffer, 0, rx_buffer.Length);
-                Array.Clear(time, 0, time.Length);*/
+                
                 t = 0;i = 0;
                 timer1.Enabled = true;
                 timer1.Start();
             }
-            if (serialPort1.IsOpen)
+            
+        }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            TextBox textBox = new Step_class().TextBox(ParentForm, "txtMode", "Main");
+            Mode = int.Parse(textBox.Text);
+            if (Mode == 1)
             {
-                MessageBox.Show("Connect sucessfully");
+                new Step_class().Forward(ParentForm, "step2", "step3", "Calculator_1Plane", "StepProcess");
             }
-            else
+            else if (Mode == 2)
             {
-                MessageBox.Show("Disconnect sucessfully");
+                new Step_class().Forward(ParentForm, "step2", "step3", "Calculator_2Plane", "StepProcess");
             }
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            new Step_class().Back(ParentForm, "step2", "step1", "Main", "StepProcess");
+        }
+
+        private void btnReturnStep4_Click(object sender, EventArgs e)
+        {
+            NextButton.Visible = true;
+            BackButton.Visible = true;
+            btnReturnStep4.Visible = false;
+            if (Mode == 1)
+            {
+                ParentForm.Controls.Find("PanelProcess", false)[0].Controls.Find("Result_1plane", false)[0].BringToFront();
+            }
+            else if (Mode == 2)
+            {
+                ParentForm.Controls.Find("PanelProcess", false)[0].Controls.Find("Result_2plane", false)[0].BringToFront();
+            }
+            
         }
 
         double[] piezo = new double[1500];
@@ -342,21 +347,46 @@ namespace dynamic_balancing_machine.User_control
             zgc.AxisChange();
             zgc.Invalidate();
         }
-        
+
         private void btnSpeed_Click(object sender, EventArgs e)
         {
-            if(serialPort1.IsOpen)
+            try
             {
-                int x = int.Parse(txtNumericSpeed.Text);
-                int chuc = x / 10;
-                int donvi = x % 10;
-                byte[] DO_Chars = { (byte)(chuc+48), (byte)(donvi+48)};                
-                serialPort1.Write(DO_Chars, 0,2);
-                //serialPort1.WriteLine(txtNumericSpeed.Text);
+                if (serialPort1.IsOpen)
+                {
+                    /*int x = int.Parse(txtNumericSpeed.Text);
+                    int chuc = x / 10;
+                    int donvi = x % 10;
+                    byte[] DO_Chars = { (byte)(chuc+48), (byte)(donvi+48)};                
+                    serialPort1.Write(DO_Chars, 0,2);*/
+
+                    double x = double.Parse(txtNumericSpeed.Text);
+                    if (x > 50 | x < 0)
+                    {
+                        MessageBox.Show("please enter the frequency again!");
+                    }
+                    else
+                    {
+                        int chuc = (int)(x / 10);
+                        x = x - chuc * 10;
+                        int donvi = (int)x;
+                        x = x - donvi;
+                        int phay = (int)(x * 10);
+                        byte[] DO_Chars = { (byte)(chuc + 48), (byte)(donvi + 48), (byte)(phay + 48) };
+                        DialogResult dl = MessageBox.Show("Are you sure you want to RUN the machine at this frequency?", "Notify", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (dl == DialogResult.Yes)
+                            serialPort1.Write(DO_Chars, 0, 3);
+                    }
+                    //serialPort1.WriteLine(txtNumericSpeed.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Please connect Serial Com Port");
+                }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Please connect Com Port");
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -364,13 +394,16 @@ namespace dynamic_balancing_machine.User_control
         {
             if (serialPort1.IsOpen)
             {
-                byte[] DO_Chars = { (byte)48 };
-                serialPort1.Write(DO_Chars, 0, 1);
+                byte[] DO_Chars = { (byte)48, (byte)48 };
+                DialogResult dl = MessageBox.Show("Are you sure you want to STOP the machine?", "Notify", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dl == DialogResult.Yes)
+                    serialPort1.Write(DO_Chars, 0, 2);
+
                 //serialPort1.WriteLine("0");
             }
             else
             {
-                MessageBox.Show("Please connect Com Port");
+                MessageBox.Show("Please connect Serial Com Port");
             }
         }
     }
