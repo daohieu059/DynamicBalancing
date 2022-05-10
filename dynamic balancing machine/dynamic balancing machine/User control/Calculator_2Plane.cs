@@ -9,13 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using dynamic_balancing_machine.Step;
 using Excel = Microsoft.Office.Interop.Excel;
-
+using System.Data.SqlClient;
 
 namespace dynamic_balancing_machine.User_control
 {
     public partial class Calculator_2Plane : UserControl
-    {       
-        
+    {
+        SQLClass sqlclass = new SQLClass();
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-OUODJF98\SQLEXPRESS;Initial Catalog=DynamicBalanceMachine;Integrated Security=True");
+
         public Calculator_2Plane()
         {
             InitializeComponent();
@@ -258,7 +260,7 @@ namespace dynamic_balancing_machine.User_control
                 item10.SubItems.Add(PhiAn_21.Text);
                 ListViewItem item11 = new ListViewItem("Anpha 22");
                 item11.SubItems.Add(Anpha_22.Text);
-                ListViewItem item12 = new ListViewItem("phi 22");
+                ListViewItem item12 = new ListViewItem("Phi 22");
                 item12.SubItems.Add(PhiAn_22.Text);
                 ListViewItem item13 = new ListViewItem("Am_det");
                 item13.SubItems.Add(A_detload.Text);
@@ -272,47 +274,62 @@ namespace dynamic_balancing_machine.User_control
             catch { MessageBox.Show("Please data collection before saving database"); }
         }
 
-        double Phizero1_2P, Phizero2_2P, phiV10, phiV20, M11, phiM11, M12, phiM12, M21, phiM21, M22, phiM22, A_det, Ph_det;
+        double Phizero1_2P, Phizero2_2P, phiV10, phiV20, M11, phiM11, M12, phiM12, M21, phiM21, M22, phiM22, A_det, Ph_det;        
 
         private void btnLoadDatabase_Click(object sender, EventArgs e)
         {
             try
             {
                 LoadExcel_function(ListViewDatabase);
-                double.TryParse(ListViewDatabase.Items[0].SubItems[1].Text, out Phizero1_2P);
-                double.TryParse(ListViewDatabase.Items[1].SubItems[1].Text, out Phizero2_2P);
-                double.TryParse(ListViewDatabase.Items[2].SubItems[1].Text, out phiV10);
-                double.TryParse(ListViewDatabase.Items[3].SubItems[1].Text, out phiV20);
-                double.TryParse(ListViewDatabase.Items[4].SubItems[1].Text, out M11);
-                double.TryParse(ListViewDatabase.Items[5].SubItems[1].Text, out phiM11);
-                double.TryParse(ListViewDatabase.Items[6].SubItems[1].Text, out M12);
-                double.TryParse(ListViewDatabase.Items[7].SubItems[1].Text, out phiM12);
-                double.TryParse(ListViewDatabase.Items[8].SubItems[1].Text, out M21);
-                double.TryParse(ListViewDatabase.Items[9].SubItems[1].Text, out phiM21);
-                double.TryParse(ListViewDatabase.Items[10].SubItems[1].Text, out M22); 
-                double.TryParse(ListViewDatabase.Items[11].SubItems[1].Text, out phiM22); 
-                double.TryParse(ListViewDatabase.Items[12].SubItems[1].Text, out A_det);
-                double.TryParse(ListViewDatabase.Items[13].SubItems[1].Text, out Ph_det);
-
-                Phizero_1.Text = Phizero1_2P.ToString("0.000"); Phizero_2.Text = Phizero2_2P.ToString("0.000");
-                Phi_V10.Text = phiV10.ToString("0.000"); Phi_V20.Text = phiV20.ToString("0.000");
-                Anpha_11.Text = M11.ToString("0.000"); PhiAn_11.Text = phiM11.ToString("0.000");
-                Anpha_12.Text = M12.ToString("0.000"); PhiAn_12.Text = phiM12.ToString("0.000");
-                Anpha_21.Text = M21.ToString("0.000"); PhiAn_21.Text = phiM21.ToString("0.000");
-                Anpha_22.Text = M22.ToString("0.000"); PhiAn_22.Text = phiM22.ToString("0.000");
-                A_detload.Text = A_det.ToString("0.000"); Phi_detload.Text = Ph_det.ToString("0.000");
-                
-                lblAnpha_11.Text = M11.ToString("0.000") + " < " + (phiM11 * 180 / Math.PI).ToString("0.000");
-                lblAnpha_12.Text = M12.ToString("0.000") + " < " + (phiM12 * 180 / Math.PI).ToString("0.000");
-                lblAnpha_21.Text = M21.ToString("0.000") + " < " + (phiM21 * 180 / Math.PI).ToString("0.000");
-                lblAnpha_22.Text = M22.ToString("0.000") + " < " + (phiM22 * 180 / Math.PI).ToString("0.000");
-                txtPhizero1.Text = Phizero1_2P.ToString("0.000");
-                txtPhizero2.Text = Phizero2_2P.ToString("0.000");
+                Export();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void Export()
+        {
+            double.TryParse(ListViewDatabase.Items[0].SubItems[1].Text, out Phizero1_2P);
+            double.TryParse(ListViewDatabase.Items[1].SubItems[1].Text, out Phizero2_2P);
+            double.TryParse(ListViewDatabase.Items[2].SubItems[1].Text, out phiV10);
+            double.TryParse(ListViewDatabase.Items[3].SubItems[1].Text, out phiV20);
+            double.TryParse(ListViewDatabase.Items[4].SubItems[1].Text, out M11);
+            double.TryParse(ListViewDatabase.Items[5].SubItems[1].Text, out phiM11);
+            double.TryParse(ListViewDatabase.Items[6].SubItems[1].Text, out M12);
+            double.TryParse(ListViewDatabase.Items[7].SubItems[1].Text, out phiM12);
+            double.TryParse(ListViewDatabase.Items[8].SubItems[1].Text, out M21);
+            double.TryParse(ListViewDatabase.Items[9].SubItems[1].Text, out phiM21);
+            double.TryParse(ListViewDatabase.Items[10].SubItems[1].Text, out M22);
+            double.TryParse(ListViewDatabase.Items[11].SubItems[1].Text, out phiM22);
+            double.TryParse(ListViewDatabase.Items[12].SubItems[1].Text, out A_det);
+            double.TryParse(ListViewDatabase.Items[13].SubItems[1].Text, out Ph_det);
+
+            Phizero_1.Text = Phizero1_2P.ToString("0.000"); Phizero_2.Text = Phizero2_2P.ToString("0.000");
+            Phi_V10.Text = phiV10.ToString("0.000"); Phi_V20.Text = phiV20.ToString("0.000");
+            Anpha_11.Text = M11.ToString("0.000"); PhiAn_11.Text = phiM11.ToString("0.000");
+            Anpha_12.Text = M12.ToString("0.000"); PhiAn_12.Text = phiM12.ToString("0.000");
+            Anpha_21.Text = M21.ToString("0.000"); PhiAn_21.Text = phiM21.ToString("0.000");
+            Anpha_22.Text = M22.ToString("0.000"); PhiAn_22.Text = phiM22.ToString("0.000");
+            A_detload.Text = A_det.ToString("0.000"); Phi_detload.Text = Ph_det.ToString("0.000");
+
+            lblAnpha_11.Text = M11.ToString("0.000") + " < " + (phiM11 * 180 / Math.PI).ToString("0.000");
+            lblAnpha_12.Text = M12.ToString("0.000") + " < " + (phiM12 * 180 / Math.PI).ToString("0.000");
+            lblAnpha_21.Text = M21.ToString("0.000") + " < " + (phiM21 * 180 / Math.PI).ToString("0.000");
+            lblAnpha_22.Text = M22.ToString("0.000") + " < " + (phiM22 * 180 / Math.PI).ToString("0.000");
+            txtPhizero1.Text = Phizero1_2P.ToString("0.000");
+            txtPhizero2.Text = Phizero2_2P.ToString("0.000");
+        }
+
+        private void btnLoadSQL_Click(object sender, EventArgs e)
+        {
+            LoadDataSQL();
+        }
+
+        private void btnSaveSQL_Click(object sender, EventArgs e)
+        {
+            UpdateDataSQL();
         }
 
         // hàm tính anpha  ct = (v2-v1)/m
@@ -526,6 +543,60 @@ namespace dynamic_balancing_machine.User_control
             }
             else
             {
+            }
+        }
+        private void UpdateDataSQL()
+        {
+            try
+            {
+                sqlclass.Open_Connect(sqlcon);
+                for (int i = 1; i <= ListViewDatabase.Items.Count; i++)
+                {
+                    ListViewItem item = ListViewDatabase.Items[i - 1];
+                    Update(item.SubItems[1].Text, item.Text);
+                }
+
+                sqlclass.Close_Connect(sqlcon);
+                MessageBox.Show("Sucess!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                MessageBox.Show("Please data collection before saving database");
+            }
+            
+        }
+
+        public void Update(string st, string st1)
+        {
+            string str = st.Trim();
+            sqlclass.excedata("update Parameters_2Plane set Value = " + str + " where Fields = '"+st1+"' ", sqlcon);
+        }
+
+        private void LoadDataSQL()
+        {
+            try
+            {
+                sqlclass.Open_Connect(sqlcon);
+
+                SqlCommand cmds = new SqlCommand("select * from Parameters_2Plane", sqlcon);
+                SqlDataReader reader = cmds.ExecuteReader();
+                ListViewDatabase.Items.Clear();
+                while (reader.Read())
+                {
+                    string Field = (string)reader["Fields"];
+                    float Value = (float)reader["Value"];
+                    ListViewItem item = new ListViewItem(Field);
+                    item.SubItems.Add(Value.ToString());
+                    ListViewDatabase.Items.Add(item);
+                }
+                reader.Close();
+                sqlclass.Close_Connect(sqlcon);
+                Export();
+                MessageBox.Show("Sucess!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

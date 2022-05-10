@@ -9,19 +9,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using dynamic_balancing_machine.Step;
 using Excel = Microsoft.Office.Interop.Excel;
+using System.Data.SqlClient;
 
 namespace dynamic_balancing_machine.User_control
 {
     public partial class Result_1Plane : UserControl
     {
 
+        SQLClass sqlclass = new SQLClass();
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-OUODJF98\SQLEXPRESS;Initial Catalog=DynamicBalanceMachine;Integrated Security=True");
 
         /*public int MyText
         {
             get { return Mode; }
             set { Mode = value; } 
         }*/
-        int stt=1;
+        int stt =1;
         public Result_1Plane()
         {
             InitializeComponent();
@@ -162,6 +165,7 @@ namespace dynamic_balancing_machine.User_control
                 btnSaveDatabase.Text = "Save Database";
                 btnReturn.Visible = true;
                 btnDelete.Visible = true;
+                btnSaveSQL.Visible = true;
                 //ListViewDatabase.Items.Clear();
 
 
@@ -174,6 +178,28 @@ namespace dynamic_balancing_machine.User_control
                                 
             }
         }
+        private void btnSaveSQL_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                sqlclass.Open_Connect(sqlcon);
+                for (int i = 1; i <= ListViewDatabase.Items.Count; i++)
+                {
+                    ListViewItem item = ListViewDatabase.Items[i - 1];
+                    string m = item.SubItems[1].Text.Trim();
+                    string g = item.SubItems[2].Text.Trim();
+                    string g_add = item.SubItems[3].Text.Trim();
+                    sqlclass.excedata("INSERT INTO Result_1Plane (KhoiLuong, ViTriMCB, ViTriThem) VALUES(" + m + ", " + g + ", " + g_add + ")", sqlcon);
+
+                }
+                sqlclass.Close_Connect(sqlcon);
+                MessageBox.Show("Sucess!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+}
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
@@ -181,6 +207,7 @@ namespace dynamic_balancing_machine.User_control
             ListViewDatabase.Visible = false;
             btnReturn.Visible = false;
             btnDelete.Visible = false;
+            btnSaveSQL.Visible = false;
             draw(); draw_result(goc_mcb);
         }
 
@@ -261,6 +288,7 @@ namespace dynamic_balancing_machine.User_control
 
         }
 
+        
 
         private void draw_result(double PhiB)
         {            

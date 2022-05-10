@@ -83,6 +83,7 @@ namespace dynamic_balancing_machine.User_control
             this.label14 = new System.Windows.Forms.Label();
             this.txtAm1 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnGetdata = new System.Windows.Forms.Button();
             this.btnDiagnostic = new System.Windows.Forms.Button();
             this.btnRun = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
@@ -102,7 +103,7 @@ namespace dynamic_balancing_machine.User_control
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnGetdata = new System.Windows.Forms.Button();
+            this.btnSaveSQL = new System.Windows.Forms.Button();
             this.pnl1.SuspendLayout();
             this.pnl2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -546,6 +547,7 @@ namespace dynamic_balancing_machine.User_control
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.btnSaveSQL);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.btnReturn);
@@ -573,7 +575,7 @@ namespace dynamic_balancing_machine.User_control
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDelete.Location = new System.Drawing.Point(8, 427);
+            this.btnDelete.Location = new System.Drawing.Point(8, 384);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(112, 37);
             this.btnDelete.TabIndex = 143;
@@ -588,7 +590,7 @@ namespace dynamic_balancing_machine.User_control
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label16.Location = new System.Drawing.Point(27, 190);
+            this.label16.Location = new System.Drawing.Point(27, 170);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(73, 29);
             this.label16.TabIndex = 30;
@@ -604,7 +606,7 @@ namespace dynamic_balancing_machine.User_control
             this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReturn.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnReturn.Location = new System.Drawing.Point(8, 384);
+            this.btnReturn.Location = new System.Drawing.Point(8, 341);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(112, 37);
             this.btnReturn.TabIndex = 142;
@@ -636,7 +638,7 @@ namespace dynamic_balancing_machine.User_control
             this.txtPhase2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhase2.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhase2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtPhase2.Location = new System.Drawing.Point(8, 314);
+            this.txtPhase2.Location = new System.Drawing.Point(8, 294);
             this.txtPhase2.Name = "txtPhase2";
             this.txtPhase2.Size = new System.Drawing.Size(117, 43);
             this.txtPhase2.TabIndex = 29;
@@ -648,7 +650,7 @@ namespace dynamic_balancing_machine.User_control
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label17.Location = new System.Drawing.Point(5, 294);
+            this.label17.Location = new System.Drawing.Point(5, 274);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(76, 17);
             this.label17.TabIndex = 28;
@@ -660,7 +662,7 @@ namespace dynamic_balancing_machine.User_control
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label18.Location = new System.Drawing.Point(5, 223);
+            this.label18.Location = new System.Drawing.Point(5, 203);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(85, 17);
             this.label18.TabIndex = 27;
@@ -673,7 +675,7 @@ namespace dynamic_balancing_machine.User_control
             this.txtAm2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAm2.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAm2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.txtAm2.Location = new System.Drawing.Point(8, 243);
+            this.txtAm2.Location = new System.Drawing.Point(8, 223);
             this.txtAm2.Name = "txtAm2";
             this.txtAm2.Size = new System.Drawing.Size(117, 43);
             this.txtAm2.TabIndex = 26;
@@ -762,6 +764,23 @@ namespace dynamic_balancing_machine.User_control
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(133, 514);
             this.panel3.TabIndex = 22;
+            // 
+            // btnGetdata
+            // 
+            this.btnGetdata.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnGetdata.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGetdata.FlatAppearance.BorderSize = 0;
+            this.btnGetdata.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnGetdata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGetdata.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetdata.ForeColor = System.Drawing.Color.White;
+            this.btnGetdata.Location = new System.Drawing.Point(5, 389);
+            this.btnGetdata.Name = "btnGetdata";
+            this.btnGetdata.Size = new System.Drawing.Size(122, 50);
+            this.btnGetdata.TabIndex = 30;
+            this.btnGetdata.Text = "Get data";
+            this.btnGetdata.UseVisualStyleBackColor = false;
+            this.btnGetdata.Click += new System.EventHandler(this.btnGetdata_Click);
             // 
             // btnDiagnostic
             // 
@@ -965,22 +984,23 @@ namespace dynamic_balancing_machine.User_control
             this.columnHeader11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader11.Width = 88;
             // 
-            // btnGetdata
+            // btnSaveSQL
             // 
-            this.btnGetdata.BackColor = System.Drawing.Color.DarkBlue;
-            this.btnGetdata.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGetdata.FlatAppearance.BorderSize = 0;
-            this.btnGetdata.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnGetdata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGetdata.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGetdata.ForeColor = System.Drawing.Color.White;
-            this.btnGetdata.Location = new System.Drawing.Point(5, 389);
-            this.btnGetdata.Name = "btnGetdata";
-            this.btnGetdata.Size = new System.Drawing.Size(122, 50);
-            this.btnGetdata.TabIndex = 30;
-            this.btnGetdata.Text = "Get data";
-            this.btnGetdata.UseVisualStyleBackColor = false;
-            this.btnGetdata.Click += new System.EventHandler(this.btnGetdata_Click);
+            this.btnSaveSQL.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnSaveSQL.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveSQL.FlatAppearance.BorderSize = 0;
+            this.btnSaveSQL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSaveSQL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveSQL.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveSQL.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSaveSQL.Location = new System.Drawing.Point(8, 427);
+            this.btnSaveSQL.Name = "btnSaveSQL";
+            this.btnSaveSQL.Size = new System.Drawing.Size(112, 37);
+            this.btnSaveSQL.TabIndex = 144;
+            this.btnSaveSQL.Text = "Save to SQL";
+            this.btnSaveSQL.UseVisualStyleBackColor = false;
+            this.btnSaveSQL.Visible = false;
+            this.btnSaveSQL.Click += new System.EventHandler(this.btnSaveSQL_Click);
             // 
             // Result_2Plane
             // 
@@ -1091,5 +1111,6 @@ namespace dynamic_balancing_machine.User_control
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnGetdata;
+        private System.Windows.Forms.Button btnSaveSQL;
     }
 }

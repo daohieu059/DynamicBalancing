@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using dynamic_balancing_machine.Step;
 using Excel = Microsoft.Office.Interop.Excel;
-
+using System.Data.SqlClient;
 
 namespace dynamic_balancing_machine.User_control
 {
     public partial class Result_2Plane : UserControl
     {
+        SQLClass sqlclass = new SQLClass();
+        SqlConnection sqlcon = new SqlConnection(@"Data Source=LAPTOP-OUODJF98\SQLEXPRESS;Initial Catalog=DynamicBalanceMachine;Integrated Security=True");
         int stt = 1;
         public Result_2Plane()
         {
@@ -222,6 +224,8 @@ namespace dynamic_balancing_machine.User_control
                 ListViewDatabase.Location = new Point(153, 61);
                 btnSaveDatabase.Text = "Save Database";
                 btnReturn.Visible = true;
+                btnDelete.Visible = true;
+                btnSaveSQL.Visible = true;
                 //ListViewDatabase.Items.Clear();
 
 
@@ -254,6 +258,8 @@ namespace dynamic_balancing_machine.User_control
             btnSaveDatabase.Text = "Database";
             ListViewDatabase.Visible = false;
             btnReturn.Visible = false;
+            btnDelete.Visible = false;
+            btnSaveSQL.Visible = false;
             draw(); draw_result(PhiB1, PhiB2);
         }
 
@@ -332,8 +338,34 @@ namespace dynamic_balancing_machine.User_control
             else
             {
             }
-
         }
+
+        private void btnSaveSQL_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                sqlclass.Open_Connect(sqlcon);
+                for (int i = 2; i <= ListViewDatabase.Items.Count; i++)
+                {
+                    ListViewItem item = ListViewDatabase.Items[i - 1];
+                    string m1 = item.SubItems[1].Text.Trim();
+                    string g1 = item.SubItems[2].Text.Trim();
+                    string g_add1 = item.SubItems[3].Text.Trim();
+                    string m2 = item.SubItems[4].Text.Trim();
+                    string g2 = item.SubItems[5].Text.Trim();
+                    string g_add2 = item.SubItems[6].Text.Trim();
+                    sqlclass.excedata("INSERT INTO Result_2Plane (KhoiLuong_P1, ViTriMCB_P1, ViTriThem_P1, KhoiLuong_P2, ViTriMCB_P2, ViTriThem_P2) VALUES(" + m1 + ", " + g1 + ", " + g_add1 + ", " + m2 + ", " + g2 + ", " + g_add2 + ")", sqlcon);
+
+                }
+                sqlclass.Close_Connect(sqlcon); 
+                MessageBox.Show("Sucess!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         //hàm tính det
         public List<double> Calculator_det(double a11, double phia11, double a12, double phia12, double a21, double phia21, double a22, double phia22)
         {

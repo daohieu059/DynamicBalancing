@@ -69,6 +69,7 @@ namespace dynamic_balancing_machine.User_control
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnSaveSQL = new System.Windows.Forms.Button();
             this.pnl1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -313,6 +314,7 @@ namespace dynamic_balancing_machine.User_control
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.btnSaveSQL);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnReturn);
@@ -348,7 +350,7 @@ namespace dynamic_balancing_machine.User_control
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDelete.Location = new System.Drawing.Point(8, 423);
+            this.btnDelete.Location = new System.Drawing.Point(8, 380);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(137, 37);
             this.btnDelete.TabIndex = 140;
@@ -366,7 +368,7 @@ namespace dynamic_balancing_machine.User_control
             this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReturn.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnReturn.Location = new System.Drawing.Point(8, 380);
+            this.btnReturn.Location = new System.Drawing.Point(8, 337);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(137, 37);
             this.btnReturn.TabIndex = 139;
@@ -608,6 +610,24 @@ namespace dynamic_balancing_machine.User_control
             this.columnHeader2.Text = "Vị trí thêm";
             this.columnHeader2.Width = 90;
             // 
+            // btnSaveSQL
+            // 
+            this.btnSaveSQL.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnSaveSQL.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveSQL.FlatAppearance.BorderSize = 0;
+            this.btnSaveSQL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSaveSQL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveSQL.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveSQL.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSaveSQL.Location = new System.Drawing.Point(8, 423);
+            this.btnSaveSQL.Name = "btnSaveSQL";
+            this.btnSaveSQL.Size = new System.Drawing.Size(137, 37);
+            this.btnSaveSQL.TabIndex = 142;
+            this.btnSaveSQL.Text = "Save to SQL";
+            this.btnSaveSQL.UseVisualStyleBackColor = false;
+            this.btnSaveSQL.Visible = false;
+            this.btnSaveSQL.Click += new System.EventHandler(this.btnSaveSQL_Click);
+            // 
             // Result_1Plane
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -683,5 +703,6 @@ namespace dynamic_balancing_machine.User_control
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button btnGetdata;
+        private System.Windows.Forms.Button btnSaveSQL;
     }
 }

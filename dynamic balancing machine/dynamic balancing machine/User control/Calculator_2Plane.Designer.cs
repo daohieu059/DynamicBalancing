@@ -105,6 +105,8 @@ namespace dynamic_balancing_machine.User_control
             this.txtPhiV2 = new System.Windows.Forms.TextBox();
             this.txtPhiV1 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnLoadSQL = new System.Windows.Forms.Button();
+            this.btnSaveSQL = new System.Windows.Forms.Button();
             this.PhiAn_12 = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
             this.Phi_detload = new System.Windows.Forms.TextBox();
@@ -1048,6 +1050,8 @@ namespace dynamic_balancing_machine.User_control
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Control;
+            this.panel4.Controls.Add(this.btnLoadSQL);
+            this.panel4.Controls.Add(this.btnSaveSQL);
             this.panel4.Controls.Add(this.PhiAn_12);
             this.panel4.Controls.Add(this.label41);
             this.panel4.Controls.Add(this.Phi_detload);
@@ -1086,6 +1090,40 @@ namespace dynamic_balancing_machine.User_control
             this.panel4.Size = new System.Drawing.Size(723, 479);
             this.panel4.TabIndex = 30;
             this.panel4.Visible = false;
+            // 
+            // btnLoadSQL
+            // 
+            this.btnLoadSQL.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnLoadSQL.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoadSQL.FlatAppearance.BorderSize = 0;
+            this.btnLoadSQL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
+            this.btnLoadSQL.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnLoadSQL.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoadSQL.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnLoadSQL.Location = new System.Drawing.Point(559, 434);
+            this.btnLoadSQL.Name = "btnLoadSQL";
+            this.btnLoadSQL.Size = new System.Drawing.Size(148, 37);
+            this.btnLoadSQL.TabIndex = 160;
+            this.btnLoadSQL.Text = "Load Database SQL";
+            this.btnLoadSQL.UseVisualStyleBackColor = false;
+            this.btnLoadSQL.Click += new System.EventHandler(this.btnLoadSQL_Click);
+            // 
+            // btnSaveSQL
+            // 
+            this.btnSaveSQL.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnSaveSQL.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveSQL.FlatAppearance.BorderSize = 0;
+            this.btnSaveSQL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(190)))), ((int)(((byte)(214)))));
+            this.btnSaveSQL.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnSaveSQL.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveSQL.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSaveSQL.Location = new System.Drawing.Point(559, 391);
+            this.btnSaveSQL.Name = "btnSaveSQL";
+            this.btnSaveSQL.Size = new System.Drawing.Size(148, 37);
+            this.btnSaveSQL.TabIndex = 159;
+            this.btnSaveSQL.Text = "Save Database SQL";
+            this.btnSaveSQL.UseVisualStyleBackColor = false;
+            this.btnSaveSQL.Click += new System.EventHandler(this.btnSaveSQL_Click);
             // 
             // PhiAn_12
             // 
@@ -1607,5 +1645,7 @@ namespace dynamic_balancing_machine.User_control
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Button btnLoadSQL;
+        private System.Windows.Forms.Button btnSaveSQL;
     }
 }

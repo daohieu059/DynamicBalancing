@@ -141,7 +141,7 @@ int main(void)
 				sprintf(data,"adc, %d, %d, %d, %d, %d %d\r\n",adc[0],adc[1], adc[2],adc[3] ,FRE, FRE1);				
 		    CDC_Transmit_FS((uint8_t *)data, strlen(data));
 			}
-		HAL_Delay(300);
+		HAL_Delay(50);
 		
     /* USER CODE END WHILE */
 
