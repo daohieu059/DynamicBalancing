@@ -48,13 +48,15 @@
 DAC_HandleTypeDef hdac;
 
 /* USER CODE BEGIN PV */
-char data[1000];
-uint8_t x, k;float t;
+uint8_t data[12000];char data1[1000];
+uint16_t data_adc[6000];
 uint16_t adc[10];
+uint8_t  x, k;
+uint16_t i=0;
 
 uint32_t FRE=0, FRE1=0, FRE2=0;
-uint8_t buffer[100];
-uint8_t zero[100];
+uint8_t buffer[10];
+uint8_t zero[10];
 uint32_t len=0;
 
 /* USER CODE END PV */
@@ -119,9 +121,9 @@ int main(void)
 		
 		if (VCP_retrieveInputData(buffer,&len)==1)
 		{			
-			t =(buffer[0] - 48)*10 + (buffer[1]-48) + (buffer[2]-48)*0.1;
-			t = t/50*4095;
-			FRE = (uint32_t)t;
+			float t =(buffer[0] - 48)*10 + (buffer[1]-48) + (buffer[2]-48)*0.1;
+			//t = t/50*4095;
+			FRE = (uint32_t)(t/50*4095);
 			FRE1=buffer[1];
 			FRE2=buffer[2];
 			if (FRE<=4095)
@@ -133,15 +135,55 @@ int main(void)
 			//len=0;
 			memset(buffer,0x00,sizeof(buffer));
 		}
-		/*sprintf(data,"adc, %d, %d, %d, %d, %d, %d, %d\r\n",adc[0],adc[1], adc[2], FRE, FRE1, FRE2, len);				
-		CDC_Transmit_FS((uint8_t *)data, strlen(data));*/
+		//sprintf(data1,"adc, %d, %d, %d, %d, %d, %d, %d\r\n",adc[0],adc[1], adc[2], FRE, FRE1, FRE2, len);				
+		//CDC_Transmit_FS((uint8_t *)data1, strlen(data1));
+		/*data[i]= (adc[0]/256);
+				data[i+1] = adc[0]%256;
+				data[i+2]= (adc[1]/256);
+				data[i+3] = adc[1]%256;
+				data[i+4]= (adc[2]/256);
+				data[i+5] = adc[2]%256;
+				i=i+6;
+				if (i>=6000)
+				{
+					
+						CDC_Transmit_FS((uint8_t *)data, sizeof(data));			
+					
+					
+					i=0;
+					
+				}					
+				DWT_Delay_us(1);	
+			  */
 		if (FRE!=0)
-			{
-				k = AD7606_readConversionValue(adc);
-				sprintf(data,"adc, %d, %d, %d, %d, %d %d\r\n",adc[0],adc[1], adc[2],adc[3] ,FRE, FRE1);				
-		    CDC_Transmit_FS((uint8_t *)data, strlen(data));
-			}
-		HAL_Delay(50);
+		{
+				k = AD7606_readConversionValue(adc);			
+				
+				data_adc[i]=adc[0];
+				data_adc[i+1]=adc[1];
+				data_adc[i+2]=adc[3];
+		
+				i=i+3;				
+				if (i+2>=6000)
+				{
+					for(uint16_t m=0;m+2<6000;m=m+3)
+					{
+						uint16_t j = m*2;
+						data[j]= (data_adc[m]/256);
+						data[j+1] = data_adc[m]%256;
+						data[j+2]= (data_adc[m+1]/256);
+						data[j+3] = data_adc[m+1]%256;
+						data[j+4]= (data_adc[m+2]/256);
+						data[j+5] = data_adc[m+2]%256;						
+					}
+					i=0;
+					CDC_Transmit_FS((uint8_t *)data, sizeof(data));
+					//memset(data,0x00,sizeof(data));
+					//memset(data_adc,0x00,sizeof(data_adc));
+				}
+		}
+			
+		DWT_Delay_us(10);
 		
     /* USER CODE END WHILE */
 

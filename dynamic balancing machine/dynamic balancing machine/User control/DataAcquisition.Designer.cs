@@ -90,6 +90,7 @@ namespace dynamic_balancing_machine.User_control
             this.label21 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
+            this.btnLoadCOM = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -305,6 +306,7 @@ namespace dynamic_balancing_machine.User_control
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnLoadCOM);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label4);
@@ -320,7 +322,7 @@ namespace dynamic_balancing_machine.User_control
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(214, 220);
+            this.groupBox1.Size = new System.Drawing.Size(214, 259);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Serial COM Port";
@@ -788,6 +790,16 @@ namespace dynamic_balancing_machine.User_control
             this.label23.Text = "Tính toán dữ liệu thu thập";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnLoadCOM
+            // 
+            this.btnLoadCOM.Location = new System.Drawing.Point(12, 213);
+            this.btnLoadCOM.Name = "btnLoadCOM";
+            this.btnLoadCOM.Size = new System.Drawing.Size(193, 34);
+            this.btnLoadCOM.TabIndex = 4;
+            this.btnLoadCOM.Text = "Load Com Port";
+            this.btnLoadCOM.UseVisualStyleBackColor = true;
+            this.btnLoadCOM.Click += new System.EventHandler(this.btnLoadCOM_Click);
+            // 
             // DataAcquisition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -890,5 +902,6 @@ namespace dynamic_balancing_machine.User_control
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Button btnLoadCOM;
     }
 }
