@@ -164,7 +164,7 @@ int main(void)
 				data_adc[i+2]=adc[3];
 		
 				i=i+3;				
-				if (i+2>=6000)
+				if (i>=6000)
 				{
 					for(uint16_t m=0;m+2<6000;m=m+3)
 					{
@@ -183,7 +183,7 @@ int main(void)
 				}
 		}
 			
-		DWT_Delay_us(10);
+		DWT_Delay_us(100);
 		
     /* USER CODE END WHILE */
 

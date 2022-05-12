@@ -29,7 +29,7 @@ namespace dynamic_balancing_machine.User_control
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "STT",
             "Khối lượng",
             "Vị trí MCB",
@@ -69,6 +69,7 @@ namespace dynamic_balancing_machine.User_control
             this.label12 = new System.Windows.Forms.Label();
             this.lblResult = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSaveSQL = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.btnReturn = new System.Windows.Forms.Button();
@@ -103,7 +104,6 @@ namespace dynamic_balancing_machine.User_control
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnSaveSQL = new System.Windows.Forms.Button();
             this.pnl1.SuspendLayout();
             this.pnl2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -566,6 +566,24 @@ namespace dynamic_balancing_machine.User_control
             this.panel1.Size = new System.Drawing.Size(132, 514);
             this.panel1.TabIndex = 8;
             // 
+            // btnSaveSQL
+            // 
+            this.btnSaveSQL.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnSaveSQL.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveSQL.FlatAppearance.BorderSize = 0;
+            this.btnSaveSQL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSaveSQL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveSQL.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveSQL.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSaveSQL.Location = new System.Drawing.Point(8, 427);
+            this.btnSaveSQL.Name = "btnSaveSQL";
+            this.btnSaveSQL.Size = new System.Drawing.Size(112, 37);
+            this.btnSaveSQL.TabIndex = 144;
+            this.btnSaveSQL.Text = "Save to SQL";
+            this.btnSaveSQL.UseVisualStyleBackColor = false;
+            this.btnSaveSQL.Visible = false;
+            this.btnSaveSQL.Click += new System.EventHandler(this.btnSaveSQL_Click);
+            // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.SystemColors.ButtonShadow;
@@ -934,7 +952,7 @@ namespace dynamic_balancing_machine.User_control
             this.ListViewDatabase.HideSelection = false;
             this.ListViewDatabase.HoverSelection = true;
             this.ListViewDatabase.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.ListViewDatabase.Location = new System.Drawing.Point(154, 581);
             this.ListViewDatabase.Name = "ListViewDatabase";
             this.ListViewDatabase.Size = new System.Drawing.Size(673, 320);
@@ -983,24 +1001,6 @@ namespace dynamic_balancing_machine.User_control
             this.columnHeader11.Text = "";
             this.columnHeader11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader11.Width = 88;
-            // 
-            // btnSaveSQL
-            // 
-            this.btnSaveSQL.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnSaveSQL.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSaveSQL.FlatAppearance.BorderSize = 0;
-            this.btnSaveSQL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSaveSQL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveSQL.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveSQL.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSaveSQL.Location = new System.Drawing.Point(8, 427);
-            this.btnSaveSQL.Name = "btnSaveSQL";
-            this.btnSaveSQL.Size = new System.Drawing.Size(112, 37);
-            this.btnSaveSQL.TabIndex = 144;
-            this.btnSaveSQL.Text = "Save to SQL";
-            this.btnSaveSQL.UseVisualStyleBackColor = false;
-            this.btnSaveSQL.Visible = false;
-            this.btnSaveSQL.Click += new System.EventHandler(this.btnSaveSQL_Click);
             // 
             // Result_2Plane
             // 

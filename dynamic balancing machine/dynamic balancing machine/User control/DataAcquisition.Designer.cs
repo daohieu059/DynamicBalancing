@@ -47,6 +47,7 @@ namespace dynamic_balancing_machine.User_control
             this.btnConnect = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnLoadCOM = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -90,7 +91,9 @@ namespace dynamic_balancing_machine.User_control
             this.label21 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
-            this.btnLoadCOM = new System.Windows.Forms.Button();
+            this.btnDisconnect = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -270,6 +273,7 @@ namespace dynamic_balancing_machine.User_control
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnDisconnect);
             this.groupBox2.Controls.Add(this.btnConnect);
             this.groupBox2.Controls.Add(this.progressBar1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -277,7 +281,7 @@ namespace dynamic_balancing_machine.User_control
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(214, 115);
+            this.groupBox2.Size = new System.Drawing.Size(214, 183);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Connect COM";
@@ -298,7 +302,7 @@ namespace dynamic_balancing_machine.User_control
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(4, 79);
+            this.progressBar1.Location = new System.Drawing.Point(4, 135);
             this.progressBar1.Margin = new System.Windows.Forms.Padding(2);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(201, 23);
@@ -326,6 +330,16 @@ namespace dynamic_balancing_machine.User_control
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Serial COM Port";
+            // 
+            // btnLoadCOM
+            // 
+            this.btnLoadCOM.Location = new System.Drawing.Point(12, 213);
+            this.btnLoadCOM.Name = "btnLoadCOM";
+            this.btnLoadCOM.Size = new System.Drawing.Size(193, 34);
+            this.btnLoadCOM.TabIndex = 4;
+            this.btnLoadCOM.Text = "Load Com Port";
+            this.btnLoadCOM.UseVisualStyleBackColor = true;
+            this.btnLoadCOM.Click += new System.EventHandler(this.btnLoadCOM_Click);
             // 
             // label1
             // 
@@ -672,6 +686,8 @@ namespace dynamic_balancing_machine.User_control
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
+            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.txtDataReceive1);
             this.panel3.Controls.Add(this.txtAmAverage_1P);
@@ -790,15 +806,35 @@ namespace dynamic_balancing_machine.User_control
             this.label23.Text = "Tính toán dữ liệu thu thập";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnLoadCOM
+            // btnDisconnect
             // 
-            this.btnLoadCOM.Location = new System.Drawing.Point(12, 213);
-            this.btnLoadCOM.Name = "btnLoadCOM";
-            this.btnLoadCOM.Size = new System.Drawing.Size(193, 34);
-            this.btnLoadCOM.TabIndex = 4;
-            this.btnLoadCOM.Text = "Load Com Port";
-            this.btnLoadCOM.UseVisualStyleBackColor = true;
-            this.btnLoadCOM.Click += new System.EventHandler(this.btnLoadCOM_Click);
+            this.btnDisconnect.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDisconnect.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisconnect.ForeColor = System.Drawing.Color.Red;
+            this.btnDisconnect.Location = new System.Drawing.Point(4, 75);
+            this.btnDisconnect.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDisconnect.Name = "btnDisconnect";
+            this.btnDisconnect.Size = new System.Drawing.Size(201, 44);
+            this.btnDisconnect.TabIndex = 8;
+            this.btnDisconnect.Text = "Dísconnect";
+            this.btnDisconnect.UseVisualStyleBackColor = true;
+            this.btnDisconnect.Click += new System.EventHandler(this.btnDisconnect_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(245, 97);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(193, 26);
+            this.textBox1.TabIndex = 58;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(245, 136);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(193, 26);
+            this.textBox2.TabIndex = 59;
             // 
             // DataAcquisition
             // 
@@ -903,5 +939,8 @@ namespace dynamic_balancing_machine.User_control
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button btnLoadCOM;
+        private System.Windows.Forms.Button btnDisconnect;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

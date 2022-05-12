@@ -47,6 +47,7 @@ namespace dynamic_balancing_machine.User_control
             this.label5 = new System.Windows.Forms.Label();
             this.lblResult = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSaveSQL = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
@@ -69,7 +70,6 @@ namespace dynamic_balancing_machine.User_control
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnSaveSQL = new System.Windows.Forms.Button();
             this.pnl1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -327,6 +327,24 @@ namespace dynamic_balancing_machine.User_control
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(152, 514);
             this.panel1.TabIndex = 7;
+            // 
+            // btnSaveSQL
+            // 
+            this.btnSaveSQL.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnSaveSQL.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveSQL.FlatAppearance.BorderSize = 0;
+            this.btnSaveSQL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSaveSQL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveSQL.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveSQL.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSaveSQL.Location = new System.Drawing.Point(8, 423);
+            this.btnSaveSQL.Name = "btnSaveSQL";
+            this.btnSaveSQL.Size = new System.Drawing.Size(137, 37);
+            this.btnSaveSQL.TabIndex = 142;
+            this.btnSaveSQL.Text = "Save to SQL";
+            this.btnSaveSQL.UseVisualStyleBackColor = false;
+            this.btnSaveSQL.Visible = false;
+            this.btnSaveSQL.Click += new System.EventHandler(this.btnSaveSQL_Click);
             // 
             // label15
             // 
@@ -609,24 +627,6 @@ namespace dynamic_balancing_machine.User_control
             // 
             this.columnHeader2.Text = "Vị trí thêm";
             this.columnHeader2.Width = 90;
-            // 
-            // btnSaveSQL
-            // 
-            this.btnSaveSQL.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnSaveSQL.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSaveSQL.FlatAppearance.BorderSize = 0;
-            this.btnSaveSQL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnSaveSQL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveSQL.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveSQL.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSaveSQL.Location = new System.Drawing.Point(8, 423);
-            this.btnSaveSQL.Name = "btnSaveSQL";
-            this.btnSaveSQL.Size = new System.Drawing.Size(137, 37);
-            this.btnSaveSQL.TabIndex = 142;
-            this.btnSaveSQL.Text = "Save to SQL";
-            this.btnSaveSQL.UseVisualStyleBackColor = false;
-            this.btnSaveSQL.Visible = false;
-            this.btnSaveSQL.Click += new System.EventHandler(this.btnSaveSQL_Click);
             // 
             // Result_1Plane
             // 
