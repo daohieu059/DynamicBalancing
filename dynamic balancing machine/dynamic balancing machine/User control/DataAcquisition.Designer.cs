@@ -44,6 +44,7 @@ namespace dynamic_balancing_machine.User_control
             this.lblmode = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnDisconnect = new System.Windows.Forms.Button();
             this.btnConnect = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -81,6 +82,7 @@ namespace dynamic_balancing_machine.User_control
             this.label17 = new System.Windows.Forms.Label();
             this.btnReturnStep4 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDataReceive1 = new System.Windows.Forms.TextBox();
             this.txtAmAverage_1P = new System.Windows.Forms.TextBox();
@@ -91,9 +93,8 @@ namespace dynamic_balancing_machine.User_control
             this.label21 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
-            this.btnDisconnect = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -285,6 +286,20 @@ namespace dynamic_balancing_machine.User_control
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Connect COM";
+            // 
+            // btnDisconnect
+            // 
+            this.btnDisconnect.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDisconnect.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisconnect.ForeColor = System.Drawing.Color.Red;
+            this.btnDisconnect.Location = new System.Drawing.Point(4, 75);
+            this.btnDisconnect.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDisconnect.Name = "btnDisconnect";
+            this.btnDisconnect.Size = new System.Drawing.Size(201, 44);
+            this.btnDisconnect.TabIndex = 8;
+            this.btnDisconnect.Text = "Dísconnect";
+            this.btnDisconnect.UseVisualStyleBackColor = true;
+            this.btnDisconnect.Click += new System.EventHandler(this.btnDisconnect_Click);
             // 
             // btnConnect
             // 
@@ -687,7 +702,6 @@ namespace dynamic_balancing_machine.User_control
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
             this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.txtDataReceive1);
             this.panel3.Controls.Add(this.txtAmAverage_1P);
@@ -701,6 +715,14 @@ namespace dynamic_balancing_machine.User_control
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(438, 212);
             this.panel3.TabIndex = 58;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(245, 136);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(193, 26);
+            this.textBox2.TabIndex = 59;
             // 
             // label5
             // 
@@ -806,41 +828,25 @@ namespace dynamic_balancing_machine.User_control
             this.label23.Text = "Tính toán dữ liệu thu thập";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnDisconnect
-            // 
-            this.btnDisconnect.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDisconnect.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisconnect.ForeColor = System.Drawing.Color.Red;
-            this.btnDisconnect.Location = new System.Drawing.Point(4, 75);
-            this.btnDisconnect.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDisconnect.Name = "btnDisconnect";
-            this.btnDisconnect.Size = new System.Drawing.Size(201, 44);
-            this.btnDisconnect.TabIndex = 8;
-            this.btnDisconnect.Text = "Dísconnect";
-            this.btnDisconnect.UseVisualStyleBackColor = true;
-            this.btnDisconnect.Click += new System.EventHandler(this.btnDisconnect_Click);
-            // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(245, 97);
+            this.textBox1.Location = new System.Drawing.Point(244, 473);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(193, 26);
+            this.textBox1.Size = new System.Drawing.Size(712, 26);
             this.textBox1.TabIndex = 58;
             // 
-            // textBox2
+            // contextMenuStrip1
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(245, 136);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(193, 26);
-            this.textBox2.TabIndex = 59;
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // DataAcquisition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.zed);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblmode);
@@ -942,5 +948,6 @@ namespace dynamic_balancing_machine.User_control
         private System.Windows.Forms.Button btnDisconnect;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

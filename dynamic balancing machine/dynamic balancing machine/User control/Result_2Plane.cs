@@ -70,6 +70,20 @@ namespace dynamic_balancing_machine.User_control
         {
             try
             {
+                TextBox Anpha_11 = new Step_class().TextBox1(ParentForm, "Anpha_11", "panel4", "Calculator_2Plane");
+                TextBox Anpha_12 = new Step_class().TextBox1(ParentForm, "Anpha_12", "panel4", "Calculator_2Plane");
+                TextBox Anpha_21 = new Step_class().TextBox1(ParentForm, "Anpha_21", "panel4", "Calculator_2Plane");
+                TextBox Anpha_22 = new Step_class().TextBox1(ParentForm, "Anpha_22", "panel4", "Calculator_2Plane");
+                TextBox PhiAn_11 = new Step_class().TextBox1(ParentForm, "PhiAn_11", "panel4", "Calculator_2Plane");
+                TextBox PhiAn_12 = new Step_class().TextBox1(ParentForm, "PhiAn_12", "panel4", "Calculator_2Plane");
+                TextBox PhiAn_21 = new Step_class().TextBox1(ParentForm, "PhiAn_21", "panel4", "Calculator_2Plane");
+                TextBox PhiAn_22 = new Step_class().TextBox1(ParentForm, "PhiAn_22", "panel4", "Calculator_2Plane");                
+
+                lblAnpha_11.Text = AnPha11.ToString("0.000") + " < " + (PhiAnPha11 * 180 / Math.PI).ToString("0.000");
+                lblAnpha_12.Text = AnPha12.ToString("0.000") + " < " + (PhiAnPha12 * 180 / Math.PI).ToString("0.000");
+                lblAnpha_21.Text = AnPha21.ToString("0.000") + " < " + (PhiAnPha21 * 180 / Math.PI).ToString("0.000");
+                lblAnpha_22.Text = AnPha22.ToString("0.000") + " < " + (PhiAnPha22 * 180 / Math.PI).ToString("0.000");
+
                 //hien thi ket qua mat 1
                 TextBox txtV1 = new Step_class().TextBox(ParentForm, "txtV1", "Calculator_2Plane");
                 B1 = double.Parse(txtV1.Text);

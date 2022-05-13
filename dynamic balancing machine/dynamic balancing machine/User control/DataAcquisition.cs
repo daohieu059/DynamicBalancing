@@ -35,7 +35,7 @@ namespace dynamic_balancing_machine.User_control
         {            
             Control.CheckForIllegalCrossThreadCalls = false;
             cBoxCOM.DataSource = SerialPort.GetPortNames();
-            //cBoxCOM.SelectedIndex = 1;
+            //cBoxCOM.SelectedIndex = 3;
             cBoxBaud.SelectedIndex = 7;
             cBoxDatabits.SelectedIndex = 2;
             cBoxStopbits.SelectedIndex = 0;
@@ -245,8 +245,8 @@ namespace dynamic_balancing_machine.User_control
             {
                 y11 = y1;
                 y1 = quang[j];
-
-                    if (y1 >= 0.68)
+                
+                if (y1 >= 0.68)
                     {
                         y1 = average + 0.05;
                     }
@@ -261,7 +261,7 @@ namespace dynamic_balancing_machine.User_control
                         }
                         else
                         {
-                            if((j - cbquang[th-1]) > 50)
+                            if((j - cbquang[th-1]) > 200)
                             {
                                 cbquang[th] = j - 1;
                                 th++;
@@ -318,7 +318,8 @@ namespace dynamic_balancing_machine.User_control
                 double Am_avrage = 0;
                 double Pha1_average = 0;
                 double A0 = 0;
-                textBox1.Text = cbquang[0].ToString() +"  " + cbquang[1].ToString() + "  " + cbquang[2].ToString() + "  " + cbquang[3].ToString() ;
+                textBox1.Text = cbquang[0].ToString() + "  " + cbquang[1].ToString() + "  " + cbquang[2].ToString() + "  " + cbquang[3].ToString() +
+                    "  " + cbquang[4].ToString() + "  " + cbquang[5].ToString() + "  " + cbquang[6].ToString() + "  " + cbquang[7].ToString();
                 textBox2.Text = (cbquang[1] - cbquang[0]).ToString() + "  " + (cbquang[2] - cbquang[1]).ToString() + "  " + (cbquang[3] - cbquang[2]).ToString();
                 for (int i = 0; i < th; i++)
                 {
@@ -461,10 +462,10 @@ namespace dynamic_balancing_machine.User_control
                     }
                     //serialPort1.WriteLine(txtNumericSpeed.Text);
                 }
-                else
+                /*else
                 {
                     MessageBox.Show("Please connect Serial Com Port");
-                }
+                }*/
             }
             catch(Exception ex)
             {
@@ -483,10 +484,10 @@ namespace dynamic_balancing_machine.User_control
 
                 //serialPort1.WriteLine("0");
             }
-            else
+            /*else
             {
                 MessageBox.Show("Please connect Serial Com Port");
-            }
+            }*/
         }
 
         private void btnLoadCOM_Click(object sender, EventArgs e)

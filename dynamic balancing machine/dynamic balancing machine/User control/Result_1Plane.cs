@@ -83,8 +83,8 @@ namespace dynamic_balancing_machine.User_control
                 
                 TextBox AmAverage = new Step_class().TextBox1(ParentForm, "txtAmAverage_1P", "panel3", "DataAcquisition");
                 TextBox Dolechpha = new Step_class().TextBox1(ParentForm, "txtDolechpha_1P", "panel3", "DataAcquisition");
-                /*txtAm.Text = AmAverage.Text;
-                txtPhase.Text = Dolechpha.Text;*/
+                txtAm.Text = AmAverage.Text;
+                txtPhase.Text = Dolechpha.Text;
 
                 TextBox txtPhizero = new Step_class().TextBox1(ParentForm, "Phizero", "panel4", "Calculator_1Plane");
                 TextBox txtPhi1 = new Step_class().TextBox1(ParentForm, "Phi1", "panel4", "Calculator_1Plane");
@@ -140,6 +140,12 @@ namespace dynamic_balancing_machine.User_control
         {           
             try
             {
+                TextBox Anphax = new Step_class().TextBox1(ParentForm, "Anpha_x", "panel4", "Calculator_1Plane");
+                TextBox Anphay = new Step_class().TextBox1(ParentForm, "Anpha_y", "panel4", "Calculator_1Plane");
+
+                lblAnpha_x.Text = Anphax.Text;
+                lblAnpha_y.Text = Anphay.Text;
+
                 TextBox txtAm = new Step_class().TextBox(ParentForm, "txtAm", "Calculator_1Plane");
                 Am_mcb = double.Parse(txtAm.Text);
                 TextBox txtGoc = new Step_class().TextBox(ParentForm, "txtGoc", "Calculator_1Plane");
@@ -149,7 +155,7 @@ namespace dynamic_balancing_machine.User_control
                 txtPhiM.Text = (goc_mcb * 180 / Math.PI).ToString("f2");
                 txtPhiM_add.Text = (180 + goc_mcb * 180 / Math.PI).ToString("f2");
 
-                draw_result(goc_mcb);
+                draw(); draw_result(goc_mcb);
             }
             catch { MessageBox.Show("Please data collection"); }
             
