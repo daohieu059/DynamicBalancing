@@ -79,7 +79,6 @@ D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic ba
 D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.xml
 D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Bunifu_UI_v1.5.3.xml
 D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
-D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.csprojAssemblyReference.cache
 D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.Form1.resources
 D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.MachineControlForm.resources
 D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic_balancing_machine.Properties.Resources.resources
@@ -114,3 +113,8 @@ D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic ba
 D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\System.ComponentModel.Annotations.dll
 D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\EPPlus.xml
 D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\MathNet.Numerics.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\System.ValueTuple.dll
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\MathNet.Numerics.xml
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\bin\Debug\System.ValueTuple.xml
+D:\GitHub\DynamicBalancing\DynamicBalancing\dynamic balancing machine\dynamic balancing machine\obj\Debug\dynamic balancing machine.csprojAssemblyReference.cache

@@ -95,6 +95,7 @@ namespace dynamic_balancing_machine.User_control
             this.label23 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.FFTGraph = new ZedGraph.ZedGraphControl();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -841,11 +842,26 @@ namespace dynamic_balancing_machine.User_control
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // FFTGraph
+            // 
+            this.FFTGraph.Location = new System.Drawing.Point(651, 266);
+            this.FFTGraph.Name = "FFTGraph";
+            this.FFTGraph.ScrollGrace = 0D;
+            this.FFTGraph.ScrollMaxX = 0D;
+            this.FFTGraph.ScrollMaxY = 0D;
+            this.FFTGraph.ScrollMaxY2 = 0D;
+            this.FFTGraph.ScrollMinX = 0D;
+            this.FFTGraph.ScrollMinY = 0D;
+            this.FFTGraph.ScrollMinY2 = 0D;
+            this.FFTGraph.Size = new System.Drawing.Size(326, 286);
+            this.FFTGraph.TabIndex = 59;
+            // 
             // DataAcquisition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.Controls.Add(this.FFTGraph);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.zed);
             this.Controls.Add(this.panel1);
@@ -949,5 +965,6 @@ namespace dynamic_balancing_machine.User_control
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private ZedGraph.ZedGraphControl FFTGraph;
     }
 }

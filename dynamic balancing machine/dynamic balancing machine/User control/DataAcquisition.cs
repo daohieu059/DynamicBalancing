@@ -11,6 +11,20 @@ using dynamic_balancing_machine.Step;
 using System.IO.Ports;
 using ZedGraph;
 using System.Threading;
+//using MathNet.Numerics;
+using MathNet.Numerics.IntegralTransforms;
+using System.Numerics;
+/*
+public struct Complex
+{
+    public double real;
+    public double imaginary;
+    public Complex(double real, double imaginary)
+    {
+        this.real = real;
+        this.imaginary = imaginary;
+    }
+}*/
 namespace dynamic_balancing_machine.User_control
 {
     public partial class DataAcquisition : UserControl
@@ -199,6 +213,8 @@ namespace dynamic_balancing_machine.User_control
             PointPairList list1 = new PointPairList();// data và cbquang
             PointPairList list2 = new PointPairList();// vẽ lại hài bậc 1
 
+            PointPairList list3 = new PointPairList();// vẽ lại hài bậc 1
+
 
 
             // xử lí data      
@@ -240,7 +256,7 @@ namespace dynamic_balancing_machine.User_control
             int vi_tri_max = 0;
             bool high = false;
 
-
+            
             for (int j = 0, k = 0; j < piezo.Length; j++)
             {
                 y11 = y1;
@@ -297,6 +313,9 @@ namespace dynamic_balancing_machine.User_control
                 }
                 list1.Add(j, y1);*/
             }
+
+            th = th - 1;
+
             if (th > 0)
             {
                 // vẽ data từ cbquang 0 đến cbquang finish
@@ -309,6 +328,34 @@ namespace dynamic_balancing_machine.User_control
 
 
                 //tinhs DFT
+                FFT_function(piezo);
+                double f1 = 5e7, f2 = 5e8, fs = 1e9, wc1 = 1.5e7 / 1e9 * Math.PI, wc2 = 1.5e8 / 1e9 * Math.PI;
+                double[] s = new double[2000], Wn, Hd1, Hd2, Hd = new double[2000], H = new double[2000];
+                complex[] fft, fil = new complex[2000], Hf, kq;
+
+
+
+                fft = DSP.fft(piezo);
+                ////// Tính hàm cửa sổ Wn
+                Wn = DSP.gausswin(1000);
+                ////
+                /// Tính đáp ứng xung của bộ lọc
+                Hd1 = DSP.deal_lp(wc1, 1000);
+                Hd2 = DSP.deal_lp(wc2, 1000);
+                for (int i = 0; i < 1000; i++)
+                {
+                    Hd[i] = Hd2[i] - Hd1[i];
+                    H[i] = Hd[i] * Wn[i];
+                }
+                /// chuyển đáp ứng xung qua miền tần số
+                Hf = DSP.fft(H);
+                ////// tính phổ tín hiệu sau khi lọc
+                for (int i = 0; i < fft.Length; i++) { fil[i] = fft[i] * Hf[i]; }
+
+                //// chuyển về miền thời gian
+                kq = DSP.ifft(fil);
+                for (int i = 0; i < kq.Length; i++) { piezo[i] = kq[i].real; }
+
 
                 double[] a0 = new double[5000];
                 double[] a1 = new double[5000];
@@ -358,7 +405,7 @@ namespace dynamic_balancing_machine.User_control
                     }
                     Am[i] = Math.Sqrt(a1[i] * a1[i] + b1[i] * b1[i]);
                     Am_avrage += Am[i];
-                    if (i < th - 1)
+                    if (i < th )
                     { Pha1_average += phase[i] * 180 / Math.PI; }
 
                     A0 += a0[i];
@@ -367,8 +414,8 @@ namespace dynamic_balancing_machine.User_control
 
                 }
 
-                txtAmAverage.Text = (Am_avrage * 10000 / (th - 1)).ToString("0.000");// nhân 1000 để tính toán
-                txtAnphaAverage.Text = (Pha1_average / (th - 1)).ToString("0.000");
+                txtAmAverage.Text = (Am_avrage * 10000 / (th)).ToString("0.000");// nhân 1000 để tính toán
+                txtAnphaAverage.Text = (Pha1_average / (th)).ToString("0.000");
 
                 double Phi1_DFT = double.Parse(txtAnphaAverage.Text);
 
@@ -376,7 +423,7 @@ namespace dynamic_balancing_machine.User_control
                 double min = 0;
                 int Poi = 0;
                 // vẽ hình sin dựa vào biên độ và pha DFT
-                for (int i = cbquang[0]; i < cbquang[th - 1]; i++)
+                for (int i = cbquang[0]; i <= cbquang[th]; i++)
                 {
                     double p = Am1 * Math.Sin(2 * Math.PI * i / (cbquang[1] - cbquang[0]) + Phi1_DFT * Math.PI / 180);
                     list2.Add(i, p + average);
@@ -430,7 +477,57 @@ namespace dynamic_balancing_machine.User_control
                 MessageBox.Show(ex.Message);
             }*/
         }
+        private void FFT_function(double[] array_in)
+        {
+            //Am = 0; freq = 0; phase = 0;
+            GraphPane myPane1 = FFTGraph.GraphPane;
+            myPane1.CurveList.Clear();
+            // Set the titles and axis labels
+            myPane1.Title.Text = " FFT";
+            myPane1.XAxis.Title.Text = "X Value";
+            myPane1.YAxis.Title.Text = "My Y Axis";
 
+
+            // Make up some data points from the Sine function
+
+            PointPairList list3 = new PointPairList();
+
+
+            int i;
+            double hzPerSample, mag;
+            Complex[] samples;
+
+            samples = new Complex[array_in.Length];
+            //array_out = new double[samples.Length / 2];
+
+            for (i = 0; i < array_in.Length; i++)
+            {
+                samples[i] = new Complex(array_in[i], 0);
+            }
+
+            Fourier.Forward(samples, FourierOptions.NoScaling);
+
+            for (i = 0; i < samples.Length / 2; i++) // 2^n 16 32 64 128 256 512 1024 2048 ...
+            {
+                mag = (2.0 / samples.Length) * (Math.Sqrt(Math.Pow(samples[i].Real, 2)
+                                                            + Math.Pow(samples[i].Imaginary, 2)));
+
+                hzPerSample = 1; // determine how many Hz represented by each sample
+                list3.Add(hzPerSample * i, mag);
+            }
+
+
+            //list3.Add(m, n);
+            LineItem myCurve = myPane1.AddCurve("FFT", list3, Color.Blue,
+                                   SymbolType.None);
+            //  LineItem myCurve1 = myPane.AddCurve("cbquang", list1, Color.Red,
+            //                         SymbolType.None);
+
+            FFTGraph.AxisChange();
+            FFTGraph.Invalidate();
+
+            // end FFTfunc
+        } // FFT_func
         private void btnSpeed_Click(object sender, EventArgs e)
         {
             try
